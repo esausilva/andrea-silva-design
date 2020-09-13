@@ -8,7 +8,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
+import { ThemeProvider } from 'styled-components';
 
+import { GlobalStyles } from './styles/globalStyles';
+import { theme } from './styles/theme';
 import Header from './header';
 
 const Layout = ({ children }) => {
@@ -23,12 +26,13 @@ const Layout = ({ children }) => {
   `);
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
-      </div>
-    </>
+      </>
+    </ThemeProvider>
   );
 };
 
