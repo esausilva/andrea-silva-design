@@ -7,29 +7,18 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'styled-components';
 
-import { GlobalStyles } from './styles/globalStyles';
-import { theme } from './styles/theme';
-import Header from './header';
+import { GlobalStyles } from '../styles/globalStyles';
+import { theme } from '../styles/theme';
+import { Navigation } from '../Navigation';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Navigation />
         <main>{children}</main>
       </>
     </ThemeProvider>
