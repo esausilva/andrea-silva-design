@@ -1,12 +1,48 @@
 import React from 'react';
 
-import Layout from '../components/layouts/MainLayout';
-import SEO from '../components/seo';
+import { MainLayout } from '../components/layouts/MainLayout';
+import { SEO } from '../components/helpers/SEO';
 
 const IndexPage = () => (
-  <Layout>
+  <MainLayout>
     <SEO title="Home" />
-  </Layout>
+    {/* <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur eum
+      dolores odio provident neque mollitia unde velit accusamus accusantium
+      excepturi esse a aperiam, dolor eligendi aspernatur magni rerum laborum
+      deserunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur eum
+      dolores odio provident neque mollitia unde velit accusamus accusantium
+      excepturi esse a aperiam, dolor eligendi aspernatur magni rerum laborum
+      deserunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur eum
+      dolores odio provident neque mollitia unde velit accusamus accusantium
+      excepturi esse a aperiam, dolor eligendi aspernatur magni rerum laborum
+      deserunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur eum
+      dolores odio provident neque mollitia unde velit accusamus accusantium
+      excepturi esse a aperiam, dolor eligendi aspernatur magni rerum laborum
+      deserunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur eum
+      dolores odio provident neque mollitia unde velit accusamus accusantium
+      excepturi esse a aperiam, dolor eligendi aspernatur magni rerum laborum
+      deserunt.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur eum
+      dolores odio provident neque mollitia unde velit accusamus accusantium
+      excepturi esse a aperiam, dolor eligendi aspernatur magni rerum laborum
+      deserunt.
+    </p> */}
+  </MainLayout>
 );
 
 export default IndexPage;

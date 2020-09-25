@@ -12,21 +12,23 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../styles/globalStyles';
 import { theme } from '../styles/theme';
 import { Navigation } from '../Navigation';
+import { Footer } from '../Footer';
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </>
     </ThemeProvider>
   );
 };
 
-Layout.propTypes = {
+MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export { MainLayout };

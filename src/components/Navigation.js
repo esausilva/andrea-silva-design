@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import { Image } from './Image';
+import { Image } from './helpers/Image';
 import { transformationsFormat } from '../utils';
 
 //#region Styles
@@ -221,25 +221,25 @@ const Navigation = () => {
           <li>
             <a
               href="https://www.facebook.com/andreasilva.design"
-              title="Andrea Silva Design Facebook"
               target="_blank"
               rel="noreferrer"
             >
               <Image
                 relativePath="social-media-facebook-icon.png"
                 alt="Andrea Silva Design Facebook"
+                title="Andrea Silva Design Facebook"
                 transformations={transformationsFormat('w_40,h_40')}
               />
             </a>
             <a
               href="https://www.instagram.com/andreasilva.design"
-              title="Andrea Silva Design Instagram"
               target="_blank"
               rel="noreferrer"
             >
               <Image
                 relativePath="social-media-instagram-icon.png"
                 alt="Andrea Silva Design Instagram"
+                title="Andrea Silva Design Instagram"
                 transformations={transformationsFormat('w_40,h_40')}
               />
             </a>

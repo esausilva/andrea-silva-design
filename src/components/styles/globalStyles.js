@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
     color: ${theme.fontMain};
     background: #fff;
     letter-spacing: 0.07rem;
@@ -38,13 +38,14 @@ export const GlobalStyles = createGlobalStyle`
   h3 {
     font-size: 5.8rem;
   }
-  ${
-    '' /* a {
-    color: ${theme.fontMain};
-    &:focus,
-    &:hover {
-      color: ${lighten(0.5, theme.fontMain)}
-    }
-  } */
+  ${'' /* Gatsby injects two div wrapping elements */}
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    min-height: 100vh;
+    ${'' /* border: 1px solid red; */}
+  }
+  #gatsby-focus-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 `;
