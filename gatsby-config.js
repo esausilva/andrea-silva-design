@@ -5,6 +5,7 @@ module.exports = {
     title: `Andrea Silva Design`,
     description: `Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in digital design, fine art, illustration, and more, located in Music City - Nashville, TN.`,
     author: `@_esausilva`,
+    siteUrl: 'https://andreasilva-design.netlify.app', // TODO: Change to actual domain before production
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -6,7 +6,7 @@ import { Work } from '../components/Work';
 
 const IndexPage = () => (
   <MainLayout>
-    <SEO title="Home" />
+    {/* <SEO title="Home" /> */}
     <Work />
   </MainLayout>
 );
