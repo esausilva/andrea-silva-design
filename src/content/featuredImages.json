@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Graphic Design",
+    "image": "featured-images/graphic-design.jpg",
+    "alt": "Graphic Design - My work",
+    "slug": "graphic-design"
+  },
+  {
+    "title": "Motion Graphics",
+    "image": "featured-images/motion-graphics.jpg",
+    "alt": "Motion Graphics - My work",
+    "slug": "motion-graphics"
+  },
+  {
+    "title": "Illustration",
+    "image": "featured-images/illustration.jpg",
+    "alt": "Illustration - My work",
+    "slug": "illustration"
+  },
+  {
+    "title": "Art",
+    "image": "featured-images/art.jpg",
+    "alt": "Art - My work",
+    "slug": "art"
+  }
+]

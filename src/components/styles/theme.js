@@ -5,4 +5,7 @@ export const theme = {
   gray: '#CECECE',
   breakMedium: '824px',
   breakLarge: '1186px',
+  navHeight: '10rem',
+  navHeightMedium: '15rem',
+  navHeightLarge: '20rem',
 };

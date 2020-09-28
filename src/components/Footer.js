@@ -14,10 +14,10 @@ const FooterTag = styled.footer`
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   img {
-    margin: 0 0.3rem 0 0.3rem;
-    width: 3rem;
+    margin: 0 0.2rem 0 0.2rem;
+    width: 2.5rem;
   }
   p {
     margin: 0;

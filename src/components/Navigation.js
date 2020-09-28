@@ -9,17 +9,16 @@ import { transformationsFormat } from '../utils';
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  height: 10rem;
+  height: ${({ theme }) => theme.navHeight};
   align-items: center;
   font-weight: 400;
+  z-index: 2;
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    height: 15rem;
+    height: ${({ theme }) => theme.navHeightMedium};
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    height: 20rem;
+    height: ${({ theme }) => theme.navHeightLarge};
   }
-
-  border-bottom: 1px solid red;
 `;
 
 const NavBrand = styled.div`
@@ -122,7 +121,6 @@ const NavMenu = styled.ul`
     cursor: pointer;
     a {
       color: #000;
-      text-decoration: none;
     }
     &:last-child {
       img {
