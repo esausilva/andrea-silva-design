@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styled from 'styled-components';
 
 import { Image } from './helpers/Image';
@@ -192,14 +192,14 @@ const Navigation = () => {
   return (
     <Nav>
       <NavBrand>
-        <Link to="/">
+        <AniLink fade to="/">
           <Image
             relativePath="andrea-silva-design-logo-black.png"
             alt="Andrea Silva Design Logo"
             title="Andrea Silva Design Logo | Back to Home"
             transformations={transformationsFormat('h_180')}
           />
-        </Link>
+        </AniLink>
         <span>Andrea Silva Design</span>
       </NavBrand>
       <MobileTitle>Andrea Silva</MobileTitle>
