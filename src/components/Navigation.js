@@ -13,6 +13,7 @@ const Nav = styled.nav`
   align-items: center;
   font-weight: 400;
   z-index: 2;
+  position: relative;
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     height: ${({ theme }) => theme.navHeightMedium};
   }
