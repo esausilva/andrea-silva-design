@@ -40,7 +40,7 @@ const AboutMe = styled.section`
 
 const ReadMore = styled.div`
   overflow: hidden;
-  max-height: ${({ isOpen }) => (isOpen ? '1000px' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? '1500px' : '0')};
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   transition: all 1500ms;
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
@@ -51,7 +51,7 @@ const ReadMore = styled.div`
 
 const ReadMoreLarge = styled.div`
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    max-height: ${({ isOpen }) => (isOpen ? '1000px' : '0')};
+    max-height: ${({ isOpen }) => (isOpen ? '1500px' : '0')};
     opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
     transition: all 1500ms;
   }
