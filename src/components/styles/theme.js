@@ -8,4 +8,7 @@ export const theme = {
   navHeight: '10rem',
   navHeightMedium: '15rem',
   navHeightLarge: '20rem',
+  fontSize: '1.6rem',
+  fontSizeMedium: '1.8rem',
+  fontSizeLarge: '2rem',
 };

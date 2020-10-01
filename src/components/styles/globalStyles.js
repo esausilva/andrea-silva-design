@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.fontMain};
     background: #fff;
     letter-spacing: 0.07rem;
-    font-size: 1.6rem;
+    font-size: ${theme.fontSize};
   }
   h1,
   h2,
@@ -53,7 +53,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   @media (min-width: ${theme.breakMedium}) { 
     body {
-      font-size: 1.8rem;
+      font-size: ${theme.fontSizeMedium};
     }
     h1 {
       font-size: 5.2rem;
@@ -67,7 +67,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   @media (min-width: ${theme.breakLarge}) { 
     body {
-      font-size: 2rem;
+      font-size: ${theme.fontSizeLarge};
     }
     h1 {
       font-size: 5.2rem;

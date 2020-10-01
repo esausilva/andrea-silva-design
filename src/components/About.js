@@ -15,10 +15,10 @@ const AboutMe = styled.section`
     border-radius: 50%;
   }
   div {
-    text-align: center;
-    p {
-      text-align: left;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     grid-template-columns: 350px 1fr;
@@ -27,7 +27,7 @@ const AboutMe = styled.section`
       width: 30rem;
     }
     div {
-      text-align: left;
+      align-items: start;
     }
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
@@ -43,18 +43,6 @@ const ReadMore = styled.div`
   max-height: ${({ isOpen }) => (isOpen ? '1500px' : '0')};
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   transition: all 1500ms;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    max-height: 1000px;
-    opacity: 1;
-  }
-`;
-
-const ReadMoreLarge = styled.div`
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    max-height: ${({ isOpen }) => (isOpen ? '1500px' : '0')};
-    opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-    transition: all 1500ms;
-  }
 `;
 
 const ReadMoreButton = styled.button`
@@ -68,11 +56,16 @@ const ReadMoreButton = styled.button`
   padding: 0.5rem 1rem;
   margin-top: ${({ isOpen }) => (isOpen ? '15px' : '0')};
   transition: all 500ms;
+  font-size: calc(${({ theme }) => theme.fontSize} - 0.3rem);
   &:hover {
     transform: scale(1.02);
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     margin: 0;
+    font-size: calc(${({ theme }) => theme.fontSizeMedium} - 0.3rem);
+  }
+  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+    font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.3rem);
   }
 `;
 //#endregion
@@ -115,29 +108,27 @@ const About = () => {
             decade has also carried over to the graphic design world,
             particularly as I continue growing my skills in motion design.
           </p>
-          <ReadMoreLarge isOpen={isReadMore}>
-            <p>
-              When I'm not behind my computer or at my easel creating you might
-              find me outdoors exploring with my dear husband of 4 plus years
-              and my toddler. Life with them is full and rewarding. As a foodie
-              and health nut, in addition you might find me whipping up
-              something tasty and healthy in the kitchen. I also will take any
-              opportunity to travel and have enjoyed trips to Europe, the
-              Bahamas, and across the U.S.
-            </p>
-            <p>
-              Though I love being an artist and graphic designer, my true
-              identity lies in my relationship with Jesus Christ and learning to
-              follow Him. Any skills I possess, I realize come from Him alone.
-            </p>
-            <p>
-              Thanks for taking the time to stop by my website! It would be an
-              honor to work with you on your next project whether you need a
-              design for print, motion graphics for a website or logo animation,
-              or personalized artwork to give as a gift or keepsake. Let me know
-              how I can serve you!
-            </p>
-          </ReadMoreLarge>
+          <p>
+            When I'm not behind my computer or at my easel creating you might
+            find me outdoors exploring with my dear husband of 4 plus years and
+            my toddler. Life with them is full and rewarding. As a foodie and
+            health nut, in addition you might find me whipping up something
+            tasty and healthy in the kitchen. I also will take any opportunity
+            to travel and have enjoyed trips to Europe, the Bahamas, and across
+            the U.S.
+          </p>
+          <p>
+            Though I love being an artist and graphic designer, my true identity
+            lies in my relationship with Jesus Christ and learning to follow
+            Him. Any skills I possess, I realize come from Him alone.
+          </p>
+          <p>
+            Thanks for taking the time to stop by my website! It would be an
+            honor to work with you on your next project whether you need a
+            design for print, motion graphics for a website or logo animation,
+            or personalized artwork to give as a gift or keepsake. Let me know
+            how I can serve you!
+          </p>
         </ReadMore>
         <ReadMoreButton
           type="button"
