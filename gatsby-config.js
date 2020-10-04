@@ -39,9 +39,11 @@ module.exports = {
     },
     `gatsby-plugin-transition-link`,
     // {
-    //   resolve: `gatsby-plugin-google-analytics`,
+    //   resolve: `gatsby-plugin-gtag`,
     //   options: {
-    //     trackingId: process.env.GOOGLE_ANALYTICS,
+    //     trackingId: process.env.GOOGLE_ANALYTICS_ID,
+    //     head: true,
+    //     anonymize: true,
     //   },
     // },
     // {

@@ -34,7 +34,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 4rem;
   }
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   h3 {
     font-size: 3.8rem;
@@ -59,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 5.2rem;
     }
     h2 {
-      font-size: 8rem;
+      font-size: 6rem;
     }
     h3 {
       font-size: 5.8rem;

@@ -4,7 +4,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import { Image } from './helpers/Image';
 import { transformationsFormat } from '../utils';
-import JSONData from '../content/featuredImages.json';
+import featuredImagesData from '../content/featuredImages.json';
 
 //#region Styles
 const Portfolio = styled.section`
@@ -70,7 +70,7 @@ const WorkMedium = styled.div`
 const Work = () => {
   return (
     <Portfolio>
-      {JSONData.map(content => (
+      {featuredImagesData.map(content => (
         <WorkMedium key={content.image}>
           <Image
             relativePath={content.image}
