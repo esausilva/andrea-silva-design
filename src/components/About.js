@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { lighten } from 'polished';
 
 import { Image } from './helpers/Image';
 import { transformationsFormat } from '../utils';
@@ -38,37 +37,49 @@ const AboutMe = styled.section`
   }
 `;
 
-const ReadMore = styled.div`
+const ReadMoreBlock = styled.div`
   overflow: hidden;
   max-height: ${({ isOpen }) => (isOpen ? '1500px' : '0')};
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   transition: all 1500ms;
 `;
 
-const ReadMoreButton = styled.button`
-  background: #fff;
-  border: 0;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.1rem 0.3rem hsla(0, 0%, 0%, 0.3);
-  cursor: pointer;
-  background: ${({ theme }) => lighten(0.1, theme.pink)};
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin-top: ${({ isOpen }) => (isOpen ? '15px' : '0')};
-  transition: all 500ms;
+const ReadMoreLink = styled.button`
+  background: none;
+  border: none;
+  font-weight: bolder;
   font-size: calc(${({ theme }) => theme.fontSize} - 0.3rem);
+  color: ${({ theme }) => theme.pink};
+  cursor: pointer;
+  &:after {
+    font-size: calc(${({ theme }) => theme.fontSize} - 0.4rem);
+    font-weight: bolder;
+    display: inline-block;
+    margin-left: 0.2rem;
+    transition: all 500ms;
+    color: ${({ theme }) => theme.pink};
+  }
+  ${({ isOpen }) =>
+    isOpen
+      ? '&:after{content: "▲";}'
+      : '&:after{content: "▲";transform: rotate(180deg);}'};
+  &:focus {
+    outline: none;
+  }
   &:hover {
-    transform: scale(1.02);
+    text-decoration: underline;
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    margin: 0;
     font-size: calc(${({ theme }) => theme.fontSizeMedium} - 0.3rem);
+    &:after {
+      font-size: calc(${({ theme }) => theme.fontSize} - 0.3rem);
+    }
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
     font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.3rem);
   }
 `;
-//#endregion
+//#endregion ▼
 
 const About = () => {
   const [isReadMore, setIsReadMore] = useState(false);
@@ -91,7 +102,7 @@ const About = () => {
           2010 with a BA in Graphic Design and minors in Painting and Music from
           Tabor College in Hillsboro, KS.
         </p>
-        <ReadMore isOpen={isReadMore}>
+        <ReadMoreBlock isOpen={isReadMore}>
           <p>
             While in college I worked part-time at Great Plains Christian Radio,
             KJIL, a Christian radio station covering most of Kansas and parts of
@@ -129,15 +140,15 @@ const About = () => {
             or personalized artwork to give as a gift or keepsake. Let me know
             how I can serve you!
           </p>
-        </ReadMore>
-        <ReadMoreButton
+        </ReadMoreBlock>
+        <ReadMoreLink
           type="button"
           aria-hidden="true"
           onClick={toggleReadMore}
           isOpen={isReadMore}
         >
           Read {isReadMore ? 'Less' : 'More'}
-        </ReadMoreButton>
+        </ReadMoreLink>
       </div>
     </AboutMe>
   );
