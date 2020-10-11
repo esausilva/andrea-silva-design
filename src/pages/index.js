@@ -5,6 +5,7 @@ import { SEO } from '../components/helpers/SEO';
 import { Work } from '../components/Work';
 import { About } from '../components/About';
 import { Testimonials } from '../components/Testimonials';
+import { InstagramFeed } from '../components/InstagramFeed';
 
 const IndexPage = () => (
   <MainLayout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
     <Work />
     <About />
     <Testimonials />
+    <InstagramFeed />
   </MainLayout>
 );
 

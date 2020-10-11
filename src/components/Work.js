@@ -44,10 +44,13 @@ const WorkMedium = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    &:hover {
+      text-decoration: none;
+    }
   }
   h1 {
     color: #fff;
-    text-shadow: 3px 3px 6px #333;
+    text-shadow: ${({ theme }) => theme.textShadow};
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     a {

@@ -141,6 +141,7 @@ const NavMenu = styled.ul`
       }
       a:hover {
         color: ${({ theme }) => theme.pink};
+        text-decoration: none;
       }
       &:after {
         display: block;

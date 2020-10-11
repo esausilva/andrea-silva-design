@@ -5,7 +5,7 @@ module.exports = {
     title: `Andrea Silva Design`,
     description: `Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in digital design, fine art, illustration, and more, located in Music City - Nashville, TN.`,
     author: `@_esausilva`,
-    siteUrl: 'https://andreasilva-design.netlify.app', // TODO: Change to actual domain before production
+    siteUrl: 'https://andreasilva.design',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -38,21 +38,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: process.env.INSTAGRAM_USERNAME_ID,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-gtag`,
     //   options: {
     //     trackingId: process.env.GOOGLE_ANALYTICS_ID,
     //     head: true,
     //     anonymize: true,
-    //   },
-    // },
-    // {
-    //   resolve: 'gatsby-transformer-cloudinary',
-    //   options: {
-    //     cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-    //     apiKey: process.env.CLOUDINARY_API_KEY,
-    //     apiSecret: process.env.CLOUDINARY_API_SECRET,
-    //     uploadFolder: 'esausilva-dev/portfolio/',
     //   },
     // },
     // this (optional) plugin enables Progressive Web App + Offline functionality

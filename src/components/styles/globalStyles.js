@@ -41,6 +41,10 @@ export const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    color: ${theme.pink};
+    &:hover {
+      text-decoration: underline;
+    }
   }
   ${'' /* Gatsby injects two div wrapping elements */}
   #___gatsby {
@@ -76,7 +80,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 8rem;
     }
     h3 {
-      font-size: 5.8rem;
+      font-size: 6rem;
     }
   }
 `;

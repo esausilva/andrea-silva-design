@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useKeenSlider } from 'keen-slider/react';
 
+import { ArrowBase } from './styles/ArrowBase';
+
 import testimonialsData from '../content/testimonials.json';
 
 import 'keen-slider/keen-slider.min.css';
@@ -22,7 +24,6 @@ const TestimonialsSection = styled.section`
 const SliderWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
   span {
     font-weight: bolder;
     font-style: italic;
@@ -34,29 +35,22 @@ const SliderWrapper = styled.div`
   }
 `;
 
-const Arrow = styled.svg`
-  display: none;
+const Arrow = styled(ArrowBase)`
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     margin: 0 2rem;
-    display: initial;
-    width: 80px;
-    height: 80px;
-    fill: ${({ disabled }) => (disabled ? 'rgba(255, 255, 255, 0.5)' : '#fff')};
-    cursor: pointer;
-    transition: all 500ms;
+    width: 8rem;
+    height: 8rem;
     circle {
       fill: rgba(255, 255, 255, 0.6);
     }
     path {
       fill: ${({ theme }) => theme.gray};
     }
-    &:hover {
-      transform: scale(1.2);
-    }
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    width: 100px;
-    height: 100px;
+    margin-top: -2rem;
+    width: 10rem;
+    height: 10rem;
   }
 `;
 
@@ -98,15 +92,12 @@ const Testimonials = () => {
       <SliderWrapper>
         {slider && (
           <>
-            <ArrowLeft
-              onClick={e => e.stopPropagation() || slider.prev()}
-              disabled={currentSlide === 0}
-            />
+            <ArrowLeft onClick={e => e.stopPropagation() || slider.prev()} />
           </>
         )}
         <div ref={sliderRef} className="keen-slider">
           {testimonialsData.map(content => (
-            <div className="keen-slider__slide">
+            <div className="keen-slider__slide" key={content.by}>
               <p>
                 {content.testimonial} <br /> <span>- {content.by}</span>
               </p>
@@ -115,10 +106,7 @@ const Testimonials = () => {
         </div>
         {slider && (
           <>
-            <ArrowRight
-              onClick={e => e.stopPropagation() || slider.next()}
-              disabled={currentSlide === slider.details().size - 1}
-            />
+            <ArrowRight onClick={e => e.stopPropagation() || slider.next()} />
           </>
         )}
       </SliderWrapper>
@@ -138,9 +126,8 @@ const Testimonials = () => {
   );
 };
 
-const ArrowLeft = ({ disabled, onClick }) => (
+const ArrowLeft = ({ onClick }) => (
   <Arrow
-    disabled={disabled}
     onClick={onClick}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -150,9 +137,8 @@ const ArrowLeft = ({ disabled, onClick }) => (
   </Arrow>
 );
 
-const ArrowRight = ({ disabled, onClick }) => (
+const ArrowRight = ({ onClick }) => (
   <Arrow
-    disabled={disabled}
     onClick={onClick}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
