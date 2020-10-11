@@ -45,6 +45,13 @@ module.exports = {
       },
     },
     // {
+    //   resolve: 'gatsby-plugin-root-import',
+    //   options: {
+    //     src: path.join(__dirname, 'src'),
+    //     pages: path.join(__dirname, 'src/pages'),
+    //   },
+    // },
+    // {
     //   resolve: `gatsby-plugin-gtag`,
     //   options: {
     //     trackingId: process.env.GOOGLE_ANALYTICS_ID,

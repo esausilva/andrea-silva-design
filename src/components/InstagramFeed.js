@@ -151,14 +151,11 @@ const InstagramFeed = () => {
   //#region Queries
   const data = useStaticQuery(graphql`
     query {
-      grams: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 20) {
+      grams: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 15) {
         edges {
           node {
             id
-            likes
-            comments
             caption
-            mediaType
             timestamp
             localFile {
               childImageSharp {
