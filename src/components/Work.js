@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
-import { Image } from './helpers/Image';
-import { transformationsFormat } from '../utils';
-import featuredImagesData from '../content/featuredImages.json';
+import { Image } from '~helpers/Image';
+import { transformationsFormat } from '~utils/index';
+import featuredImagesData from '~content/featuredImages.json';
 
 //#region Styles
 const Portfolio = styled.section`

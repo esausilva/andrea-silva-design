@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useKeenSlider } from 'keen-slider/react';
 
-import { ArrowBase } from './styles/ArrowBase';
+import { ArrowBase } from '~styles/ArrowBase';
 
-import testimonialsData from '../content/testimonials.json';
+import testimonialsData from '~content/testimonials.json';
 
 import 'keen-slider/keen-slider.min.css';
 

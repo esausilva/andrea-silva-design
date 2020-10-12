@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { lighten } from 'polished';
 
-import { Image } from './helpers/Image';
-import { transformationsFormat } from '../utils';
-import { ArrowBase } from './styles/ArrowBase';
+import { Image } from '~helpers/Image';
+import { transformationsFormat } from '~utils/index';
+import { ArrowBase } from '~styles/ArrowBase';
 
 //#region Styles
 const imageDimensions = '20rem !important';

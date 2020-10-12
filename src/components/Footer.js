@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Image } from './helpers/Image';
-import { transformationsFormat } from '../utils';
+import { Image } from '~helpers/Image';
+import { transformationsFormat } from '~utils';
 
 //#region Styles
 const FooterTag = styled.footer`

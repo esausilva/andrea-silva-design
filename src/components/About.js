@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Image } from './helpers/Image';
-import { transformationsFormat } from '../utils';
+import { Image } from '~helpers/Image';
+import { transformationsFormat } from '~utils/index';
 
 //#region Styles
 const AboutMe = styled.section`

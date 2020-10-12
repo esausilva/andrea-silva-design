@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styled from 'styled-components';
 
-import { Image } from './helpers/Image';
-import { transformationsFormat } from '../utils';
+import { Image } from '~helpers/Image';
+import { transformationsFormat } from '~utils/index';
 
 //#region Styles
 const Nav = styled.nav`
