@@ -11,8 +11,8 @@ import { ThemeProvider } from 'styled-components';
 
 import { GlobalStyles } from '~styles/globalStyles';
 import { theme } from '~styles/theme';
-import { Navigation } from '~components/Navigation';
-import { Footer } from '~components/Footer';
+import { Navigation } from './Navigation';
+import { Footer } from './Footer';
 
 const MainLayout = ({ children }) => {
   return (
