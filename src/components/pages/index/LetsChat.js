@@ -37,6 +37,11 @@ const Form = styled.form`
     color: #495057;
     margin: 0.25rem 0;
     width: 100%;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0.23rem 0.23rem #17a2b8;
+    }
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     width: 70%;
