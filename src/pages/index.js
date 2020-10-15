@@ -6,6 +6,7 @@ import { Work } from '~components/pages/index/Work';
 import { About } from '~components/pages/index/About';
 import { Testimonials } from '~components/pages/index/Testimonials';
 import { InstagramFeed } from '~components/pages/index/InstagramFeed';
+import { LetsChat } from '~components/pages/index/LetsChat';
 
 const IndexPage = () => (
   <MainLayout>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <About />
     <Testimonials />
     <InstagramFeed />
+    <LetsChat />
   </MainLayout>
 );
 
