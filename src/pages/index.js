@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormspreeProvider } from '@formspree/react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
 import { SEO } from '~helpers/SEO';
@@ -15,7 +16,9 @@ const IndexPage = () => (
     <About />
     <Testimonials />
     <InstagramFeed />
-    <LetsChat />
+    <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>
+      <LetsChat />
+    </FormspreeProvider>
   </MainLayout>
 );
 

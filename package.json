@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "author": "Esau Silva <@_esausilva>",
   "dependencies": {
+    "@formspree/react": "^2.2.2",
     "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.50",
@@ -44,7 +45,8 @@
     "start": "npm-run-all -s clean develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "fs:deploy": "formspree deploy"
   },
   "repository": {
     "type": "git",

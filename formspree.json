@@ -1,0 +1,31 @@
+{
+  "forms": {
+    "lets-chat": {
+      "name": "Let's Chat",
+      "fields": {
+        "name": { 
+          "type": "text",
+          "prettyName": "Name",
+          "required": true 
+        },
+        "email": { 
+          "type": "email", 
+          "prettyName": "Email address",
+          "required": true 
+        },
+        "message": { 
+          "type": "text", 
+          "prettyName": "Message",
+          "required": true 
+        }
+      },
+      "actions": [
+        {
+          "type": "email",
+          "to": "andreasilva.design@outlook.com"
+        }
+      ],
+      "allowExtraFields": false
+    }
+  }
+}

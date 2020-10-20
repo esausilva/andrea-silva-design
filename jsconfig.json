@@ -8,7 +8,8 @@
       "~components/*": ["./src/components/*"],
       "~styles/*": ["./src/components/styles/*"],
       "~helpers/*": ["./src/components/helpers/*"],
-      "~content/*": ["./src/components/content/*"]
+      "~svgs/*": ["./src/components/svgs/*"],
+      "~content/*": ["./src/content/*"]
     }
   }
 }
