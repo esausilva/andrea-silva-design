@@ -129,20 +129,36 @@ const Validation = styled(ValidationError)`
     font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.2rem);
   }
 `;
+
+const ThankYou = styled.mark`
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid transparent;
+  border-color: #c3e6cb;
+  border-radius: 0.25rem;
+  text-align: center;
+  display: ${({ show }) => (show ? 'inline-block' : 'none')};
+`;
 //#endregion
 
 const LetsChat = () => {
-  const [formState, handleSubmit] = useForm('lets-chat');
-
-  if (formState.succeeded) {
-    console.log('Form submitted');
-  }
+  const [formState, handleSubmit] = useForm('lets-chat', {
+    data: {
+      _subject: `Andrea Silva Design - New Submission`,
+    },
+  });
 
   return (
     <LetsChatSection>
       <h2>What can I create for you?</h2>
       <Fieldset disabled={formState.submitting}>
         <Form method="POST" onSubmit={handleSubmit}>
+          <ThankYou show={formState.succeeded}>
+            Thank you for your interest, I will be in touch with you soon.
+            -Andrea
+          </ThankYou>
           <FormRow>
             <label htmlFor="name">Name</label>
             <InputColumn>
@@ -163,7 +179,7 @@ const LetsChat = () => {
             <label htmlFor="email">Email</label>
             <InputColumn>
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 placeholder="Enter your email"
@@ -179,7 +195,6 @@ const LetsChat = () => {
             <label htmlFor="message">Message</label>
             <InputColumn>
               <textarea
-                type="text"
                 id="message"
                 name="message"
                 placeholder="Enter your message"
