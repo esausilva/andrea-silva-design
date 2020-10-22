@@ -123,13 +123,13 @@ const NavMenu = styled.ul`
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
-  font-weight: 300;
   li {
     list-style-type: none;
     font-size: 4.5rem;
     cursor: pointer;
     a {
       color: #000;
+      font-weight: 200;
     }
     &:last-child {
       img {
@@ -150,16 +150,7 @@ const NavMenu = styled.ul`
       a:hover {
         color: ${({ theme }) => theme.pink};
         text-decoration: none;
-      }
-      &:after {
-        display: block;
-        content: '';
-        border-bottom: solid 1px ${({ theme }) => theme.pink};
-        transform: scaleX(0);
-        transition: transform 300ms ease-in-out;
-      }
-      &:hover:after {
-        transform: scaleX(1);
+        text-shadow: 1px 1px 5px rgba(51, 51, 51, 0.2);
       }
       &:last-child {
         margin-right: 1rem;
