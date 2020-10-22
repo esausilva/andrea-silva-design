@@ -4,8 +4,8 @@ const typography = new Typography({
   baseFontSize: '10px',
   headerWeight: 400,
   bodyWeight: 300,
-  headerFontFamily: ['Bebas Neue', 'Segoe UI', 'Helvetica Neue', 'sans-serif'],
-  bodyFontFamily: ['Helvetica Neue', 'Helvetica', 'Segoe UI', 'sans-serif'],
+  headerFontFamily: ['Bebas Neue', 'Helvetica Neue', 'Segoe UI', 'sans-serif'],
+  bodyFontFamily: ['Helvetica Neue', 'Segoe UI', 'sans-serif'],
   googleFonts: [
     {
       name: 'Bebas Neue',
