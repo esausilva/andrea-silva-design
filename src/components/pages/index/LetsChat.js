@@ -151,7 +151,7 @@ const LetsChat = () => {
   });
 
   return (
-    <LetsChatSection>
+    <LetsChatSection id="nav-contact">
       <h2>What can I create for you?</h2>
       <Fieldset disabled={formState.submitting}>
         <Form method="POST" onSubmit={handleSubmit}>

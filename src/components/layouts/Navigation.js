@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
+import {
+  internal as internalNav,
+  social as socialNav,
+} from '~content/navigation.json';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 
@@ -74,9 +79,12 @@ const MenuWrapper = styled.div`
   transform: ${({ isMenuOpen }) =>
     isMenuOpen ? 'translateX(-100%)' : 'translateX(0)'};
   transition: transform 250ms;
+  box-shadow: ${({ isMenuOpen }) =>
+    isMenuOpen ? '0 0.1rem 3rem hsla(0, 0%, 0%, 0.7)' : 'none'};
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     position: initial;
     width: initial;
+    box-shadow: none;
   }
 `;
 
@@ -209,40 +217,30 @@ const Navigation = () => {
       <MenuWrapper isMenuOpen={isMenuOpen}>
         <CloseMenu onClick={toggleMenu}>&times;</CloseMenu>
         <NavMenu>
+          {internalNav.map(({ linkTo, text }) => (
+            <li key={linkTo}>
+              <Link
+                to={linkTo}
+                spy={true}
+                smooth={true}
+                duration={600}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {text}
+              </Link>
+            </li>
+          ))}
           <li>
-            <a href="#">Work</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Let's Chat</a>
-          </li>
-          <li>
-            <a
-              href="https://www.facebook.com/andreasilva.design"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                relativePath="social-media-facebook-icon.png"
-                alt="Andrea Silva Design Facebook"
-                title="Andrea Silva Design Facebook"
-                transformations={transformationsFormat('w_40,h_40')}
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/andreasilva.design"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                relativePath="social-media-instagram-icon.png"
-                alt="Andrea Silva Design Instagram"
-                title="Andrea Silva Design Instagram"
-                transformations={transformationsFormat('w_40,h_40')}
-              />
-            </a>
+            {socialNav.map(({ href, image, alt }) => (
+              <a target="_blank" rel="noreferrer" href={href} key={image}>
+                <Image
+                  relativePath={image}
+                  alt={alt}
+                  title={alt}
+                  transformations={transformationsFormat('w_40,h_40')}
+                />
+              </a>
+            ))}
           </li>
         </NavMenu>
       </MenuWrapper>

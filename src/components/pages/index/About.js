@@ -87,7 +87,7 @@ const About = () => {
   const toggleReadMore = () => setIsReadMore(!isReadMore);
 
   return (
-    <AboutMe>
+    <AboutMe id="nav-about">
       <Image
         relativePath="andrea-silva-portrait.jpg"
         alt="Andrea Silva Portrait"

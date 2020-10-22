@@ -13,12 +13,14 @@ import { GlobalStyles } from '~styles/globalStyles';
 import { theme } from '~styles/theme';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
+import { BackToTop } from './BackToTop';
 
 const MainLayout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
+        <BackToTop />
         <Navigation />
         <main>{children}</main>
         <Footer />

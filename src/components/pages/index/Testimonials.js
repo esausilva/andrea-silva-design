@@ -96,10 +96,10 @@ const Testimonials = () => {
           </>
         )}
         <div ref={sliderRef} className="keen-slider">
-          {testimonialsData.map(content => (
-            <div className="keen-slider__slide" key={content.by}>
+          {testimonialsData.map(({ by, testimonial }) => (
+            <div className="keen-slider__slide" key={by}>
               <p>
-                {content.testimonial} <br /> <span>- {content.by}</span>
+                {testimonial} <br /> <span>- {by}</span>
               </p>
             </div>
           ))}

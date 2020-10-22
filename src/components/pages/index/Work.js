@@ -72,17 +72,17 @@ const WorkMedium = styled.div`
 
 const Work = () => {
   return (
-    <Portfolio>
-      {featuredImagesData.map(content => (
-        <WorkMedium key={content.image}>
+    <Portfolio id="nav-work">
+      {featuredImagesData.map(({ image, alt, slug, title }) => (
+        <WorkMedium key={image}>
           <Image
-            relativePath={content.image}
-            alt={content.alt}
-            title={content.alt}
+            relativePath={image}
+            alt={alt}
+            title={alt}
             transformations={transformationsFormat('w_1000')}
           />
-          <AniLink fade to={`/portfolio/${content.slug}`}>
-            <h1>{content.title}</h1>
+          <AniLink fade to={`/portfolio/${slug}`}>
+            <h1>{title}</h1>
           </AniLink>
         </WorkMedium>
       ))}

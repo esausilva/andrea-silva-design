@@ -1,0 +1,28 @@
+{
+  "internal": [
+    {
+      "text": "Work",
+      "linkTo": "nav-work"
+    },
+    {
+      "text": "About",
+      "linkTo": "nav-about"
+    },
+    {
+      "text": "Let's Chat",
+      "linkTo": "nav-contact"
+    }
+  ],
+  "social": [
+    {
+      "href": "https://www.facebook.com/andreasilva.design",
+      "image": "social-media-facebook-icon.png",
+      "alt": "Andrea Silva Design Facebook"
+    },
+    {
+      "href": "https://www.instagram.com/andreasilva.design",
+      "image": "social-media-instagram-icon.png",
+      "alt": "Andrea Silva Design Instagram"
+    }
+  ]
+}
