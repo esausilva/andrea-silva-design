@@ -103,7 +103,7 @@ const Hamburger = styled.button`
 
 const CloseMenu = styled.button`
   border: 0;
-  background: 0;
+  background: none;
   color: ${({ theme }) => theme.pink};
   font-size: 5rem;
   cursor: pointer;

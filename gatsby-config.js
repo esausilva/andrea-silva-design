@@ -45,6 +45,13 @@ module.exports = {
         username: process.env.INSTAGRAM_USERNAME_ID,
       },
     },
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'modal-portal',
+        id: 'modal-portal',
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-gtag`,
     //   options: {
