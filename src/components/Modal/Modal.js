@@ -5,6 +5,7 @@ import tinykeys from 'tinykeys';
 
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
+import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
 
 //#region Styles
 const ModalContainer = styled.div`

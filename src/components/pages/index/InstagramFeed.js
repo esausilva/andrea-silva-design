@@ -7,6 +7,7 @@ import { lighten } from 'polished';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ArrowLeft, ArrowRight } from '~svgs/Chevron';
+import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
 
 //#region Styles
 const imageDimensions = '20rem !important';
@@ -126,13 +127,6 @@ const Overlay = styled.span`
     font-size: 1.7rem;
   }
 `;
-
-const ArrowButton = styled.button`
-  padding: 0;
-  border: 0;
-  background: none;
-  outline: none;
-`;
 //#endregion
 
 const LEFT = 'left';
@@ -218,12 +212,12 @@ const InstagramFeed = () => {
             See More
           </LastSlide>
         </div>
-        <ArrowButton onClick={() => moveSlider(LEFT)}>
+        <ButtonSvgWrapper onClick={() => moveSlider(LEFT)}>
           <ArrowLeft />
-        </ArrowButton>
-        <ArrowButton onClick={() => moveSlider(RIGHT)}>
+        </ButtonSvgWrapper>
+        <ButtonSvgWrapper onClick={() => moveSlider(RIGHT)}>
           <ArrowRight />
-        </ArrowButton>
+        </ButtonSvgWrapper>
       </Slider>
     </Instagram>
   );

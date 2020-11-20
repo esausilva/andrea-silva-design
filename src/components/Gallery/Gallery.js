@@ -107,8 +107,6 @@ const Gallery = ({ data }) => {
   );
 };
 
-Gallery.defaultProps = {};
-
 Gallery.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({

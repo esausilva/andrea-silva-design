@@ -3,18 +3,14 @@ import styled from 'styled-components';
 import { animateScroll as scroll } from 'react-scroll';
 
 import { ArrowTickUpCircle } from '~svgs/ArrowTickUpCircle';
+import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
 
 //#region Styles
-const Button = styled.button`
+const Button = styled(ButtonSvgWrapper)`
   position: fixed;
   z-index: 1;
   right: 2rem;
   bottom: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  outline: none;
   z-index: 2;
   transition: all 500ms;
   opacity: ${({ show }) => (show ? '1' : '0')};

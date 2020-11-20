@@ -3,6 +3,7 @@ import { useKeenSlider } from 'keen-slider/react';
 import styled from 'styled-components';
 
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
+import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
 import testimonialsData from '~content/testimonials.json';
 
 import 'keen-slider/keen-slider.min.css';
@@ -49,17 +50,12 @@ const Dot = styled.button`
   border-radius: 50%;
   margin: 0 5px;
   padding: 5px;
-  cursor: pointer;
   &:focus {
     outline: none;
   }
 `;
 
-const ArrowButton = styled.button`
-  padding: 0;
-  border: 0;
-  background: none;
-  outline: none;
+const ArrowButton = styled(ButtonSvgWrapper)`
   align-self: center;
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     margin: -4rem 2rem 0 2rem;
