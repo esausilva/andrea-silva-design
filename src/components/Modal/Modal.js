@@ -6,6 +6,7 @@ import tinykeys from 'tinykeys';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
+import { ButtonSvgWrapper } from '~styles/ButtonSvgWrapper';
 
 //#region Styles
 const ModalContainer = styled.div`
@@ -68,11 +69,34 @@ const CloseModal = styled.button`
   position: absolute;
   right: 1rem;
   top: -1.5rem;
+  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+    font-size: 6rem;
+    top: -2.5rem;
+  }
+  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+    font-size: 7rem;
+    top: -3rem;
+  }
+`;
+
+const ArrowButtonBase = styled(ButtonSvgWrapper)`
+  position: absolute;
+  top: 45%;
+`;
+
+const ArrowButtonLeft = styled(ArrowButtonBase)`
+  margin-left: 2rem;
+`;
+
+const ArrowButtonRight = styled(ArrowButtonBase)`
+  right: 0;
+  margin-right: 2rem;
 `;
 //#endregion
 
 const Modal = ({ children, modalState, closeModal }) => {
   const { heading, blurb, portfolio } = children;
+  const chevronColor = '#474747';
 
   useEffect(() => {
     let body = document.querySelector('body');
@@ -98,6 +122,9 @@ const Modal = ({ children, modalState, closeModal }) => {
 
   return (
     <ModalContainer isOpen={modalState}>
+      <ArrowButtonLeft>
+        <ArrowLeft pathFill={chevronColor} />
+      </ArrowButtonLeft>
       <ModalBody>
         <CloseModal onClick={closeModal}>&times;</CloseModal>
         <h1>{heading}</h1>
@@ -112,6 +139,9 @@ const Modal = ({ children, modalState, closeModal }) => {
           />
         ))}
       </ModalBody>
+      <ArrowButtonRight>
+        <ArrowRight pathFill={chevronColor} />
+      </ArrowButtonRight>
     </ModalContainer>
   );
 };
