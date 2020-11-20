@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useKeenSlider } from 'keen-slider/react';
+import styled from 'styled-components';
 
-import { ArrowBase } from '~styles/ArrowBase';
-
+import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
 import testimonialsData from '~content/testimonials.json';
 
 import 'keen-slider/keen-slider.min.css';
@@ -35,25 +34,6 @@ const SliderWrapper = styled.div`
   }
 `;
 
-const Arrow = styled(ArrowBase)`
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    margin: 0 2rem;
-    width: 8rem;
-    height: 8rem;
-    circle {
-      fill: rgba(255, 255, 255, 0.6);
-    }
-    path {
-      fill: ${({ theme }) => theme.gray};
-    }
-  }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    margin-top: -2rem;
-    width: 10rem;
-    height: 10rem;
-  }
-`;
-
 const Dots = styled.div`
   display: flex;
   padding: 10px 0;
@@ -74,6 +54,20 @@ const Dot = styled.button`
     outline: none;
   }
 `;
+
+const ArrowButton = styled.button`
+  padding: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  align-self: center;
+  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+    margin: -4rem 2rem 0 2rem;
+  }
+  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+    margin-top: -4rem;
+  }
+`;
 //#endregion
 
 const Testimonials = () => {
@@ -91,9 +85,9 @@ const Testimonials = () => {
       <h2>What Andrea's Clients Say</h2>
       <SliderWrapper>
         {slider && (
-          <>
-            <ArrowLeft onClick={e => e.stopPropagation() || slider.prev()} />
-          </>
+          <ArrowButton onClick={e => e.stopPropagation() || slider.prev()}>
+            <ArrowLeft />
+          </ArrowButton>
         )}
         <div ref={sliderRef} className="keen-slider">
           {testimonialsData.map(({ by, testimonial }) => (
@@ -105,9 +99,9 @@ const Testimonials = () => {
           ))}
         </div>
         {slider && (
-          <>
-            <ArrowRight onClick={e => e.stopPropagation() || slider.next()} />
-          </>
+          <ArrowButton onClick={e => e.stopPropagation() || slider.next()}>
+            <ArrowRight />
+          </ArrowButton>
         )}
       </SliderWrapper>
       {slider && (
@@ -125,27 +119,5 @@ const Testimonials = () => {
     </TestimonialsSection>
   );
 };
-
-const ArrowLeft = ({ onClick }) => (
-  <Arrow
-    onClick={onClick}
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-  >
-    <circle cx="12" cy="12" r="10" />
-    <path d="M13.7 15.3a1 1 0 0 1-1.4 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 1.4L10.42 12l3.3 3.3z" />
-  </Arrow>
-);
-
-const ArrowRight = ({ onClick }) => (
-  <Arrow
-    onClick={onClick}
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-  >
-    <circle cx="12" cy="12" r="10" />
-    <path d="M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z" />
-  </Arrow>
-);
 
 export { Testimonials };
