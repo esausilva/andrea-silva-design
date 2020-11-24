@@ -7,6 +7,7 @@ import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
 import { ButtonSvgWrapper } from '~styles/ButtonSvgWrapper';
+import { FORWARD, BACKWARD } from '~components/Gallery/Gallery';
 
 //#region Styles
 const ModalContainer = styled.div`
@@ -94,7 +95,7 @@ const ArrowButtonRight = styled(ArrowButtonBase)`
 `;
 //#endregion
 
-const Modal = ({ children, modalState, closeModal }) => {
+const Modal = ({ children, modalState, closeModal, changeSlide }) => {
   const { heading, blurb, portfolio } = children;
   const chevronColor = '#474747';
 
@@ -113,6 +114,8 @@ const Modal = ({ children, modalState, closeModal }) => {
   useEffect(() => {
     let unsubscribe = tinykeys(window, {
       Escape: () => closeModal(),
+      ArrowLeft: () => changeSlide(BACKWARD),
+      ArrowRight: () => changeSlide(FORWARD),
     });
 
     return () => {
@@ -122,7 +125,7 @@ const Modal = ({ children, modalState, closeModal }) => {
 
   return (
     <ModalContainer isOpen={modalState}>
-      <ArrowButtonLeft>
+      <ArrowButtonLeft onClick={e => changeSlide(BACKWARD)}>
         <ArrowLeft pathFill={chevronColor} />
       </ArrowButtonLeft>
       <ModalBody>
@@ -139,7 +142,7 @@ const Modal = ({ children, modalState, closeModal }) => {
           />
         ))}
       </ModalBody>
-      <ArrowButtonRight>
+      <ArrowButtonRight onClick={e => changeSlide(FORWARD)}>
         <ArrowRight pathFill={chevronColor} />
       </ArrowButtonRight>
     </ModalContainer>
@@ -151,18 +154,21 @@ Modal.defaultProps = {
     heading: '',
     blurb: '',
     portfolio: [],
+    currentIndex: 0,
   },
   modalState: false,
 };
 
 Modal.propTypes = {
   children: PropTypes.shape({
-    heading: PropTypes.string,
+    heading: PropTypes.string.isRequired,
     blurb: PropTypes.string,
-    portfolio: PropTypes.arrayOf(PropTypes.string),
+    portfolio: PropTypes.arrayOf(PropTypes.string).isRequired,
+    currentIndex: PropTypes.number,
   }).isRequired,
   modalState: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  changeSlide: PropTypes.func.isRequired,
 };
 
 export { Modal };
