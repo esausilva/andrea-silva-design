@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import tinykeys from 'tinykeys';
+import Swipe from 'react-easy-swipe';
 
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
@@ -123,25 +124,35 @@ const Modal = ({ children, modalState, closeModal, changeSlide }) => {
     };
   });
 
+  const onSwipeLeft = () => changeSlide(FORWARD);
+
+  const onSwipeRight = () => changeSlide(BACKWARD);
+
   return (
     <ModalContainer isOpen={modalState}>
       <ArrowButtonLeft onClick={e => changeSlide(BACKWARD)}>
         <ArrowLeft pathFill={chevronColor} />
       </ArrowButtonLeft>
-      <ModalBody>
-        <CloseModal onClick={closeModal}>&times;</CloseModal>
-        <h1>{heading}</h1>
-        <p>{blurb}</p>
-        {portfolio.map((image, index) => (
-          <Image
-            key={image}
-            relativePath={image}
-            alt={`${heading} ${index + 1}`}
-            title={`${heading} ${index + 1}`}
-            transformations={transformationsFormat('w_1000')}
-          />
-        ))}
-      </ModalBody>
+      <Swipe
+        onSwipeLeft={onSwipeLeft}
+        onSwipeRight={onSwipeRight}
+        tolerance={100}
+      >
+        <ModalBody>
+          <CloseModal onClick={closeModal}>&times;</CloseModal>
+          <h1>{heading}</h1>
+          <p>{blurb}</p>
+          {portfolio.map((image, index) => (
+            <Image
+              key={image}
+              relativePath={image}
+              alt={`${heading} ${index + 1}`}
+              title={`${heading} ${index + 1}`}
+              transformations={transformationsFormat('w_1000')}
+            />
+          ))}
+        </ModalBody>
+      </Swipe>
       <ArrowButtonRight onClick={e => changeSlide(FORWARD)}>
         <ArrowRight pathFill={chevronColor} />
       </ArrowButtonRight>
