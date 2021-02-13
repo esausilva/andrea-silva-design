@@ -135,7 +135,7 @@ const RIGHT = 'right';
 const InstagramFeed = () => {
   //#region Queries
   const data = useStaticQuery(graphql`
-    query {
+    query InstagramFeed {
       grams: allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 15) {
         edges {
           node {
