@@ -6,7 +6,7 @@ import Masonry from 'react-masonry-css';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ZoomIn } from '~svgs/ZoomIn';
-import { ModalPortal, Modal } from '~components/Modal/index';
+import { Modal } from '~src/components/helpers/Modal';
 
 //#region Styles
 import '~styles/react-masonry-css.css';
@@ -119,15 +119,13 @@ const Gallery = ({ data }) => {
         ))}
       </Masonry>
       {isModalOpen && (
-        <ModalPortal>
-          <Modal
-            modalState={isModalOpen}
-            closeModal={toggleModal}
-            changeSlide={changeSlide}
-          >
-            {modalBodyState}
-          </Modal>
-        </ModalPortal>
+        <Modal
+          modalState={isModalOpen}
+          closeModal={toggleModal}
+          changeSlide={changeSlide}
+        >
+          {modalBodyState}
+        </Modal>
       )}
     </>
   );
