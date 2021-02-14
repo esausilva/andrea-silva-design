@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
 
 import {
   internal as internalNav,
   social as socialNav,
 } from '~content/navigation.json';
 import { Image } from '~helpers/Image';
+import { NavigationLink } from '~helpers/NavigationLink';
 import { transformationsFormat } from '~utils/index';
 
 //#region Styles
@@ -210,15 +210,11 @@ const Navigation = () => {
         <NavMenu>
           {internalNav.map(({ linkTo, text }) => (
             <li key={linkTo}>
-              <Link
-                to={linkTo}
-                spy={true}
-                smooth={true}
-                duration={600}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {text}
-              </Link>
+              <NavigationLink
+                linkTo={linkTo}
+                text={text}
+                setIsMenuOpen={setIsMenuOpen}
+              />
             </li>
           ))}
           <li>
