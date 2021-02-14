@@ -194,7 +194,7 @@ const InstagramFeed = () => {
                   )}`}
                 />
                 <Overlay>
-                  {caption.substring(0, 150)}... <span>View in Instagram</span>
+                  {caption.substring(0, 150)}... <span>View on Instagram</span>
                 </Overlay>
               </a>
             ),

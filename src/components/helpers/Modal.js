@@ -115,8 +115,8 @@ const Modal = ({ children, modalState, closeModal, changeSlide }) => {
   useEffect(() => {
     let unsubscribe = tinykeys(window, {
       Escape: () => closeModal(),
-      ArrowLeft: () => changeSlide(BACKWARD),
-      ArrowRight: () => changeSlide(FORWARD),
+      ArrowLeft: () => backward(),
+      ArrowRight: () => forward(),
     });
 
     return () => {
@@ -124,20 +124,15 @@ const Modal = ({ children, modalState, closeModal, changeSlide }) => {
     };
   });
 
-  const onSwipeLeft = () => changeSlide(FORWARD);
-
-  const onSwipeRight = () => changeSlide(BACKWARD);
+  const forward = () => changeSlide(FORWARD);
+  const backward = () => changeSlide(BACKWARD);
 
   return (
     <ModalContainer isOpen={modalState}>
-      <ArrowButtonLeft onClick={e => changeSlide(BACKWARD)}>
+      <ArrowButtonLeft onClick={e => backward()}>
         <ArrowLeft pathFill={chevronColor} />
       </ArrowButtonLeft>
-      <Swipe
-        onSwipeLeft={onSwipeLeft}
-        onSwipeRight={onSwipeRight}
-        tolerance={100}
-      >
+      <Swipe onSwipeLeft={forward} onSwipeRight={backward} tolerance={100}>
         <ModalBody>
           <CloseModal onClick={closeModal}>&times;</CloseModal>
           <h1>{heading}</h1>
@@ -153,7 +148,7 @@ const Modal = ({ children, modalState, closeModal, changeSlide }) => {
           ))}
         </ModalBody>
       </Swipe>
-      <ArrowButtonRight onClick={e => changeSlide(FORWARD)}>
+      <ArrowButtonRight onClick={e => forward()}>
         <ArrowRight pathFill={chevronColor} />
       </ArrowButtonRight>
     </ModalContainer>

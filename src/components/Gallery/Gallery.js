@@ -2,11 +2,14 @@ import React, { useState, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Masonry from 'react-masonry-css';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ZoomIn } from '~svgs/ZoomIn';
 import { Modal } from '~src/components/helpers/Modal';
+import { useMediaQuery } from '~src/hooks/useMediaQuery';
+import { theme } from '~styles/theme';
 
 //#region Styles
 import '~styles/react-masonry-css.css';
@@ -67,6 +70,7 @@ const Gallery = ({ data }) => {
     modalBodyReducer,
     initialModalBodyState,
   );
+  const isMobile = useMediaQuery(`(max-width: ${theme.breakMedium})`);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
@@ -78,6 +82,8 @@ const Gallery = ({ data }) => {
       currentIndex: index,
     });
     toggleModal();
+
+    if (isMobile) notify();
   };
 
   const changeSlide = direction => {
@@ -95,6 +101,20 @@ const Gallery = ({ data }) => {
       currentIndex: nextIndex,
     });
   };
+
+  const notify = () =>
+    toast(
+      <span>
+        <strong>←</strong> Swipe To See More <strong>→</strong>
+      </span>,
+      {
+        style: {
+          border: `1px solid ${theme.pink}`,
+          padding: '10px',
+          color: theme.pink,
+        },
+      },
+    );
 
   return (
     <>
@@ -127,6 +147,12 @@ const Gallery = ({ data }) => {
           {modalBodyState}
         </Modal>
       )}
+      <Toaster
+        position="top-left"
+        toastOptions={{
+          duration: 3000,
+        }}
+      />
     </>
   );
 };
