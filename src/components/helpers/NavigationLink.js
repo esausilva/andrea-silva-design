@@ -8,7 +8,7 @@ const NavigationLink = ({ linkTo, text, setIsMenuOpen }) => {
     window.location.pathname === '/' ? setIsRoot(true) : setIsRoot(false);
 
     return () => {};
-  }, [window.location]);
+  }, []);
 
   return (
     <>
