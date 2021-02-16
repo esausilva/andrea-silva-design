@@ -100,7 +100,7 @@ const LetsChatButton = styled.button`
   background: none;
   color: ${({ theme }) => lighten(0.1, theme.gray)};
   padding: 0.5rem 1rem;
-  transition: all 500ms;
+  transition: ${({ theme }) => theme.transform500ms};
   font-size: calc(${({ theme }) => theme.fontSize} + 0.2rem);
   margin-top: 0.7rem !important;
   &:hover {

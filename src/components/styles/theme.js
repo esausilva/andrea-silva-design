@@ -12,4 +12,5 @@ export const theme = {
   fontSizeMedium: '1.8rem',
   fontSizeLarge: '2rem',
   textShadow: '3px 3px 6px #333',
+  transform500ms: 'transform 500ms',
 };

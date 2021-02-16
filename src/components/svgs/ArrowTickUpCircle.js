@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Arrow = styled.svg`
   width: 6rem;
   height: 6rem;
-  transition: all 500ms;
+  transition: ${({ theme }) => theme.transform500ms};
   circle {
     fill: rgba(255, 255, 255, 0.8);
   }

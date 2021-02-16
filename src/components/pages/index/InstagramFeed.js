@@ -101,7 +101,7 @@ const GatsbyImage = styled(Img)`
 
 const Overlay = styled.span`
   opacity: 0;
-  transition: all 600ms;
+  transition: opacity 600ms;
   position: absolute;
   top: 0;
   height: 100%;

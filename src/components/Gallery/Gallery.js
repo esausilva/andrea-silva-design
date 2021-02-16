@@ -14,7 +14,7 @@ import { theme } from '~styles/theme';
 //#region Styles
 import '~styles/react-masonry-css.css';
 
-const transition = 'all 0.2s ease-in';
+const transition = '0.2s ease-in';
 
 const GalleryImageContainer = styled.figure`
   margin-bottom: -0.7rem;
@@ -31,7 +31,7 @@ const GalleryImageContainer = styled.figure`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: ${transition};
+    transition: filter ${transition};
   }
   svg {
     cursor: pointer;
@@ -42,7 +42,7 @@ const GalleryImageContainer = styled.figure`
     bottom: 0;
     right: 0;
     opacity: 0;
-    transition: ${transition};
+    transition: opacity ${transition};
   }
 `;
 //#endregion

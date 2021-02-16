@@ -12,7 +12,7 @@ const Button = styled(ButtonSvgWrapper)`
   right: 2rem;
   bottom: 1.5rem;
   z-index: 2;
-  transition: all 500ms;
+  transition: opacity 500ms, ${({ theme }) => theme.transform500ms};
   opacity: ${({ show }) => (show ? '1' : '0')};
   transform: ${({ show }) => (show ? 'rotate(360deg)' : 'rotate(180deg)')};
   @media (min-width: ${({ theme }) => theme.breakMedium}) {

@@ -41,7 +41,7 @@ const ReadMoreBlock = styled.div`
   overflow: hidden;
   max-height: ${({ isOpen }) => (isOpen ? '1500px' : '0')};
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-  transition: all 1500ms;
+  transition: opacity 1500ms, max-height 1500ms;
 `;
 
 const ReadMoreLink = styled.button`
@@ -56,7 +56,7 @@ const ReadMoreLink = styled.button`
     font-weight: bolder;
     display: inline-block;
     margin-left: 0.2rem;
-    transition: all 500ms;
+    transition: ${({ theme }) => theme.transform500ms};
     color: ${({ theme }) => theme.pink};
   }
   ${({ isOpen }) =>
