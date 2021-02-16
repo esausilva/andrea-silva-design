@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import { Link } from 'gatsby';
 
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
@@ -80,9 +80,9 @@ const Work = () => {
             title={alt}
             transformations={transformationsFormat('w_1000')}
           />
-          <AniLink fade to={`/portfolio/${slug}`}>
+          <Link to={`/portfolio/${slug}`}>
             <h1>{title}</h1>
-          </AniLink>
+          </Link>
         </WorkMedium>
       ))}
     </Portfolio>

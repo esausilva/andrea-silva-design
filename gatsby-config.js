@@ -1,5 +1,4 @@
 require('dotenv').config();
-const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -38,7 +37,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-instagram`,
       options: {
