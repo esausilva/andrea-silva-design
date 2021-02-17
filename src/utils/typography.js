@@ -11,6 +11,14 @@ const typography = new Typography({
       name: 'Bebas Neue',
       styles: ['400'],
     },
+    {
+      name: 'Libre Baskerville',
+      styles: ['400', '700'],
+    },
+    {
+      name: 'Montserrat',
+      styles: ['200', '300', '400', '500'],
+    },
   ],
 });
 

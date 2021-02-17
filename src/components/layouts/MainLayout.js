@@ -7,13 +7,24 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import { GlobalStyles } from '~styles/globalStyles';
 import { theme } from '~styles/theme';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 import { BackToTop } from './BackToTop';
+
+//#region Styles
+const Main = styled.main`
+  overflow-x: hidden;
+  max-width: 100%;
+  @media (min-width: ${theme.breakMedium}) {
+    overflow-x: initial;
+    max-width: initial;
+  }
+`;
+//#endregion
 
 const MainLayout = ({ children }) => {
   return (
@@ -22,7 +33,7 @@ const MainLayout = ({ children }) => {
         <GlobalStyles />
         <BackToTop />
         <Navigation />
-        <main>{children}</main>
+        <Main>{children}</Main>
         <Footer />
       </>
     </ThemeProvider>
