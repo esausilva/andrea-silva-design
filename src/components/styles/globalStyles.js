@@ -29,15 +29,16 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.fontHeading};
     text-transform: uppercase;
     letter-spacing: -0.1rem;
+    font-weight: 500;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 2.7rem;
   }
   h2 {
-    font-size: 4rem;
+    font-size: 2.2rem;
   }
   h3 {
-    font-size: 3.8rem;
+    font-size: 2rem;
   }
   a {
     text-decoration: none;
@@ -60,13 +61,13 @@ export const GlobalStyles = createGlobalStyle`
       font-size: ${theme.fontSizeMedium};
     }
     h1 {
-      font-size: 5.2rem;
+      font-size: 3.5rem;
     }
     h2 {
-      font-size: 6rem;
+      font-size: 3.7rem;
     }
     h3 {
-      font-size: 5.8rem;
+      font-size: 3.2rem;
     }
   }
   @media (min-width: ${theme.breakLarge}) { 
@@ -74,13 +75,13 @@ export const GlobalStyles = createGlobalStyle`
       font-size: ${theme.fontSizeLarge};
     }
     h1 {
-      font-size: 5.2rem;
+      font-size: 4rem;
     }
     h2 {
-      font-size: 8rem;
+      font-size: 4.2rem;
     }
     h3 {
-      font-size: 6rem;
+      font-size: 3.7rem;
     }
   }
 `;

@@ -19,7 +19,7 @@ import { BackToTop } from './BackToTop';
 const Main = styled.main`
   overflow-x: hidden;
   max-width: 100%;
-  @media (min-width: ${theme.breakMedium}) {
+  @media (min-width: ${theme.breakLarge}) {
     overflow-x: initial;
     max-width: initial;
   }

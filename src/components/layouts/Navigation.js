@@ -37,9 +37,13 @@ const NavBrand = styled.div`
   span {
     display: none;
   }
+  a {
+    color: #000;
+  }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     img {
       height: 12rem;
+      min-width: 84px;
       margin: 0 1em 0 2em;
     }
     span {
@@ -51,6 +55,7 @@ const NavBrand = styled.div`
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
     img {
       height: 17rem;
+      min-width: 116px;
       margin: 0 1em 0 3em;
     }
     span {
@@ -60,9 +65,10 @@ const NavBrand = styled.div`
 `;
 
 const MobileTitle = styled.span`
-  font-size: 2.6rem;
+  font-size: 3.4rem;
   text-align: center;
-  line-height: 2.8rem;
+  line-height: 3rem;
+  color: #000;
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     display: none;
   }
@@ -201,7 +207,9 @@ const Navigation = () => {
             transformations={transformationsFormat('h_180')}
           />
         </Link>
-        <span>Andrea Silva Design</span>
+        <Link to="/">
+          <span>Andrea Silva Design</span>
+        </Link>
       </NavBrand>
       <MobileTitle>Andrea Silva</MobileTitle>
       <Hamburger onClick={toggleMenu}>&#9776;</Hamburger>

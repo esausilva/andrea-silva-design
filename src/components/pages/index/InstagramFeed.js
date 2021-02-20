@@ -22,7 +22,6 @@ const Instagram = styled.section`
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     h3 {
-      text-align: left;
       margin-left: 2rem;
     }
   }

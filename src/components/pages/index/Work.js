@@ -50,6 +50,8 @@ const WorkMedium = styled.div`
   h1 {
     color: #fff;
     text-shadow: ${({ theme }) => theme.textShadow};
+    font-size: 3rem;
+    font-weight: 600;
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     a {
@@ -58,12 +60,12 @@ const WorkMedium = styled.div`
     }
     h1 {
       margin: 1.5rem;
-      font-size: 4.5rem;
+      font-size: 4rem;
     }
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
     h1 {
-      font-size: 5.2rem;
+      font-size: 5.5rem;
     }
   }
 `;

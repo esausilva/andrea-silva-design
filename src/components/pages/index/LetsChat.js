@@ -31,7 +31,7 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
-  font-size: calc(${({ theme }) => theme.fontSize} + 0.4rem);
+  font-size: calc(${({ theme }) => theme.fontSize} + 0.2rem);
   position: relative;
   label {
     margin: 0.25rem 0;
@@ -53,7 +53,7 @@ const Form = styled.form`
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     width: 70%;
-    font-size: calc(${({ theme }) => theme.fontSizeMedium} + 0.4rem);
+    font-size: calc(${({ theme }) => theme.fontSizeMedium} + 0.2rem);
     label {
       text-align: right;
       margin: 0.45rem 0.35rem 0.45rem 0;
@@ -61,7 +61,7 @@ const Form = styled.form`
     }
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    font-size: calc(${({ theme }) => theme.fontSizeLarge} + 0.4rem);
+    font-size: calc(${({ theme }) => theme.fontSizeLarge} + 0.2rem);
     label {
       width: 15%;
       margin: 0.65rem 0.55rem 0.65rem 0;
@@ -119,14 +119,14 @@ const LetsChatButton = styled.button`
 `;
 
 const Validation = styled(ValidationError)`
-  color: #333;
-  font-size: calc(${({ theme }) => theme.fontSize} - 0.2rem);
-  font-weight: bolder;
+  color: ${lighten(0.5, '#7c2626')};
+  font-size: calc(${({ theme }) => theme.fontSize} - 0.1rem);
+  font-weight: 500;
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    font-size: calc(${({ theme }) => theme.fontSizeMedium} - 0.2rem);
+    font-size: calc(${({ theme }) => theme.fontSizeMedium} - 0.1rem);
   }
   @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.2rem);
+    font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.1rem);
   }
 `;
 

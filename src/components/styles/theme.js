@@ -9,8 +9,8 @@ export const theme = {
   navHeightMedium: '15rem',
   navHeightLarge: '20rem',
   fontSize: '1.6rem',
-  fontSizeMedium: '1.8rem',
-  fontSizeLarge: '2rem',
-  textShadow: '3px 3px 6px #333',
+  fontSizeMedium: '1.7rem',
+  fontSizeLarge: '1.9rem',
+  textShadow: '3px 3px 6px #21130d',
   transform500ms: 'transform 500ms',
 };
