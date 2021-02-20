@@ -17,12 +17,8 @@ import { BackToTop } from './BackToTop';
 
 //#region Styles
 const Main = styled.main`
-  overflow-x: hidden;
+  overflow: hidden;
   max-width: 100%;
-  @media (min-width: ${theme.breakLarge}) {
-    overflow-x: initial;
-    max-width: initial;
-  }
 `;
 //#endregion
 
