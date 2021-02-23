@@ -1,0 +1,20 @@
+[
+  {
+    "thumb": "portfolio/motion-graphics/best-mom-ever.png",
+    "title": "Best Mom Ever",
+    "blurb": "1 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/best-mom-ever.png|portfolio/motion-graphics/best-mom-ever.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/artist-booth-logo.png",
+    "title": "Artist Booth",
+    "blurb": "2 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/artist-booth-logo.png|portfolio/motion-graphics/artist-booth-logo.mp4"
+    ]
+  }
+]

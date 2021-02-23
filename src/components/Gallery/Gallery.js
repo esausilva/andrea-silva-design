@@ -50,13 +50,18 @@ const GalleryImageContainer = styled.figure`
 const initialModalBodyState = {
   heading: '',
   blurb: '',
+  portfolioType: '',
   portfolio: [],
   currentIndex: 0,
 };
 
-const modalBodyReducer = (_, { heading, blurb, portfolio, currentIndex }) => ({
+const modalBodyReducer = (
+  _,
+  { heading, blurb, portfolioType, portfolio, currentIndex },
+) => ({
   heading,
   blurb,
+  portfolioType,
   portfolio,
   currentIndex,
 });
@@ -74,10 +79,17 @@ const Gallery = ({ data }) => {
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
-  const setModalBodyState = (heading, blurb, portfolio, index) => {
+  const setModalBodyState = (
+    heading,
+    blurb,
+    portfolioType,
+    portfolio,
+    index,
+  ) => {
     dispatchModalBodyState({
       heading,
       blurb,
+      portfolioType,
       portfolio,
       currentIndex: index,
     });
@@ -97,6 +109,7 @@ const Gallery = ({ data }) => {
     dispatchModalBodyState({
       heading: nextSlide.title,
       blurb: nextSlide.blurb,
+      portfolioType: nextSlide.portfolioType,
       portfolio: nextSlide.portfolio,
       currentIndex: nextIndex,
     });
@@ -119,24 +132,28 @@ const Gallery = ({ data }) => {
   return (
     <>
       <Masonry
-        breakpointCols={{ default: 6, 1186: 5, 910: 4, 700: 2, 500: 1 }}
+        breakpointCols={{ default: 5, 1186: 4, 910: 3, 700: 2, 500: 1 }}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {data.map(({ thumb, title, blurb, portfolio }, index) => (
-          <GalleryImageContainer
-            key={thumb}
-            onClick={e => setModalBodyState(title, blurb, portfolio, index)}
-          >
-            <Image
-              relativePath={thumb}
-              alt={title}
-              title={title}
-              transformations={transformationsFormat('w_300')}
-            />
-            <ZoomIn />
-          </GalleryImageContainer>
-        ))}
+        {data.map(
+          ({ thumb, title, blurb, portfolioType, portfolio }, index) => (
+            <GalleryImageContainer
+              key={thumb}
+              onClick={e =>
+                setModalBodyState(title, blurb, portfolioType, portfolio, index)
+              }
+            >
+              <Image
+                relativePath={thumb}
+                alt={title}
+                title={title}
+                transformations={transformationsFormat('w_300')}
+              />
+              <ZoomIn />
+            </GalleryImageContainer>
+          ),
+        )}
       </Masonry>
       {isModalOpen && (
         <Modal

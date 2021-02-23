@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import tinykeys from 'tinykeys';
 import Swipe from 'react-easy-swipe';
 
-import { Image } from '~helpers/Image';
-import { transformationsFormat } from '~utils/index';
+import { PortfolioSelector } from '~helpers/PortfolioSelector';
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
 import { ButtonSvgWrapper } from '~styles/ButtonSvgWrapper';
 import { FORWARD, BACKWARD } from '~components/Gallery/Gallery';
@@ -45,6 +44,9 @@ const ModalBody = styled.section`
   }
   img {
     align-self: center;
+  }
+  video {
+    width: 100%;
   }
   @media (min-width: ${({ theme }) => theme.breakMedium}) {
     width: 70%;
@@ -97,7 +99,7 @@ const ArrowButtonRight = styled(ArrowButtonBase)`
 //#endregion
 
 const Modal = ({ children, modalState, closeModal, changeSlide }) => {
-  const { heading, blurb, portfolio } = children;
+  const { heading, blurb, portfolioType, portfolio } = children;
   const chevronColor = '#474747';
 
   useEffect(() => {
@@ -137,15 +139,11 @@ const Modal = ({ children, modalState, closeModal, changeSlide }) => {
           <CloseModal onClick={closeModal}>&times;</CloseModal>
           <h1>{heading}</h1>
           <p>{blurb}</p>
-          {portfolio.map((image, index) => (
-            <Image
-              key={image}
-              relativePath={image}
-              alt={`${heading} ${index + 1}`}
-              title={`${heading} ${index + 1}`}
-              transformations={transformationsFormat('w_1000')}
-            />
-          ))}
+          <PortfolioSelector
+            type={portfolioType}
+            portfolio={portfolio}
+            heading={heading}
+          />
         </ModalBody>
       </Swipe>
       <ArrowButtonRight onClick={e => forward()}>
@@ -159,6 +157,7 @@ Modal.defaultProps = {
   children: {
     heading: '',
     blurb: '',
+    portfolioType: '',
     portfolio: [],
     currentIndex: 0,
   },
@@ -169,6 +168,7 @@ Modal.propTypes = {
   children: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     blurb: PropTypes.string,
+    portfolioType: PropTypes.string.isRequired,
     portfolio: PropTypes.arrayOf(PropTypes.string).isRequired,
     currentIndex: PropTypes.number,
   }).isRequired,
