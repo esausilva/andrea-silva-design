@@ -13,14 +13,18 @@ const Video = ({ relativePath }) => {
     });
   }, [relativePath]);
 
+  if (sources.video === '') return null;
+
   return (
     <video
       controls
+      disablePictureInPicture
+      controlsList="nodownload"
       poster={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_USER}/image/upload/f_auto,q_60,w_500/andrea-silva-design/${sources.thumb}`}
     >
       <source
         type="video/mp4"
-        src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_USER}/video/upload/andrea-silva-design/${sources.video}`}
+        src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_USER}/video/upload/f_auto/andrea-silva-design/${sources.video}`}
       />
       <p>
         Sorry, your browser doesn't support embedded videos.
