@@ -16,17 +16,17 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     height: 100%;
-    color: ${theme.fontMain};
+    color: ${theme.fonts.colorMain};
     background: #fff;
     letter-spacing: 0.07rem;
-    font-size: ${theme.fontSize};
+    font-size: ${theme.fonts.small};
   }
   h1,
   h2,
   h3 {
     margin: 0;
     padding: 0;
-    color: ${theme.fontHeading};
+    color: ${theme.fonts.colorHeading};
     text-transform: uppercase;
     letter-spacing: -0.1rem;
     font-weight: 500;
@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   a {
     text-decoration: none;
-    color: ${theme.pink};
+    color: ${theme.colors.pink};
     &:hover {
       text-decoration: underline;
     }
@@ -56,9 +56,9 @@ export const GlobalStyles = createGlobalStyle`
     display: grid;
     grid-template-rows: auto 1fr auto;
   }
-  @media (min-width: ${theme.breakMedium}) { 
+  @media (min-width: ${theme.media.medium}) { 
     body {
-      font-size: ${theme.fontSizeMedium};
+      font-size: ${theme.fonts.medium};
     }
     h1 {
       font-size: 3.5rem;
@@ -70,9 +70,9 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 3.2rem;
     }
   }
-  @media (min-width: ${theme.breakLarge}) { 
+  @media (min-width: ${theme.media.large}) { 
     body {
-      font-size: ${theme.fontSizeLarge};
+      font-size: ${theme.fonts.large};
     }
     h1 {
       font-size: 4rem;

@@ -48,14 +48,14 @@ const ModalBody = styled.section`
   video {
     width: 100%;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 70%;
     padding: 2rem;
     h1 {
       font-size: 4rem;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     h1 {
       font-size: 4.5rem;
     }
@@ -67,17 +67,17 @@ const CloseModal = styled.button`
   padding: 0;
   margin: 0;
   background: none;
-  color: ${({ theme }) => theme.pink};
+  color: ${({ theme }) => theme.colors.pink};
   font-size: 5rem;
   cursor: pointer;
   position: absolute;
   right: 1rem;
   top: -1.5rem;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     font-size: 6rem;
     top: -2.5rem;
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     font-size: 7rem;
     top: -3rem;
   }

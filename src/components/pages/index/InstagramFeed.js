@@ -20,7 +20,7 @@ const Instagram = styled.section`
   h3 {
     text-align: center;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     h3 {
       margin-left: 2rem;
     }
@@ -32,9 +32,9 @@ const SwipeInfo = styled.span`
   right: 0.8rem;
   z-index: 1;
   color: #fff;
-  text-shadow: ${({ theme }) => theme.textShadow};
+  text-shadow: ${({ theme }) => theme.fonts.textShadow};
   font-weight: bolder;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     display: none;
   }
 `;
@@ -53,10 +53,10 @@ const Slider = styled.div`
       position: relative;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     height: ${imageDimensionsMedium};
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     height: ${imageDimensionsLarge};
   }
 `;
@@ -70,11 +70,11 @@ const LastSlide = styled.a`
   align-items: center;
   background: ${lighten(0.2, '#000')};
   color: #fff;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     min-width: ${imageDimensionsMedium};
     min-height: ${imageDimensionsMedium};
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     min-width: ${imageDimensionsLarge};
     min-height: ${imageDimensionsLarge};
   }
@@ -88,11 +88,11 @@ const GatsbyImage = styled(Img)`
     width: 100%;
     height: 100%;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: ${imageDimensionsMedium};
     height: ${imageDimensionsMedium};
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     width: ${imageDimensionsLarge};
     height: ${imageDimensionsLarge};
   }
@@ -113,16 +113,16 @@ const Overlay = styled.span`
   justify-content: center;
   font-size: 1.3rem;
   span {
-    color: ${({ theme }) => theme.pink};
+    color: ${({ theme }) => theme.colors.pink};
     font-weight: bolder;
   }
   &:hover {
     opacity: 1;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     font-size: 1.5rem;
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     font-size: 1.7rem;
   }
 `;

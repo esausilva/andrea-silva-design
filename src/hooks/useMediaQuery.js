@@ -23,3 +23,5 @@ const useMediaQuery = query => {
 };
 
 export { useMediaQuery };
+
+// Source: https://www.netlify.com/blog/2020/12/05/building-a-custom-react-media-query-hook-for-more-responsive-apps

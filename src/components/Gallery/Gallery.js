@@ -75,7 +75,7 @@ const Gallery = ({ data }) => {
     modalBodyReducer,
     initialModalBodyState,
   );
-  const isMobile = useMediaQuery(`(max-width: ${theme.breakMedium})`);
+  const isMobile = useMediaQuery(`(max-width: ${theme.media.medium})`);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
@@ -122,9 +122,9 @@ const Gallery = ({ data }) => {
       </span>,
       {
         style: {
-          border: `1px solid ${theme.pink}`,
+          border: `1px solid ${theme.colors.pink}`,
           padding: '10px',
-          color: theme.pink,
+          color: theme.colors.pink,
         },
       },
     );

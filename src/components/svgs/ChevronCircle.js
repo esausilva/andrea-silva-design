@@ -6,7 +6,7 @@ import { ArrowBase } from '~styles/ArrowBase';
 
 //#region Styles
 const Arrow = styled(ArrowBase)`
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 8rem;
     height: 8rem;
     circle {
@@ -14,10 +14,10 @@ const Arrow = styled(ArrowBase)`
     }
     path {
       fill: ${({ theme, pathFill }) =>
-        pathFill === '' ? theme.gray : pathFill};
+        pathFill === '' ? theme.colors.gray : pathFill};
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     width: 10rem;
     height: 10rem;
   }

@@ -7,7 +7,7 @@ import { transformationsFormat } from '~utils';
 //#region Styles
 const FooterTag = styled.footer`
   grid-row: 3 / -1;
-  background: ${({ theme }) => theme.gray};
+  background: ${({ theme }) => theme.colors.gray};
   height: 13rem;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ const FooterTag = styled.footer`
     margin: 0;
     padding: 0;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     height: 17rem;
     font-size: inherit;
     img {

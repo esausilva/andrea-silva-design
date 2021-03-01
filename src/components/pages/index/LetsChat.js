@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { lighten } from 'polished';
+import { lighten, cssVar } from 'polished';
 import { useForm, ValidationError } from '@formspree/react';
 
 import { FountainLoading } from '~svgs/FountainLoading';
@@ -10,7 +10,7 @@ const sharedFormElementsWidthMedium = '82%';
 const sharedFormElementsWidthLarge = '85%';
 
 const LetsChatSection = styled.section`
-  background: ${({ theme }) => theme.pink};
+  background: ${({ theme }) => theme.colors.pink};
   padding: 2rem;
   h2 {
     text-align: center;
@@ -21,7 +21,7 @@ const Fieldset = styled.fieldset`
   width: 100%;
   border: 0;
   margin-bottom: 0;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     display: flex;
     justify-content: center;
   }
@@ -31,12 +31,12 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
-  font-size: calc(${({ theme }) => theme.fontSize} + 0.2rem);
+  font-size: calc(${({ theme }) => theme.fonts.small} + 0.2rem);
   position: relative;
   label {
     margin: 0.25rem 0;
     font-weight: bolder;
-    color: ${({ theme }) => theme.gray};
+    color: ${({ theme }) => theme.colors.gray};
   }
   input,
   textarea {
@@ -51,17 +51,17 @@ const Form = styled.form`
       box-shadow: 0 0 0.23rem 0.23rem #17a2b8;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 70%;
-    font-size: calc(${({ theme }) => theme.fontSizeMedium} + 0.2rem);
+    font-size: calc(${({ theme }) => theme.fonts.medium} + 0.2rem);
     label {
       text-align: right;
       margin: 0.45rem 0.35rem 0.45rem 0;
       width: 18%;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    font-size: calc(${({ theme }) => theme.fontSizeLarge} + 0.2rem);
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    font-size: calc(${({ theme }) => theme.fonts.large} + 0.2rem);
     label {
       width: 15%;
       margin: 0.65rem 0.55rem 0.65rem 0;
@@ -72,11 +72,11 @@ const Form = styled.form`
 const InputColumn = styled.div`
   width: 100%;
   margin: 0.25rem 0;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: ${sharedFormElementsWidthMedium};
     margin: 0.45rem 0 0.45rem 0.55rem;
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     width: ${sharedFormElementsWidthLarge};
     margin: 0.65rem 0 0.65rem 0.55rem;
   }
@@ -86,47 +86,47 @@ const FormRow = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     align-items: center;
     flex-direction: row;
   }
 `;
 
 const LetsChatButton = styled.button`
-  border: 1px solid ${({ theme }) => theme.gray};
+  border: 1px solid ${({ theme }) => theme.colors.gray};
   border-radius: 0.5rem;
   box-shadow: 0 0.1rem 0.3rem hsla(0, 0%, 0%, 0.3);
   cursor: pointer;
   background: none;
-  color: ${({ theme }) => lighten(0.1, theme.gray)};
+  color: ${({ theme }) => lighten(0.1, cssVar('--gray'))};
   padding: 0.5rem 1rem;
-  transition: ${({ theme }) => theme.transform500ms};
-  font-size: calc(${({ theme }) => theme.fontSize} + 0.2rem);
+  transition: ${({ theme }) => theme.animations.transform500ms};
+  font-size: calc(${({ theme }) => theme.fonts.small} + 0.2rem);
   margin-top: 0.7rem !important;
   &:hover {
     transform: scale(1.02);
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     align-self: flex-end;
     width: ${sharedFormElementsWidthMedium};
     margin: 0;
-    font-size: calc(${({ theme }) => theme.fontSizeMedium} + 0.3rem);
+    font-size: calc(${({ theme }) => theme.fonts.medium} + 0.3rem);
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     width: ${sharedFormElementsWidthLarge};
-    font-size: calc(${({ theme }) => theme.fontSizeLarge} + 0.3rem);
+    font-size: calc(${({ theme }) => theme.fonts.large} + 0.3rem);
   }
 `;
 
 const Validation = styled(ValidationError)`
   color: ${lighten(0.5, '#7c2626')};
-  font-size: calc(${({ theme }) => theme.fontSize} - 0.1rem);
+  font-size: calc(${({ theme }) => theme.fonts.small} - 0.1rem);
   font-weight: 500;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    font-size: calc(${({ theme }) => theme.fontSizeMedium} - 0.1rem);
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    font-size: calc(${({ theme }) => theme.fonts.medium} - 0.1rem);
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.1rem);
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    font-size: calc(${({ theme }) => theme.fonts.large} - 0.1rem);
   }
 `;
 

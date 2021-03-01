@@ -11,12 +11,12 @@ import 'keen-slider/keen-slider.min.css';
 //#region Styles
 const TestimonialsSection = styled.section`
   padding: 2rem;
-  background: ${({ theme }) => theme.gray};
+  background: ${({ theme }) => theme.colors.gray};
   h2 {
     text-align: center;
     margin-bottom: 2rem;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     padding: 4rem 2rem;
   }
 `;
@@ -28,7 +28,7 @@ const SliderWrapper = styled.div`
     font-weight: bolder;
     font-style: italic;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     div {
       width: 70%;
     }
@@ -57,10 +57,10 @@ const Dot = styled.button`
 
 const ArrowButton = styled(ButtonSvgWrapper)`
   align-self: center;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     margin: -4rem 2rem 0 2rem;
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     margin-top: -4rem;
   }
 `;

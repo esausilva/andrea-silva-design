@@ -1,16 +1,26 @@
 export const theme = {
-  fontColorMain: '#181818',
-  fontColorHeading: '#141414',
-  pink: '#954C4C',
-  gray: '#CECECE',
-  breakMedium: '824px',
-  breakLarge: '1186px',
-  navHeight: '10rem',
-  navHeightMedium: '15rem',
-  navHeightLarge: '20rem',
-  fontSize: '1.6rem',
-  fontSizeMedium: '1.7rem',
-  fontSizeLarge: '1.9rem',
-  textShadow: '3px 3px 6px #21130d',
-  transform500ms: 'transform 500ms',
+  fonts: {
+    colorMain: 'var(--font-color-main)',
+    colorHeading: 'var(--font-color-heading)',
+    small: 'var(--font-size)',
+    medium: 'var(--font-size-medium)',
+    large: 'var(--font-size-large)',
+    textShadow: 'var(--text-shadow)',
+  },
+  colors: {
+    pink: 'var(--pink)',
+    gray: 'var(--gray)',
+  },
+  nav: {
+    small: 'var(--nav-height)',
+    medium: 'var(--nav-height-medium)',
+    large: 'var(--nav-height-large)',
+  },
+  media: {
+    medium: '824px',
+    large: '1186px',
+  },
+  animations: {
+    transform500ms: 'var(--transform-500-ms)',
+  },
 };

@@ -5,7 +5,7 @@ import { ArrowBase } from '~styles/ArrowBase';
 
 //#region Styles
 const Arrow = styled(ArrowBase)`
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     filter: drop-shadow(0px 6px 6px #000);
     position: absolute;
     top: 30%;
@@ -13,7 +13,7 @@ const Arrow = styled(ArrowBase)`
     height: 13rem;
     fill: rgba(255, 255, 255, 0.7);
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     width: 15rem;
     height: 15rem;
   }

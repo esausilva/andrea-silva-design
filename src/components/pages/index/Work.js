@@ -8,16 +8,16 @@ import featuredImagesData from '~content/featuredImages.json';
 
 //#region Styles
 const Portfolio = styled.section`
-  height: ${({ theme }) => `calc(100vh - ${theme.navHeight})`};
+  height: ${({ theme }) => `calc(100vh - ${theme.nav.small})`};
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    height: ${({ theme }) => `calc(100vh - ${theme.navHeightMedium})`};
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    height: ${({ theme }) => `calc(100vh - ${theme.nav.medium})`};
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    height: ${({ theme }) => `calc(100vh - ${theme.navHeightLarge})`};
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    height: ${({ theme }) => `calc(100vh - ${theme.nav.large})`};
   }
 `;
 
@@ -49,11 +49,11 @@ const WorkMedium = styled.div`
   }
   h1 {
     color: #fff;
-    text-shadow: ${({ theme }) => theme.textShadow};
+    text-shadow: ${({ theme }) => theme.fonts.textShadow};
     font-size: 3rem;
     font-weight: 600;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     a {
       justify-content: start;
       align-items: flex-end;
@@ -63,7 +63,7 @@ const WorkMedium = styled.div`
       font-size: 4rem;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     h1 {
       font-size: 5.5rem;
     }

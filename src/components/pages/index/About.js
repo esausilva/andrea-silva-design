@@ -19,7 +19,7 @@ const AboutMe = styled.section`
     align-items: center;
     justify-content: center;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     grid-template-columns: 350px 1fr;
     padding: 4rem 2rem;
     img {
@@ -29,7 +29,7 @@ const AboutMe = styled.section`
       align-items: start;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     grid-template-columns: 550px 1fr;
     img {
       width: 40rem;
@@ -48,16 +48,16 @@ const ReadMoreLink = styled.button`
   background: none;
   border: none;
   font-weight: bolder;
-  font-size: calc(${({ theme }) => theme.fontSize} - 0.3rem);
-  color: ${({ theme }) => theme.pink};
+  font-size: calc(${({ theme }) => theme.fonts.small} - 0.3rem);
+  color: ${({ theme }) => theme.colors.pink};
   cursor: pointer;
   &:after {
-    font-size: calc(${({ theme }) => theme.fontSize} - 0.4rem);
+    font-size: calc(${({ theme }) => theme.fonts.small} - 0.4rem);
     font-weight: bolder;
     display: inline-block;
     margin-left: 0.2rem;
-    transition: ${({ theme }) => theme.transform500ms};
-    color: ${({ theme }) => theme.pink};
+    transition: ${({ theme }) => theme.animations.transform500ms};
+    color: ${({ theme }) => theme.colors.pink};
   }
   ${({ isOpen }) =>
     isOpen
@@ -69,14 +69,14 @@ const ReadMoreLink = styled.button`
   &:hover {
     text-decoration: underline;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    font-size: calc(${({ theme }) => theme.fontSizeMedium} - 0.3rem);
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    font-size: calc(${({ theme }) => theme.fonts.medium} - 0.3rem);
     &:after {
-      font-size: calc(${({ theme }) => theme.fontSize} - 0.3rem);
+      font-size: calc(${({ theme }) => theme.fonts.small} - 0.3rem);
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    font-size: calc(${({ theme }) => theme.fontSizeLarge} - 0.3rem);
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    font-size: calc(${({ theme }) => theme.fonts.large} - 0.3rem);
   }
 `;
 //#endregion ▼

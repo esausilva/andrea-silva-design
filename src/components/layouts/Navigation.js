@@ -14,16 +14,16 @@ import { transformationsFormat } from '~utils/index';
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  height: ${({ theme }) => theme.navHeight};
+  height: ${({ theme }) => theme.nav.small};
   align-items: center;
   font-weight: 400;
   z-index: 2;
   position: relative;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
-    height: ${({ theme }) => theme.navHeightMedium};
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    height: ${({ theme }) => theme.nav.medium};
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
-    height: ${({ theme }) => theme.navHeightLarge};
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    height: ${({ theme }) => theme.nav.large};
   }
 `;
 
@@ -40,7 +40,7 @@ const NavBrand = styled.div`
   a {
     color: #000;
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     img {
       height: 12rem;
       min-width: 84px;
@@ -52,7 +52,7 @@ const NavBrand = styled.div`
       line-height: 3.8rem;
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     img {
       height: 17rem;
       min-width: 116px;
@@ -69,7 +69,7 @@ const MobileTitle = styled.span`
   text-align: center;
   line-height: 3rem;
   color: #000;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     display: none;
   }
 `;
@@ -87,7 +87,7 @@ const MenuWrapper = styled.div`
   transition: transform 250ms;
   box-shadow: ${({ isMenuOpen }) =>
     isMenuOpen ? '0 0.1rem 3rem hsla(0, 0%, 0%, 0.7)' : 'none'};
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     position: initial;
     width: initial;
     box-shadow: none;
@@ -102,7 +102,7 @@ const Hamburger = styled.button`
   padding: 0.5em;
   font-size: 2em;
   display: inline-block;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     display: none;
   }
 `;
@@ -110,14 +110,14 @@ const Hamburger = styled.button`
 const CloseMenu = styled.button`
   border: 0;
   background: none;
-  color: ${({ theme }) => theme.pink};
+  color: ${({ theme }) => theme.colors.pink};
   font-size: 5rem;
   cursor: pointer;
   padding: 0;
   margin: -1rem 0 0 1rem;
   position: absolute;
   display: inline-block;
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     display: none;
   }
 `;
@@ -143,7 +143,7 @@ const NavMenu = styled.ul`
       }
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     flex-direction: row;
     margin: 0;
     li {
@@ -154,7 +154,7 @@ const NavMenu = styled.ul`
         padding: 0.4rem 0 0.6rem 0;
       }
       a:hover {
-        color: ${({ theme }) => theme.pink};
+        color: ${({ theme }) => theme.colors.pink};
         text-decoration: none;
         text-shadow: 1px 1px 5px rgba(51, 51, 51, 0.2);
       }
@@ -173,7 +173,7 @@ const NavMenu = styled.ul`
       }
     }
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     li {
       font-size: 3.5rem;
       margin: 0 1.5rem 0 1.5rem;

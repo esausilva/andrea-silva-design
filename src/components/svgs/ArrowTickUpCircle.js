@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Arrow = styled.svg`
   width: 6rem;
   height: 6rem;
-  transition: ${({ theme }) => theme.transform500ms};
+  transition: ${({ theme }) => theme.animations.transform500ms};
   circle {
     fill: rgba(255, 255, 255, 0.8);
   }
@@ -21,11 +21,11 @@ const Arrow = styled.svg`
     }
     transform: scale(1.2);
   }
-  @media (min-width: ${({ theme }) => theme.breakMedium}) {
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 8rem;
     height: 8rem;
   }
-  @media (min-width: ${({ theme }) => theme.breakLarge}) {
+  @media (min-width: ${({ theme }) => theme.media.large}) {
     width: 10rem;
     height: 10rem;
   }
