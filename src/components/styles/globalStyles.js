@@ -1,8 +1,22 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 
-import { theme } from './theme';
+import { theme, gray } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
+  :root {
+    --pink: #954c4c;
+    --gray: ${gray};
+    --nav-height: 10rem;
+    --nav-height-medium: 15rem;
+    --nav-height-large: 20rem;
+    --font-color-main: #181818;
+    --font-color-heading: #141414;
+    --font-size: 1.6rem;
+    --font-size-medium: 1.7rem;
+    --font-size-large: 1.9rem;
+    --text-shadow: 3px 3px 6px #21130d;
+    --transform-500-ms: transform 500ms;
+  }
   html {
     height: 100%;
     overflow-x: hidden;

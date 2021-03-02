@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { lighten, cssVar } from 'polished';
+import { lighten } from 'polished';
 import { useForm, ValidationError } from '@formspree/react';
 
 import { FountainLoading } from '~svgs/FountainLoading';
+import { gray } from '~styles/theme';
 
 //#region Styles
 const sharedFormElementsWidthMedium = '82%';
@@ -98,7 +99,7 @@ const LetsChatButton = styled.button`
   box-shadow: 0 0.1rem 0.3rem hsla(0, 0%, 0%, 0.3);
   cursor: pointer;
   background: none;
-  color: ${({ theme }) => lighten(0.1, cssVar('--gray'))};
+  color: ${lighten(0.1, gray)};
   padding: 0.5rem 1rem;
   transition: ${({ theme }) => theme.animations.transform500ms};
   font-size: calc(${({ theme }) => theme.fonts.small} + 0.2rem);

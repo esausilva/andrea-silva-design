@@ -1,3 +1,5 @@
+export const gray = '#cecece';
+
 export const theme = {
   fonts: {
     colorMain: 'var(--font-color-main)',
