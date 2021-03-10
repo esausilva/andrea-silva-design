@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Img from 'gatsby-image';
+import { GatsbyImage as Img } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { lighten } from 'polished';
@@ -39,25 +39,26 @@ const SwipeInfo = styled.span`
   }
 `;
 
-const Slider = styled.div`
+const SliderWrapper = styled.div`
   height: ${imageDimensions};
   overflow: hidden;
   position: relative;
-  div {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    padding-bottom: 20px;
-    a {
-      position: relative;
-    }
-  }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     height: ${imageDimensionsMedium};
   }
   @media (min-width: ${({ theme }) => theme.media.large}) {
     height: ${imageDimensionsLarge};
+  }
+`;
+
+const Slider = styled.div`
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+  a {
+    position: relative;
   }
 `;
 
@@ -143,9 +144,7 @@ const InstagramFeed = () => {
             timestamp
             localFile {
               childImageSharp {
-                fixed(width: 350, height: 350) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(width: 350, height: 350, layout: FIXED)
               }
             }
           }
@@ -174,8 +173,8 @@ const InstagramFeed = () => {
     <Instagram>
       <h3>Follow Me On Instagram</h3>
       <SwipeInfo aria-hidden="true">← Swipe →</SwipeInfo>
-      <Slider>
-        <div ref={sliderRef}>
+      <SliderWrapper>
+        <Slider ref={sliderRef}>
           {data.grams.edges.map(
             ({ node: { id, localFile, timestamp, caption } }) => (
               <a
@@ -185,8 +184,7 @@ const InstagramFeed = () => {
                 key={timestamp}
               >
                 <GatsbyImage
-                  Tag="span"
-                  fixed={localFile.childImageSharp.fixed}
+                  image={localFile.childImageSharp.gatsbyImageData}
                   loading="lazy"
                   alt={`Instagram photo by Andrea Silva Design on ${LongDateFromUnix(
                     timestamp,
@@ -210,14 +208,14 @@ const InstagramFeed = () => {
             />
             See More
           </LastSlide>
-        </div>
+        </Slider>
         <ButtonSvgWrapper onClick={() => moveSlider(LEFT)}>
           <ArrowLeft />
         </ButtonSvgWrapper>
         <ButtonSvgWrapper onClick={() => moveSlider(RIGHT)}>
           <ArrowRight />
         </ButtonSvgWrapper>
-      </Slider>
+      </SliderWrapper>
     </Instagram>
   );
 };
