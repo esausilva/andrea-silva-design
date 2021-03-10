@@ -13,7 +13,7 @@ const Title = styled.h1`
 //#endregion
 
 const GraphicDesign = () => (
-  <MainLayout>
+  <MainLayout pageTitle="Graphic Design" pathName="portfolio/graphic-design">
     <Title>Graphic Design</Title>
     <Gallery data={graphicDesignData} />
   </MainLayout>

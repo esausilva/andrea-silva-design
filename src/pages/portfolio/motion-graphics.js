@@ -14,7 +14,10 @@ const Title = styled.h1`
 
 const MotionGraphics = () => {
   return (
-    <MainLayout>
+    <MainLayout
+      pageTitle="Motion Graphics"
+      pathName="portfolio/motion-graphics"
+    >
       <Title>Motion Graphics</Title>
       <Gallery data={motionGraphics} />
     </MainLayout>

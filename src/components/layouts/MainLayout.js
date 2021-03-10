@@ -9,6 +9,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
+import { SEO } from '~helpers/SEO';
 import { GlobalStyles } from '~styles/globalStyles';
 import { theme } from '~styles/theme';
 import { Navigation } from './Navigation';
@@ -22,10 +23,11 @@ const Main = styled.main`
 `;
 //#endregion
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children, pageTitle, pathName }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
+        {/* <SEO title={pageTitle} pathName={pathName} /> */}
         <GlobalStyles />
         <BackToTop />
         <Navigation />
@@ -38,6 +40,13 @@ const MainLayout = ({ children }) => {
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  pageTitle: PropTypes.string,
+  pathName: PropTypes.string,
+};
+
+MainLayout.defaultProps = {
+  pageTitle: '',
+  pathName: '',
 };
 
 export { MainLayout };

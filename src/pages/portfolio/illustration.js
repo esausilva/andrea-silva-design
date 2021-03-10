@@ -4,7 +4,7 @@ import { MainLayout } from '~components/layouts/MainLayout';
 
 const Illustration = () => {
   return (
-    <MainLayout>
+    <MainLayout pageTitle="Illustration" pathName="portfolio/illustration">
       <h1>Illustration</h1>
     </MainLayout>
   );

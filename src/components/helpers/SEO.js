@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title, pathname }) {
+function SEO({ description, lang, meta, title, pathName }) {
   const { site, socialCard } = useStaticQuery(
     graphql`
       query {
@@ -36,8 +36,8 @@ function SEO({ description, lang, meta, title, pathname }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const canonical = pathname
-    ? `${site.siteMetadata.siteUrl}/${pathname}`
+  const canonical = pathName
+    ? `${site.siteMetadata.siteUrl}/${pathName}`
     : site.siteMetadata.siteUrl;
 
   return (
@@ -64,7 +64,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `${title} - ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -104,7 +104,7 @@ function SEO({ description, lang, meta, title, pathname }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `${title} - ${site.siteMetadata.title}`,
         },
         {
           name: `twitter:description`,

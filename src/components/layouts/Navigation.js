@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-import {
-  internal as internalNav,
-  social as socialNav,
-} from '~content/navigation.json';
+import navigationData from '~content/navigation.json';
 import { Image } from '~helpers/Image';
 import { NavigationLink } from '~helpers/NavigationLink';
 import { transformationsFormat } from '~utils/index';
@@ -216,7 +213,7 @@ const Navigation = () => {
       <MenuWrapper isMenuOpen={isMenuOpen}>
         <CloseMenu onClick={toggleMenu}>&times;</CloseMenu>
         <NavMenu>
-          {internalNav.map(({ linkTo, text }) => (
+          {navigationData.internal.map(({ linkTo, text }) => (
             <li key={linkTo}>
               <NavigationLink
                 linkTo={linkTo}
@@ -226,7 +223,7 @@ const Navigation = () => {
             </li>
           ))}
           <li>
-            {socialNav.map(({ href, image, alt }) => (
+            {navigationData.social.map(({ href, image, alt }) => (
               <a target="_blank" rel="noreferrer" href={href} key={image}>
                 <Image
                   relativePath={image}
