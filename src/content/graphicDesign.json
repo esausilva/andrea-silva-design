@@ -1,183 +1,165 @@
 [
   {
-    "thumb": "portfolio/graphic-design/camp-loma-de-vida.jpg",
-    "title": "Camp Loma De Vida Brochure",
-    "blurb": "1 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/camp-loma-de-vida.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/kjil-morning-rewind-1.jpg",
-    "title": "KJIL Morning Rewind",
-    "blurb": "2 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/kjil-morning-rewind-1.jpg",
-      "portfolio/graphic-design/kjil-morning-rewind-2.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/notes-from-the-violin-case.jpg",
-    "title": "Notes from the Violin Case - Jaime Jorge",
-    "blurb": "3 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/notes-from-the-violin-case.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/kvmv-retractable-banners.jpg",
-    "title": "KVMV Retractable Banners",
-    "blurb": "4 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/kvmv-retractable-banners.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/kjil-car-wrap.jpg",
-    "title": "KJIL Car Wrap",
-    "blurb": "5 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/kjil-car-wrap.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/khym-logo-1.jpg",
-    "title": "KHYM Logo",
-    "blurb": "6 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/khym-logo-1.jpg",
-      "portfolio/graphic-design/khym-logo-2.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/kvmv-christmas.jpg",
-    "title": "KVMV Christmas",
-    "blurb": "7 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/kvmv-christmas.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/kjil-tshirt-red-2.jpg",
-    "title": "JKIL T-Shirt - Red",
-    "blurb": "8 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/kjil-tshirt-red-1.jpg",
-      "portfolio/graphic-design/kjil-tshirt-red-2.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/munoz-photography-brochure.jpg",
-    "title": "Munoz Photography Brochure",
-    "blurb": "9 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/munoz-photography-brochure.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/kjil-tshirt-pink-1.jpg",
-    "title": "JKIL T-Shirt - Pink",
-    "blurb": "10 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/kjil-tshirt-pink-1.jpg",
-      "portfolio/graphic-design/kjil-tshirt-pink-2.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/pull-forward-logo.jpg",
-    "title": "Pull Forward Logo",
-    "blurb": "11 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/pull-forward-logo.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/tabor-tshirt.jpg",
-    "title": "Tabor T-Shirt",
-    "blurb": "12 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/tabor-tshirt.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/thanksgiving-card-kvmv.jpg",
-    "title": "Thanksgiving Card KVMV",
-    "blurb": "13 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/thanksgiving-card-kvmv.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/lifes-a-zoo-invitation.jpg",
-    "title": "Life's a Zoo Invitation Card",
-    "blurb": "14 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
-    "portfolioType": "image",
-    "portfolio": [
-      "portfolio/graphic-design/lifes-a-zoo-invitation.jpg"
-    ]
-  },
-  {
-    "thumb": "portfolio/graphic-design/adornments-2.jpg",
+    "thumb": "portfolio/graphic-design/adornments-logo-design-andrea-silva-1.jpg",
     "title": "Adornments Logo",
-    "blurb": "15 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "blurb": "I designed this logo for an independent jewelry designer who specializes in hand-made, one-of-kind jewelry pieces.",
     "portfolioType": "image",
     "portfolio": [
-      "portfolio/graphic-design/adornments-1.jpg",
-      "portfolio/graphic-design/adornments-2.jpg",
-      "portfolio/graphic-design/adornments-3.jpg"
+      "portfolio/graphic-design/adornments-logo-design-andrea-silva-1.jpg",
+      "portfolio/graphic-design/adornments-logo-design-andrea-silva-2.jpg",
+      "portfolio/graphic-design/adornments-logo-design-andrea-silva-3.jpg"
     ]
   },
   {
-    "thumb": "portfolio/graphic-design/pt-cruiser-car-wrap.jpg",
-    "title": "PT Cruiser Car Wrap",
-    "blurb": "16 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "thumb": "portfolio/graphic-design/cldv-brochure-design-andrea-silva.jpg",
+    "title": "Camp Loma de Vida brochure",
+    "blurb": "I designed a multi-page promotional magazine for Camp Loma de Vida, a Christian camp in Edinburg, Texas.",
     "portfolioType": "image",
     "portfolio": [
-      "portfolio/graphic-design/pt-cruiser-car-wrap.jpg"
+      "portfolio/graphic-design/cldv-brochure-design-andrea-silva.jpg"
     ]
   },
   {
-    "thumb": "portfolio/graphic-design/ebenfeld-friends.jpg",
+    "thumb": "portfolio/graphic-design/dkco-brochure-design-andrea-silva-1.jpg",
+    "title": "Dickinson County Historical Society Brochure",
+    "blurb": "The Dickinson County Historical Society in Abilene, Kansas needed a brochure to advertise their capitol campaign to expand the Heritage Center. The brochure needed to remind people of the Heritage Center's current value and community presence while presenting the need and vision for an expansion, with opportunities to give.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/dkco-brochure-design-andrea-silva-1.jpg",
+      "portfolio/graphic-design/dkco-brochure-design-andrea-silva-2.jpg",
+      "portfolio/graphic-design/dkco-brochure-design-andrea-silva-3.jpg",
+      "portfolio/graphic-design/dkco-brochure-design-andrea-silva-4.jpg",
+      "portfolio/graphic-design/dkco-brochure-design-andrea-silva-5.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/ebenfeld-friends-tshirt-design-andrea-silva.jpg",
     "title": "Ebenfeld Friends T-Shirt",
-    "blurb": "17 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "blurb": "T-shirt design for Ebenfeld Mennonite Brethren Church's youth group.",
     "portfolioType": "image",
     "portfolio": [
-      "portfolio/graphic-design/ebenfeld-friends.jpg"
+      "portfolio/graphic-design/ebenfeld-friends-tshirt-design-andrea-silva.jpg"
     ]
   },
   {
-    "thumb": "portfolio/graphic-design/spring-serve-tshirt.jpg",
-    "title": "Spring Serve T-Shirt",
-    "blurb": "18 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "thumb": "portfolio/graphic-design/honda-crv-car-wrap-andrea-silva.jpg",
+    "title": "Honda CR-V wrap",
+    "blurb": "This car wrap for a Honda CR-V was designed to give greater visibility and increase station awareness while KJIL radio station employees are traveling and out in the community.",
     "portfolioType": "image",
     "portfolio": [
-      "portfolio/graphic-design/spring-serve-tshirt.jpg"
+      "portfolio/graphic-design/honda-crv-car-wrap-andrea-silva.jpg"
     ]
   },
   {
-    "thumb": "portfolio/graphic-design/heritage-center-brochure-2",
-    "title": "Heritage Center Brochure",
-    "blurb": "19 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "thumb": "portfolio/graphic-design/jaime-jorge-book-cover-design-andrea-silva.jpg",
+    "title": "Notes from the Violin Case",
+    "blurb": "Book cover design for devotional written by violinist Jaime Jorge.",
     "portfolioType": "image",
     "portfolio": [
-      "portfolio/graphic-design/heritage-center-brochure-1.jpg",
-      "portfolio/graphic-design/heritage-center-brochure-2.jpg",
-      "portfolio/graphic-design/heritage-center-brochure-3.jpg",
-      "portfolio/graphic-design/heritage-center-brochure-4.jpg",
-      "portfolio/graphic-design/heritage-center-brochure-5.jpg"
+      "portfolio/graphic-design/jaime-jorge-book-cover-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/khym-logo-design-andrea-silva-1.jpg",
+    "title": "KHYM logo",
+    "blurb": "Logo design for KHYM Praise & Encouragement, a Christian radio station broadcasting throughout Southwestern Kansas and the Oklahoma panhandle.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/khym-logo-design-andrea-silva-1.jpg",
+      "portfolio/graphic-design/khym-logo-design-andrea-silva-2.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/kjil-kids-tshirt-design-andrea-silva-1.jpg",
+    "title": "KJIL Kid's T-Shirt",
+    "blurb": "This t-shirt design was used as a giveaway and promotional item during KJIL's annual Kid's Coloring Contest.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/kjil-kids-tshirt-design-andrea-silva-1.jpg",
+      "portfolio/graphic-design/kjil-kids-tshirt-design-andrea-silva-2.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/kjil-morning-rewind-andrea-silva-1.jpg",
+    "title": "KJIL Morning Rewind Podcast Graphics",
+    "blurb": "The \"KJIL Morning Rewind\" is a daily podcast featuring clips from the KJIL morning show. I designed the cover art.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/kjil-morning-rewind-andrea-silva-1.jpg",
+      "portfolio/graphic-design/kjil-morning-rewind-andrea-silva-2.png"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/kjil-tshirt-red-design-andrea-silva-1.jpg",
+    "title": "KJIL T-Shirt",
+    "blurb": "This t-shirt was designed and printed in various color styles and used in several giveaways, station events, and fundraisers.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/kjil-tshirt-red-design-andrea-silva-1.jpg",
+      "portfolio/graphic-design/kjil-tshirt-red-design-andrea-silva-2.png"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/kvmv-christmas-card-design-andrea-silva.jpg",
+    "title": "KVMV Christmas Card",
+    "blurb": "Christmas card sent to listeners and supporters of the radio ministry.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/kvmv-christmas-card-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/kvmv-retractable-banners-design-andrea-silva.jpg",
+    "title": "KVMV Retractable Banners",
+    "blurb": "I designed these coordinating retractable banners to be used at concerts and station events for 96.9 KVMV, a radio station in the Rio Grande Valley in South Texas.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/kvmv-retractable-banners-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/kvmv-thanksgiving-card-design-andrea-silva.jpg",
+    "title": "KVMV Thanksgiving Card",
+    "blurb": "Thanksgiving postcard design sent to listeners and supporters of 96.9 KVMV.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/kvmv-thanksgiving-card-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/munoz-brochure-design-andrea-silva.jpg",
+    "title": "Munoz Photography Brochure",
+    "blurb": "David Munoz Photography needed a brochure design that would showcase his photography work as well as present his photography packages to potential clients.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/munoz-brochure-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/pt-cruiser-car-wrap-design-andrea-silva.jpg",
+    "title": "PT Cruiser Car Wrap",
+    "blurb": "This car wrap for a PT Cruiser promotes the Christian radio station 96.9 KVMV in the Rio Grande Valley, and can be seen driving to station events across the listening area. Not only did the station need an update to their old wrap, but they also needed an eye catching design that would provide pertinent station information at a glance.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/pt-cruiser-car-wrap-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/pull-forward-logo-design-andrea-silva.jpg",
+    "title": "Pull Forward Pay Back Logo",
+    "blurb": "\"Pull Forward Pay Back\" is an initiative promoted by Contemporary Christian radio station KJIL to encourage listeners to bless others anonymously while paying for a stranger's meal in the drive-thru.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/pull-forward-logo-design-andrea-silva.jpg"
+    ]
+  },
+  {
+    "thumb": "portfolio/graphic-design/tabor-tshirt-design-andrea-silva.jpg",
+    "title": "Tabor College T-Shirt",
+    "blurb": "This design was chosen in a t-shirt design contest for Tabor College. It was printed on t-shirts given to prospective students across the country.",
+    "portfolioType": "image",
+    "portfolio": [
+      "portfolio/graphic-design/tabor-tshirt-design-andrea-silva.jpg"
     ]
   }
 ]

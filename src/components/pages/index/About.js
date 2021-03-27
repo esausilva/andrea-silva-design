@@ -96,11 +96,11 @@ const About = () => {
       />
       <div>
         <p>
-          Hi! My name is Andrea Silva. I am an artist and graphic designer
-          pursuing a love for art that I've had since childhood. As a native
-          Kansan, I now currently reside in Nashville, Tennessee. I graduated in
-          2010 with a BA in Graphic Design and minors in Painting and Music from
-          Tabor College in Hillsboro, KS.
+          Hi! My name is Andrea Silva. I am a graphic designer, artist, and
+          illustrator pursuing a love for art that I've had since childhood. As
+          a native Kansan, I now currently reside in Nashville, Tennessee. I
+          graduated in 2010 with a BA in Graphic Design and minors in Painting
+          and Music from Tabor College in Hillsboro, KS.
         </p>
         <ReadMoreBlock isOpen={isReadMore}>
           <p>
@@ -121,17 +121,17 @@ const About = () => {
           </p>
           <p>
             When I'm not behind my computer or at my easel creating you might
-            find me outdoors exploring with my dear husband of 4 plus years and
-            my toddler. Life with them is full and rewarding. As a foodie and
-            health nut, in addition you might find me whipping up something
-            tasty and healthy in the kitchen. I also will take any opportunity
-            to travel and have enjoyed trips to Europe, the Bahamas, and across
-            the U.S.
+            find me outdoors exploring with my dear husband of 5 years (and
+            counting) and my toddler. Life with them is full and rewarding. As a
+            foodie and health nut, in addition you might find me whipping up
+            something tasty and healthy in the kitchen. I also will take any
+            opportunity to travel and have enjoyed trips to Europe, the Bahamas,
+            and across the U.S.
           </p>
           <p>
-            Though I love being an artist and graphic designer, my true identity
-            lies in my relationship with Jesus Christ and learning to follow
-            Him. Any skills I possess, I realize come from Him alone.
+            Though I love being an artist, illustrator, and graphic designer, my
+            true identity lies in my relationship with Jesus Christ and learning
+            to follow Him. Any skills I possess I realize come from Him alone.
           </p>
           <p>
             Thanks for taking the time to stop by my website! It would be an

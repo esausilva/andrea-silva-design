@@ -1,11 +1,15 @@
 import React from 'react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
+import { Gallery } from '~components/Gallery/Gallery';
+import { Title } from '~styles/PortfolioTitle';
+import illustrationData from '~content/illustration.json';
 
 const Illustration = () => {
   return (
     <MainLayout pageTitle="Illustration" pathName="portfolio/illustration">
-      <h1>Illustration</h1>
+      <Title>Illustration</Title>
+      <Gallery data={illustrationData} />
     </MainLayout>
   );
 };

@@ -64,6 +64,7 @@ const Footer = () => {
         </a>
       </div>
       <p>andreasilva.design@outlook.com</p>
+      <p>© Andrea Silva Design</p>
     </FooterTag>
   );
 };

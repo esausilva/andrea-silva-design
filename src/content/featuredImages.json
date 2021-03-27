@@ -1,26 +1,26 @@
 [
   {
-    "title": "Graphic Design",
-    "image": "featured-images/graphic-design.jpg",
-    "alt": "Graphic Design - My work",
-    "slug": "graphic-design"
-  },
-  {
-    "title": "Motion Graphics",
-    "image": "featured-images/motion-graphics.jpg",
-    "alt": "Motion Graphics - My work",
-    "slug": "motion-graphics"
-  },
-  {
     "title": "Illustration",
-    "image": "featured-images/illustration.jpg",
+    "image": "featured-images/illustration-wedding-watercolor-andrea-silva.jpg",
     "alt": "Illustration - My work",
     "slug": "illustration"
   },
   {
     "title": "Art",
-    "image": "featured-images/art.jpg",
+    "image": "featured-images/art-watercolor-painting-andrea-silva.jpg",
     "alt": "Art - My work",
     "slug": "art"
+  },
+  {
+    "title": "Graphic Design",
+    "image": "featured-images/graphic-design-andrea-silva.jpg",
+    "alt": "Graphic Design - My work",
+    "slug": "graphic-design"
+  },
+  {
+    "title": "Motion Graphics",
+    "image": "featured-images/motion-graphics-andrea-silva.jpg",
+    "alt": "Motion Graphics - My work",
+    "slug": "motion-graphics"
   }
 ]

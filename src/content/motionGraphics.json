@@ -1,20 +1,74 @@
 [
   {
-    "thumb": "portfolio/motion-graphics/best-mom-ever.png",
-    "title": "Best Mom Ever",
-    "blurb": "1 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "thumb": "portfolio/motion-graphics/february-budget-monster-motion-graphics-andrea-silva-1.jpg",
+    "title": "February Budget Monster",
+    "blurb": "To increase an awareness of giving during the shortest month of the year, KJIL periodically references the \"Budget Monster.\" This is a banner ad I created to promote giving.",
     "portfolioType": "video",
     "portfolio": [
-      "portfolio/motion-graphics/best-mom-ever.png|portfolio/motion-graphics/best-mom-ever.mp4"
+      "portfolio/motion-graphics/february-budget-monster-motion-graphics-andrea-silva-1.jpg|portfolio/motion-graphics/february-budget-monster-motion-graphics-andrea-silva.mp4"
     ]
   },
   {
-    "thumb": "portfolio/motion-graphics/artist-booth-logo.png",
+    "thumb": "portfolio/motion-graphics/artist-booth-motion-graphics-andrea-silva.png",
     "title": "Artist Booth",
-    "blurb": "2 Bacon ipsum dolor amet venison boudin doner, cow chislic chuck turducken ham brisket ham hock filet mignon prosciutto. Bacon pastrami corned beef frankfurter, bresaola shank chuck hamburger turkey pork loin strip steak.",
+    "blurb": "I designed and animated this logo used to intro video interviews with current CCM artists.",
     "portfolioType": "video",
     "portfolio": [
-      "portfolio/motion-graphics/artist-booth-logo.png|portfolio/motion-graphics/artist-booth-logo.mp4"
+      "portfolio/motion-graphics/artist-booth-motion-graphics-andrea-silva.png|portfolio/motion-graphics/artist-booth-motion-graphics-andrea-silva.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/mothers-day-motion-graphics-andrea-silva.png",
+    "title": "Mother's Day Giveaway",
+    "blurb": "Website banner ad for a Mother's Day Giveaway with multiple sponsors hosted by KJIL.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/mothers-day-motion-graphics-andrea-silva.png|portfolio/motion-graphics/mothers-day-motion-graphics-andrea-silva.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/snowflake-motion-graphics-andrea-silva.png",
+    "title": "Snowflake",
+    "blurb": "Animation created as part of an Advent design challenge.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/snowflake-motion-graphics-andrea-silva.png|portfolio/motion-graphics/snowflake-motion-graphics-andrea-silva.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/story-behind-the-song-motion-graphics-andrea-silva.png",
+    "title": "Story Behind the Song",
+    "blurb": "Logo design and animation used to intro audio clips from CCM artists talking about how their current songs were created. They were produced together into short videos shared on social media.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/story-behind-the-song-motion-graphics-andrea-silva.png|portfolio/motion-graphics/story-behind-the-song-motion-graphics-andrea-silva.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/the-drivethru-difference-motion-graphics-andrea-silva.png",
+    "title": "Drivethru Difference",
+    "blurb": "I designed this logo to help promote 96.9 KVMV's Drivethru Difference program, encouraging listeners to bless others anonymously while paying for a stranger's meal in the Drivethru. I then animated the logo for use in promotional videos.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/the-drivethru-difference-motion-graphics-andrea-silva.png|portfolio/motion-graphics/the-drivethru-difference-motion-graphics-andrea-silva.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/the-silva-screen-motion-graphics-andrea-silva.png",
+    "title": "The Silva Screen",
+    "blurb": "Logo design and animation for YouTube channel, The Silva Screen.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/the-silva-screen-motion-graphics-andrea-silva.png|portfolio/motion-graphics/the-silva-screen-motion-graphics-andrea-silva.mp4"
+    ]
+  },
+  {
+    "thumb": "portfolio/motion-graphics/wellspring-legacy-giving-motion-graphics-andrea-silva.png",
+    "title": "Wellspring Legacy Giving",
+    "blurb": "Logo design and animation for KJIL, Great Plains Christian Radio's legacy giving program.",
+    "portfolioType": "video",
+    "portfolio": [
+      "portfolio/motion-graphics/wellspring-legacy-giving-motion-graphics-andrea-silva.png|portfolio/motion-graphics/wellspring-legacy-giving-motion-graphics-andrea-silva.mp4"
     ]
   }
 ]
