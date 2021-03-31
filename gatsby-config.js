@@ -1,5 +1,7 @@
 require('dotenv').config();
 
+var formatDate = require('date-fns/format');
+
 module.exports = {
   siteMetadata: {
     title: `Andrea Silva Design`,
@@ -42,6 +44,33 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: process.env.INSTAGRAM_USERNAME_ID,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true,
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map(node => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `weekly`,
+              priority: 0.7,
+              lastmod: formatDate(new Date(), 'yyyy-MM-dd'),
+            };
+          }),
       },
     },
     // {
