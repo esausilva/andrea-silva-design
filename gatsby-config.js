@@ -5,7 +5,7 @@ var formatDate = require('date-fns/format');
 module.exports = {
   siteMetadata: {
     title: `Andrea Silva Design`,
-    description: `Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in digital design, fine art, illustration, and more, located in Music City - Nashville, TN.`,
+    description: `Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in illustration, fine art, digital design, and motion graphics. Located in Nashville, TN - Music City`,
     author: `@_esausilva`,
     siteUrl: 'https://andreasilva.design',
   },

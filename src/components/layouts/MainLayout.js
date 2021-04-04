@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
@@ -23,11 +16,11 @@ const Main = styled.main`
 `;
 //#endregion
 
-const MainLayout = ({ children, pageTitle, pathName }) => {
+const MainLayout = ({ children, ...rest }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        {/* <SEO title={pageTitle} pathName={pathName} /> */}
+        {/* <SEO {...rest} /> */}
         <GlobalStyles />
         <BackToTop />
         <Navigation />
@@ -42,11 +35,13 @@ MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
   pageTitle: PropTypes.string,
   pathName: PropTypes.string,
+  structuredDataTemplate: PropTypes.string,
 };
 
 MainLayout.defaultProps = {
   pageTitle: '',
   pathName: '',
+  structuredDataTemplate: null,
 };
 
 export { MainLayout };

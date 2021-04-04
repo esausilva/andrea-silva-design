@@ -1,16 +1,16 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title, pathName }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  pageTitle,
+  pathName,
+  structuredDataTemplate,
+}) {
   const { site, socialCard } = useStaticQuery(
     graphql`
       query {
@@ -40,13 +40,27 @@ function SEO({ description, lang, meta, title, pathName }) {
     ? `${site.siteMetadata.siteUrl}/${pathName}`
     : site.siteMetadata.siteUrl;
 
+  const replaceTokens = () => {
+    const tokens = {
+      '{{url}}': site.siteMetadata.siteUrl,
+      '{{description}}': site.siteMetadata.description,
+    };
+
+    let sd = structuredDataTemplate;
+    for (const token in tokens) {
+      sd = sd.replaceAll(token, tokens[token]);
+    }
+
+    return sd;
+  };
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={pageTitle}
+      titleTemplate={`%s - ${site.siteMetadata.title}`}
       link={
         canonical
           ? [
@@ -64,7 +78,7 @@ function SEO({ description, lang, meta, title, pathName }) {
         },
         {
           property: `og:title`,
-          content: `${title} - ${site.siteMetadata.title}`,
+          content: `${pageTitle} - ${site.siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -76,11 +90,11 @@ function SEO({ description, lang, meta, title, pathName }) {
         },
         {
           property: `og:url`,
-          content: `https://www.andreasilva.design`,
+          content: `${canonical}`,
         },
         {
           property: `og:image`,
-          content: `https://www.andreasilva.design${socialCard.edges[0].node.publicURL}`,
+          content: `${site.siteMetadata.siteUrl}${socialCard.edges[0].node.publicURL}`,
         },
         {
           property: `og:image:width`,
@@ -96,7 +110,7 @@ function SEO({ description, lang, meta, title, pathName }) {
         },
         {
           name: `twitter:image`,
-          content: `https://www.andreasilva.design${socialCard.edges[0].node.publicURL}`,
+          content: `${site.siteMetadata.siteUrl}${socialCard.edges[0].node.publicURL}`,
         },
         {
           name: `twitter:creator`,
@@ -104,14 +118,20 @@ function SEO({ description, lang, meta, title, pathName }) {
         },
         {
           name: `twitter:title`,
-          content: `${title} - ${site.siteMetadata.title}`,
+          content: `${pageTitle} - ${site.siteMetadata.title}`,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      {structuredDataTemplate ? (
+        <script type="application/ld+json">
+          {replaceTokens(structuredDataTemplate)}
+        </script>
+      ) : null}
+    </Helmet>
   );
 }
 
@@ -119,13 +139,15 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  structuredDataTemplate: null,
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  pageTitle: PropTypes.string.isRequired,
+  structuredDataTemplate: PropTypes.string,
 };
 
 export { SEO };
