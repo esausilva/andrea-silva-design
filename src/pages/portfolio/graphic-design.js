@@ -1,13 +1,21 @@
 import React from 'react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
+import { SecondaryLayout } from '~styles/SecondaryLayout';
 import { Gallery } from '~components/Gallery/Gallery';
-import { Title } from '~styles/PortfolioTitle';
+import { Title } from '~styles/Title';
 import graphicDesignData from '~content/graphicDesign.json';
 
 const GraphicDesign = () => (
   <MainLayout pageTitle="Graphic Design" pathName="portfolio/graphic-design">
-    <Title>Graphic Design</Title>
+    <SecondaryLayout>
+      <Title>Graphic Design</Title>
+      <p>
+        As a graphic designer my work includes projects in print design, logo
+        design and branding, and various projects across multiple forms of
+        media.
+      </p>
+    </SecondaryLayout>
     <Gallery data={graphicDesignData} />
   </MainLayout>
 );

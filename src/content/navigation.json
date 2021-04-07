@@ -2,15 +2,18 @@
   "internal": [
     {
       "text": "Work",
-      "linkTo": "nav-work"
+      "linkTo": "nav-work",
+      "isSamePage": true
     },
     {
-      "text": "About",
-      "linkTo": "nav-about"
+      "text": "About Me",
+      "linkTo": "about-me",
+      "isSamePage": false
     },
     {
       "text": "Let's Chat",
-      "linkTo": "nav-contact"
+      "linkTo": "nav-contact",
+      "isSamePage": true
     }
   ],
   "social": [

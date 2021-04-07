@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-scroll';
+import PropTypes from 'prop-types';
+import { Link as LinkScroll } from 'react-scroll';
+import { Link } from 'gatsby';
 
-const NavigationLink = ({ linkTo, text, setIsMenuOpen }) => {
+const NavigationLink = ({ linkTo, text, setIsMenuOpen, isSamePage }) => {
   const [isRoot, setIsRoot] = useState(true);
 
   useEffect(() => {
@@ -10,10 +12,12 @@ const NavigationLink = ({ linkTo, text, setIsMenuOpen }) => {
     return () => {};
   }, []);
 
-  return (
-    <>
-      {isRoot ? (
-        <Link
+  const MenuSelector = () => {
+    if (!isSamePage) return <Link to={`/${linkTo}`}>{text}</Link>;
+
+    if (isRoot)
+      return (
+        <LinkScroll
           to={linkTo}
           spy={true}
           smooth={true}
@@ -21,12 +25,20 @@ const NavigationLink = ({ linkTo, text, setIsMenuOpen }) => {
           onClick={() => setIsMenuOpen(false)}
         >
           {text}
-        </Link>
-      ) : (
-        <a href={`${window.location.origin}/#${linkTo}`}>{text}</a>
-      )}
-    </>
-  );
+        </LinkScroll>
+      );
+
+    return <Link to={`/#${linkTo}`}>{text}</Link>;
+  };
+
+  return <>{MenuSelector()}</>;
+};
+
+NavigationLink.propTypes = {
+  linkTo: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  setIsMenuOpen: PropTypes.func.isRequired,
+  isSamePage: PropTypes.bool.isRequired,
 };
 
 export { NavigationLink };

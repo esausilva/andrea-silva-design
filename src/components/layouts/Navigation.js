@@ -213,11 +213,12 @@ const Navigation = () => {
       <MenuWrapper isMenuOpen={isMenuOpen}>
         <CloseMenu onClick={toggleMenu}>&times;</CloseMenu>
         <NavMenu>
-          {navigationData.internal.map(({ linkTo, text }) => (
+          {navigationData.internal.map(({ linkTo, text, isSamePage }) => (
             <li key={linkTo}>
               <NavigationLink
                 linkTo={linkTo}
                 text={text}
+                isSamePage={isSamePage}
                 setIsMenuOpen={setIsMenuOpen}
               />
             </li>
