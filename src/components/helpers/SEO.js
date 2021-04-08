@@ -11,7 +11,7 @@ function SEO({
   pathName,
   structuredDataTemplate,
 }) {
-  const { site, socialCard } = useStaticQuery(
+  const { site, socialCard, allImages } = useStaticQuery(
     graphql`
       query {
         site {
@@ -31,6 +31,13 @@ function SEO({
             }
           }
         }
+        allImages: allFile(filter: { ext: { regex: "/.jpg/" } }) {
+          edges {
+            node {
+              publicURL
+            }
+          }
+        }
       }
     `,
   );
@@ -44,6 +51,11 @@ function SEO({
     const tokens = {
       '{{url}}': site.siteMetadata.siteUrl,
       '{{description}}': site.siteMetadata.description,
+      '{{phone}}}': '785-280-1725',
+      '{{email}}': 'andreasilva.design@outlook.com',
+      '{{andrea-photo}}':
+        'https://res.cloudinary.com/esausilva/image/upload/f_auto,q_auto,w_500/andrea-silva-design/andrea-silva-portrait.jpg',
+      //'{{logo}}': allImages.edges,
     };
 
     let sd = structuredDataTemplate;

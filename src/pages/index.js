@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Work />
     <About />
     <Testimonials />
-    {/* <InstagramFeed /> */}
+    <InstagramFeed />
     <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>
       <LetsChat />
     </FormspreeProvider>
@@ -36,7 +36,7 @@ const structuredDataTemplate = `
   "description": "{{description}}",
   "name": "Andrea Silva Design",
   "url": "{{url}}",
-  "telephone": "785-280-1725",
+  "telephone": "{{phone}}}",
   "image": [
   	"https://res.cloudinary.com/esausilva/image/upload/andrea-silva-design/andrea-silva-design-social-card.jpg",
     "https://res.cloudinary.com/esausilva/image/upload/andrea-silva-design/andrea-silva-design-logo-black.png"

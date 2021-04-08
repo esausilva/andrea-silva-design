@@ -53,7 +53,11 @@ const ContentBottom = styled.div`
 
 const AboutMe = () => {
   return (
-    <MainLayout pageTitle="About Me">
+    <MainLayout
+      pageTitle="About Me"
+      pathName="about-me"
+      structuredDataTemplate={structuredDataTemplate}
+    >
       <Content>
         <Title>About Me</Title>
         <ContentTop>
@@ -130,5 +134,17 @@ const AboutMe = () => {
     </MainLayout>
   );
 };
+
+const structuredDataTemplate = `{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "{{url}}",
+  "url": "{{url}}",
+  "name": "Andrea Silva",
+  "email": "{{email}}",
+  "image": "{{andrea-photo}}",
+  "telephone": "{{phone}}}",
+  "jobTitle": "Fine Art Artist, Graphic Designer and Illustrator"
+}`;
 
 export default AboutMe;
