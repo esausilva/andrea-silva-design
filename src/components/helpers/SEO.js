@@ -11,7 +11,7 @@ function SEO({
   pathName,
   structuredDataTemplate,
 }) {
-  const { site, socialCard, allImages } = useStaticQuery(
+  const { site, allImages } = useStaticQuery(
     graphql`
       query {
         site {
@@ -20,15 +20,6 @@ function SEO({
             description
             author
             siteUrl
-          }
-        }
-        socialCard: allFile(
-          filter: { name: { regex: "/andrea-silva-design-social-card/" } }
-        ) {
-          edges {
-            node {
-              publicURL
-            }
           }
         }
         allImages: allFile(filter: { ext: { regex: "/.jpg/" } }) {
@@ -47,6 +38,14 @@ function SEO({
     ? `${site.siteMetadata.siteUrl}/${pathName}`
     : site.siteMetadata.siteUrl;
 
+  const GetImageUrl = imageName => {
+    var image = allImages.edges.find(img =>
+      img.node.publicURL.includes(imageName),
+    );
+
+    return `${site.siteMetadata.siteUrl}${image?.node?.publicURL}`;
+  };
+
   const replaceTokens = () => {
     const tokens = {
       '{{url}}': site.siteMetadata.siteUrl,
@@ -55,7 +54,12 @@ function SEO({
       '{{email}}': 'andreasilva.design@outlook.com',
       '{{andrea-photo}}':
         'https://res.cloudinary.com/esausilva/image/upload/f_auto,q_auto,w_500/andrea-silva-design/andrea-silva-portrait.jpg',
-      //'{{logo}}': allImages.edges,
+      '{{logo}}': GetImageUrl('andrea-silva-design-logo'),
+      '{{business-images}}': [
+        `"${GetImageUrl('andrea-silva-design-1x1')}"`,
+        `"${GetImageUrl('andrea-silva-design-4x3')}"`,
+        `"${GetImageUrl('andrea-silva-design-16x9')}"`,
+      ],
     };
 
     let sd = structuredDataTemplate;
@@ -106,7 +110,7 @@ function SEO({
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${socialCard.edges[0].node.publicURL}`,
+          content: GetImageUrl('andrea-silva-design-social-card'),
         },
         {
           property: `og:image:width`,
@@ -122,7 +126,7 @@ function SEO({
         },
         {
           name: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}${socialCard.edges[0].node.publicURL}`,
+          content: GetImageUrl('andrea-silva-design-social-card'),
         },
         {
           name: `twitter:creator`,

@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~styles/SecondaryLayout';
