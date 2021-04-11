@@ -3,7 +3,7 @@ import { FormspreeProvider } from '@formspree/react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
 import { Work } from '~components/pages/index/Work';
-import { About } from '~components/pages/index/About';
+import { ArtistStatement } from '~components/pages/index/ArtistStatement';
 import { Testimonials } from '~components/pages/index/Testimonials';
 import { InstagramFeed } from '~components/pages/index/InstagramFeed';
 import { LetsChat } from '~components/pages/index/LetsChat';
@@ -11,7 +11,7 @@ import { LetsChat } from '~components/pages/index/LetsChat';
 const IndexPage = () => (
   <MainLayout pageTitle="Home" structuredDataTemplate={structuredDataTemplate}>
     <Work />
-    <About />
+    <ArtistStatement />
     <Testimonials />
     {/* <InstagramFeed /> */}
     <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>
