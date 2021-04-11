@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { useVideoAutoPlayback } from '~src/hooks/useVideoAutoPlayback';
+
 //#region Styles
 const Content = styled.section`
   position: relative;
@@ -45,9 +47,15 @@ const Statement = styled.div`
 //#endregion
 
 const ArtistStatement = () => {
+  const [containerRef, videoRef] = useVideoAutoPlayback({
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1,
+  });
+
   return (
-    <Content>
-      <video playsinline autoplay muted loop>
+    <Content ref={containerRef}>
+      <video playsinline muted loop ref={videoRef}>
         <source
           src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_USER}/video/upload/andrea-silva-design/andrea-silva-design-intro-video.mp4`}
           type="video/mp4"
