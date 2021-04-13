@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { useVideoAutoPlayback } from '~src/hooks/useVideoAutoPlayback';
+import { Video } from '~helpers/Video';
+import { transformationsFormat } from '~utils/index';
 
 //#region Styles
 const Content = styled.section`
@@ -55,12 +57,17 @@ const ArtistStatement = () => {
 
   return (
     <Content ref={containerRef}>
-      <video playsinline muted loop ref={videoRef}>
-        <source
-          src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_USER}/video/upload/andrea-silva-design/andrea-silva-design-intro-video.mp4`}
-          type="video/mp4"
-        />
-      </video>
+      <Video
+        relativePath="andrea-silva-design-intro-video-cover.jpg|andrea-silva-design-intro-video.mp4"
+        showNoSupport={false}
+        transformations={transformationsFormat('q_auto:good')}
+        attributes={{
+          playsInline: true,
+          muted: true,
+          loop: true,
+          ref: videoRef,
+        }}
+      />
       <Statement>
         <span>
           "As a graphic designer, illustrator and artist I believe in the power
