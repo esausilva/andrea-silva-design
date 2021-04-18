@@ -1,4 +1,5 @@
 export const gray = '#cecece';
+export const pink = '#954c4c';
 
 export const theme = {
   fonts: {

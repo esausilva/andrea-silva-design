@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { theme, gray } from './theme';
+import { theme, gray, pink } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   :root {
-    --pink: #954c4c;
+    --pink: ${pink};
     --gray: ${gray};
     --nav-height: 10rem;
     --nav-height-medium: 15rem;
