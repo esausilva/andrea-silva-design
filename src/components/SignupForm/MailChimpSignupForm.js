@@ -118,7 +118,7 @@ const MailChimpSignupForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Title>Subscribe to my Newsletter</Title>
+      <Title>Subscribe to my newsletter</Title>
       <p>
         Bacon ipsum dolor amet t-bone shank strip steak brisket, ham pork loin
         doner cow drumstick tail pork belly tongue tri-tip tenderloin turkey.
