@@ -12,7 +12,6 @@ const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   label {
     font-weight: 400;
     span {

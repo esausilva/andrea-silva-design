@@ -7,7 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ZoomIn } from '~svgs/ZoomIn';
-import { Modal } from '~src/components/helpers/Modal';
+import { Modal } from '~src/components/Gallery/Modal';
 import { useMediaQuery } from '~src/hooks/useMediaQuery';
 import { theme } from '~styles/theme';
 

@@ -8,6 +8,7 @@ import { theme } from '~styles/theme';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 import { BackToTop } from './BackToTop';
+import { SignupFormPopup } from '~components/SignupForm/SignupFormPopup';
 
 //#region Styles
 const Main = styled.main`
@@ -26,6 +27,7 @@ const MainLayout = ({ children, ...rest }) => {
         <Navigation />
         <Main>{children}</Main>
         <Footer />
+        <SignupFormPopup />
       </>
     </ThemeProvider>
   );
