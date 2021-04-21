@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import tinykeys from 'tinykeys';
 
 import { PopupCookieContext } from '~components/layouts/MainLayout';
-import { getMaxCookieAge } from '~utils/index';
+import { getMaxCookieAgeInSeconds } from '~utils/index';
 import {
   Container as ModalContainer,
   Body,
@@ -66,14 +66,14 @@ const Modal = ({ children, modalState }) => {
 
   const handleClose = () => {
     if (showPopup) {
-      createCookie(getMaxCookieAge({ days: 2 }));
+      createCookie(getMaxCookieAgeInSeconds({ days: 2 }));
       modalState.toggle();
     }
   };
 
   const toggleDoNotShow = () => setDoNotShowValue(!doNotShowValue);
   const handleDoNotShowClose = () => {
-    createCookie(getMaxCookieAge({ isNeverExpires: true }));
+    createCookie(getMaxCookieAgeInSeconds({ isNeverExpires: true }));
     modalState.toggle();
   };
 

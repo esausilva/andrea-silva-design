@@ -1,9 +1,9 @@
 export const transformationsFormat = transformations => `,${transformations}`;
 
-export const getMaxCookieAge = ({ days, isNeverExpires = false }) => {
-  if (!isNeverExpires) return getDaysInMilliseconds(days);
+export const getMaxCookieAgeInSeconds = ({ days, isNeverExpires = false }) => {
+  if (!isNeverExpires) return getDaysInSeconds(days);
 
-  return getDaysInMilliseconds(getNeverExpiresDays());
+  return getDaysInSeconds(getNeverExpiresDays());
 };
 
 const getNeverExpiresDays = () => {
@@ -16,4 +16,4 @@ const getNeverExpiresDays = () => {
   return daysInBetween;
 };
 
-const getDaysInMilliseconds = days => 60 * 60 * (days * 24);
+const getDaysInSeconds = days => 60 * 60 * (days * 24);

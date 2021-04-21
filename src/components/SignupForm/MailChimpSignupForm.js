@@ -5,7 +5,7 @@ import { darken } from 'polished';
 
 import { pink } from '~styles/theme';
 import { PopupCookieContext } from '~components/layouts/MainLayout';
-import { getMaxCookieAge } from '~utils/index';
+import { getMaxCookieAgeInSeconds } from '~utils/index';
 
 //#region Styles
 const danger = '#dc3545';
@@ -115,7 +115,7 @@ const MailChimpSignupForm = () => {
           const value = `<p style="color:#28a745;">${msg}</p>`;
 
           dispatch({ name: 'mcMessage', value, reset: true });
-          createCookie(getMaxCookieAge({ isNeverExpires: true }));
+          createCookie(getMaxCookieAgeInSeconds({ isNeverExpires: true }));
         }
       })
       .catch(err => alert(err));
