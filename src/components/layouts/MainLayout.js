@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
@@ -9,6 +9,7 @@ import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 import { BackToTop } from './BackToTop';
 import { SignupFormPopup } from '~components/SignupForm/SignupFormPopup';
+import { usePopupCookie } from '~src/hooks/usePopupCookie';
 
 //#region Styles
 const Main = styled.main`
@@ -17,7 +18,11 @@ const Main = styled.main`
 `;
 //#endregion
 
+const PopupCookieContext = createContext();
+
 const MainLayout = ({ children, ...rest }) => {
+  const { createCookie, showPopup } = usePopupCookie();
+
   return (
     <ThemeProvider theme={theme}>
       <>
@@ -25,9 +30,11 @@ const MainLayout = ({ children, ...rest }) => {
         <GlobalStyles />
         <BackToTop />
         <Navigation />
-        <Main>{children}</Main>
-        <Footer />
-        <SignupFormPopup />
+        <PopupCookieContext.Provider value={{ createCookie, showPopup }}>
+          <Main>{children}</Main>
+          <Footer />
+          <SignupFormPopup />
+        </PopupCookieContext.Provider>
       </>
     </ThemeProvider>
   );
@@ -46,4 +53,4 @@ MainLayout.defaultProps = {
   structuredDataTemplate: null,
 };
 
-export { MainLayout };
+export { MainLayout, PopupCookieContext };

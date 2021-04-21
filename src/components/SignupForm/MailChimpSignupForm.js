@@ -1,9 +1,11 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useContext } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
 import { pink } from '~styles/theme';
+import { PopupCookieContext } from '~components/layouts/MainLayout';
+import { getMaxCookieAge } from '~utils/index';
 
 //#region Styles
 const danger = '#dc3545';
@@ -84,6 +86,7 @@ const formReducer = (state, { name, value, reset }) => {
 
 const MailChimpSignupForm = () => {
   const [formData, dispatch] = useReducer(formReducer, initialFormState);
+  const { createCookie } = useContext(PopupCookieContext);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -110,7 +113,9 @@ const MailChimpSignupForm = () => {
           dispatch({ name: 'mcMessage', value });
         } else {
           const value = `<p style="color:#28a745;">${msg}</p>`;
+
           dispatch({ name: 'mcMessage', value, reset: true });
+          createCookie(getMaxCookieAge({ isNeverExpires: true }));
         }
       })
       .catch(err => alert(err));

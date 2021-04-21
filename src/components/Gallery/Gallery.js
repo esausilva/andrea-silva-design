@@ -158,8 +158,7 @@ const Gallery = ({ data }) => {
       </Masonry>
       {isModalOpen && (
         <Modal
-          modalState={isModalOpen}
-          closeModal={toggleModal}
+          modalState={{ value: isModalOpen, toggle: toggleModal }}
           changeSlide={changeSlide}
         >
           {modalBodyState}

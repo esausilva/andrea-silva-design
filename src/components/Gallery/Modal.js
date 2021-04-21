@@ -63,25 +63,25 @@ const ArrowButtonRight = styled(ArrowButtonBase)`
 `;
 //#endregion
 
-const Modal = ({ children, modalState, closeModal, changeSlide }) => {
+const Modal = ({ children, modalState, changeSlide }) => {
   const { heading, blurb, portfolioType, portfolio } = children;
   const chevronColor = '#474747';
 
   useEffect(() => {
     let body = document.querySelector('body');
 
-    if (modalState) {
+    if (modalState.value) {
       body.style.overflowY = 'hidden';
     }
 
     return () => {
       body.removeAttribute('style');
     };
-  }, [modalState]);
+  }, [modalState.value]);
 
   useEffect(() => {
     let unsubscribe = tinykeys(window, {
-      Escape: () => closeModal(),
+      Escape: () => modalState.toggle(),
       ArrowLeft: () => backward(),
       ArrowRight: () => forward(),
     });
@@ -95,13 +95,13 @@ const Modal = ({ children, modalState, closeModal, changeSlide }) => {
   const backward = () => changeSlide(BACKWARD);
 
   return (
-    <ModalContainer isOpen={modalState}>
+    <ModalContainer isOpen={modalState.value}>
       <ArrowButtonLeft onClick={e => backward()}>
         <ArrowLeft pathFill={chevronColor} />
       </ArrowButtonLeft>
       <Swipe onSwipeLeft={forward} onSwipeRight={backward} tolerance={100}>
         <ModalBody>
-          <CloseModal onClick={closeModal}>&times;</CloseModal>
+          <CloseModal onClick={modalState.toggle}>&times;</CloseModal>
           <h1>{heading}</h1>
           <p>{blurb}</p>
           <PortfolioSelector
@@ -126,7 +126,6 @@ Modal.defaultProps = {
     portfolio: [],
     currentIndex: 0,
   },
-  modalState: false,
 };
 
 Modal.propTypes = {
@@ -137,8 +136,10 @@ Modal.propTypes = {
     portfolio: PropTypes.arrayOf(PropTypes.string).isRequired,
     currentIndex: PropTypes.number,
   }).isRequired,
-  modalState: PropTypes.bool.isRequired,
-  closeModal: PropTypes.func.isRequired,
+  modalState: PropTypes.shape({
+    value: PropTypes.bool.isRequired,
+    toggle: PropTypes.func.isRequired,
+  }).isRequired,
   changeSlide: PropTypes.func.isRequired,
 };
 

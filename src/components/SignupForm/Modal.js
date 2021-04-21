@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import tinykeys from 'tinykeys';
 
+import { PopupCookieContext } from '~components/layouts/MainLayout';
+import { getMaxCookieAge } from '~utils/index';
 import {
   Container as ModalContainer,
   Body,
@@ -19,12 +21,42 @@ const ModalBody = styled(Body)`
     width: 50%;
   }
 `;
+
+const Checkbox = styled.label`
+  font-size: calc(${({ theme }) => theme.fonts.small} - 0.35rem);
+  display: flex;
+  align-items: center;
+  input {
+    transform: scale(0.7);
+    margin-right: 0.3rem;
+  }
+  button {
+    margin-left: 0.3rem;
+    border-radius: 0.5rem;
+    border: none;
+  }
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    font-size: calc(${({ theme }) => theme.fonts.medium} - 0.35rem);
+    input {
+      transform: scale(0.8);
+    }
+  }
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    font-size: calc(${({ theme }) => theme.fonts.large} - 0.35rem);
+    input {
+      transform: scale(0.9);
+    }
+  }
+`;
 //#endregion
 
-const Modal = ({ children, modalState, closeModal }) => {
+const Modal = ({ children, modalState }) => {
+  const [doNotShowValue, setDoNotShowValue] = useState(false);
+  const { createCookie, showPopup } = useContext(PopupCookieContext);
+
   useEffect(() => {
     let unsubscribe = tinykeys(window, {
-      Escape: () => closeModal(),
+      Escape: () => handleClose(),
     });
 
     return () => {
@@ -32,11 +64,36 @@ const Modal = ({ children, modalState, closeModal }) => {
     };
   });
 
+  const handleClose = () => {
+    if (showPopup) {
+      createCookie(getMaxCookieAge({ days: 2 }));
+      modalState.toggle();
+    }
+  };
+
+  const toggleDoNotShow = () => setDoNotShowValue(!doNotShowValue);
+  const handleDoNotShowClose = () => {
+    createCookie(getMaxCookieAge({ isNeverExpires: true }));
+    modalState.toggle();
+  };
+
   return (
-    <ModalContainer isOpen={modalState}>
+    <ModalContainer isOpen={modalState.value}>
       <ModalBody>
-        <CloseModal onClick={closeModal}>&times;</CloseModal>
+        <CloseModal onClick={handleClose}>&times;</CloseModal>
         {children}
+        <Checkbox htmlFor="do-not-show-popup">
+          <input
+            type="checkbox"
+            id="do-not-show-popup"
+            onChange={toggleDoNotShow}
+            checked={doNotShowValue}
+          />
+          Do not show again on this device
+          {doNotShowValue === true ? (
+            <button onClick={handleDoNotShowClose}>Save and close</button>
+          ) : null}
+        </Checkbox>
       </ModalBody>
     </ModalContainer>
   );
@@ -44,12 +101,16 @@ const Modal = ({ children, modalState, closeModal }) => {
 
 Modal.propTypes = {
   children: PropTypes.object.isRequired,
-  modalState: PropTypes.bool,
-  closeModal: PropTypes.func.isRequired,
+  modalState: PropTypes.shape({
+    value: PropTypes.bool,
+    toggle: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 Modal.defaultProps = {
-  modalState: false,
+  modalState: {
+    value: false,
+  },
 };
 
 export { Modal };
