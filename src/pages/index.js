@@ -11,7 +11,7 @@ import { LetsChat } from '~components/pages/index/LetsChat';
 const IndexPage = () => (
   <MainLayout pageTitle="Home" structuredDataTemplate={structuredDataTemplate}>
     <Work />
-    {/* <ArtistStatement /> */}
+    <ArtistStatement />
     <Testimonials />
     {/* <InstagramFeed /> */}
     <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>

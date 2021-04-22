@@ -11,15 +11,15 @@ const SignupFormPopup = () => {
   useEffect(() => {
     if (showPopup) {
       setTimeout(() => {
-        toggleModal();
+        setIsModalOpen(true);
       }, 10 * 1000);
     }
   }, [showPopup]);
 
-  const toggleModal = () => setIsModalOpen(!isModalOpen);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <Modal modalState={{ value: isModalOpen, toggle: toggleModal }}>
+    <Modal modalState={{ value: isModalOpen, close: closeModal }}>
       <MailChimpSignupForm />
     </Modal>
   );

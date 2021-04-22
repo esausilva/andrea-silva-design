@@ -163,9 +163,10 @@ const MailChimpSignupForm = () => {
         </FormImage>
         <FormContent>
           <p>
-            Download this free watercolor printable of Forest Bathing as my gift
-            to you for subscribing to my newsletter. Newsletter subscribers will
-            receive special updates and bonus content not found anywhere else!
+            Download a free watercolor printable of <em>Forest Bathing</em> as
+            my gift to you for subscribing to my newsletter. Newsletter
+            subscribers will receive special updates and bonus content not found
+            anywhere else!
           </p>
           <label htmlFor="fname">
             First Name{' '}
@@ -193,7 +194,7 @@ const MailChimpSignupForm = () => {
             onChange={handleChange}
             value={formData.lname}
           />
-          <label htmlFor="email">
+          <label htmlFor="signup-email">
             Email{' '}
             <span>
               * <small>{formData.errors.email}</small>
@@ -202,7 +203,7 @@ const MailChimpSignupForm = () => {
           <input
             type="email"
             name="email"
-            id="email"
+            id="signup-email"
             onChange={handleChange}
             value={formData.email}
           />

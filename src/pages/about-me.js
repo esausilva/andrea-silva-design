@@ -19,10 +19,13 @@ const Content = styled(SecondaryLayout)`
     display: block;
   }
   form {
-    width: 85%;
+    width: 100%;
     margin: 2rem auto 0 auto;
     padding: 2rem;
     border: 1px solid ${({ theme }) => theme.colors.gray};
+    @media (min-width: ${({ theme }) => theme.media.medium}) {
+      width: 85%;
+    }
   }
 `;
 

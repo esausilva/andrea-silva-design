@@ -68,16 +68,15 @@ const Modal = ({ children, modalState }) => {
   });
 
   const handleClose = () => {
-    if (showPopup) {
-      createCookie(getMaxCookieAgeInSeconds({ days: 2 }));
-      modalState.toggle();
-    }
+    if (showPopup) createCookie(getMaxCookieAgeInSeconds({ days: 2 }));
+
+    modalState.close();
   };
 
   const toggleDoNotShow = () => setDoNotShowValue(!doNotShowValue);
   const handleDoNotShowClose = () => {
     createCookie(getMaxCookieAgeInSeconds({ isNeverExpires: true }));
-    modalState.toggle();
+    modalState.close();
   };
 
   return (
@@ -106,7 +105,7 @@ Modal.propTypes = {
   children: PropTypes.object.isRequired,
   modalState: PropTypes.shape({
     value: PropTypes.bool,
-    toggle: PropTypes.func.isRequired,
+    close: PropTypes.func.isRequired,
   }).isRequired,
 };
 
