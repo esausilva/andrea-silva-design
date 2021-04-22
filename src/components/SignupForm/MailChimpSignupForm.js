@@ -26,7 +26,7 @@ const FormImage = styled.div`
     display: inline-block;
     img {
       position: absolute;
-      margin: 0;
+      margin: 0 !important;
       width: 100%;
       height: 100%;
       object-fit: cover;
