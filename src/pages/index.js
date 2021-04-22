@@ -13,7 +13,7 @@ const IndexPage = () => (
     <Work />
     <ArtistStatement />
     <Testimonials />
-    {/* <InstagramFeed /> */}
+    <InstagramFeed />
     <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>
       <LetsChat />
     </FormspreeProvider>

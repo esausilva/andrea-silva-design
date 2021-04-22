@@ -26,7 +26,7 @@ const MainLayout = ({ children, ...rest }) => {
   return (
     <ThemeProvider theme={theme}>
       <>
-        {/* <SEO {...rest} /> */}
+        <SEO {...rest} />
         <GlobalStyles />
         <BackToTop />
         <Navigation />
