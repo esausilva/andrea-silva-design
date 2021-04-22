@@ -15,8 +15,10 @@ import {
 const ModalBody = styled(Body)`
   width: 100%;
   padding-top: 3.4rem;
+  height: 100%;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 70%;
+    height: auto;
   }
   @media (min-width: ${({ theme }) => theme.media.large}) {
     width: 50%;

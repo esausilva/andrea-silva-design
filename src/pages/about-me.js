@@ -19,7 +19,8 @@ const Content = styled(SecondaryLayout)`
     display: block;
   }
   form {
-    margin-top: 2rem;
+    width: 85%;
+    margin: 2rem auto 0 auto;
     padding: 2rem;
     border: 1px solid ${({ theme }) => theme.colors.gray};
   }
