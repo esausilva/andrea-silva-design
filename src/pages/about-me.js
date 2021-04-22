@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 import { MainLayout } from '~components/layouts/MainLayout';
+import { MailChimpSignupForm } from '~components/SignupForm/MailChimpSignupForm';
 import { SecondaryLayout } from '~styles/SecondaryLayout';
 import { transformationsFormat } from '~utils/index';
 import { Image } from '~helpers/Image';
@@ -16,6 +17,11 @@ const Content = styled(SecondaryLayout)`
   img {
     margin: 2rem auto;
     display: block;
+  }
+  form {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 1px solid ${({ theme }) => theme.colors.gray};
   }
 `;
 
@@ -69,8 +75,8 @@ const AboutMe = () => {
             Painting and Music from Tabor College in Hillsboro, KS.
           </p>
           <Quote>
-            "Bacon ipsum dolor amet ball tip short ribs swine turkey spare ribs
-            pig."
+            "As a graphic designer, illustrator and artist I believe in the
+            power of beautiful images to tell a story."
           </Quote>
         </ContentTop>
         <Image
@@ -130,6 +136,7 @@ const AboutMe = () => {
             </p>
           </div>
         </ContentBottom>
+        <MailChimpSignupForm />
       </Content>
     </MainLayout>
   );

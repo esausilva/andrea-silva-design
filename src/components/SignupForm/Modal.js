@@ -14,6 +14,7 @@ import {
 //#region Styles
 const ModalBody = styled(Body)`
   width: 100%;
+  padding-top: 3.4rem;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 70%;
   }

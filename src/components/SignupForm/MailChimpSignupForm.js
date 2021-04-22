@@ -6,11 +6,35 @@ import { darken } from 'polished';
 import { pink } from '~styles/theme';
 import { PopupCookieContext } from '~components/layouts/MainLayout';
 import { getMaxCookieAgeInSeconds } from '~utils/index';
+import { Image } from '~helpers/Image';
+import { transformationsFormat } from '~utils/index';
 
 //#region Styles
 const danger = '#dc3545';
 
-const Form = styled.form`
+const Body = styled.div`
+  display: flex;
+`;
+
+const FormImage = styled.div`
+  display: none;
+  width: 40%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 0.7rem;
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    display: inline-block;
+    img {
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+`;
+
+const FormContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -49,11 +73,15 @@ const Form = styled.form`
       font-size: calc(${({ theme }) => theme.fonts.large} + 0.3rem);
     }
   }
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    width: 60%;
+  }
 `;
 
 const Title = styled.h4`
   align-self: center;
   font-size: 1.9rem;
+  text-align: center;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     font-size: 2.2rem;
   }
@@ -122,60 +150,73 @@ const MailChimpSignupForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Title>Subscribe to my newsletter</Title>
-      <p>
-        Bacon ipsum dolor amet t-bone shank strip steak brisket, ham pork loin
-        doner cow drumstick tail pork belly tongue tri-tip tenderloin turkey.
-      </p>
-      <label htmlFor="fname">
-        First Name{' '}
-        <span>
-          * <small>{formData.errors.fname}</small>
-        </span>
-      </label>
-      <input
-        type="text"
-        name="fname"
-        id="fname"
-        onChange={handleChange}
-        value={formData.fname}
-      />
-      <label htmlFor="lname">
-        Last Name{' '}
-        <span>
-          * <small>{formData.errors.lname}</small>
-        </span>
-      </label>
-      <input
-        type="text"
-        name="lname"
-        id="lname"
-        onChange={handleChange}
-        value={formData.lname}
-      />
-      <label htmlFor="email">
-        Email{' '}
-        <span>
-          * <small>{formData.errors.email}</small>
-        </span>
-      </label>
-      <input
-        type="text"
-        name="email"
-        id="email"
-        onChange={handleChange}
-        value={formData.email}
-      />
-      {formData.mcMessage === null ? null : (
-        <div
-          dangerouslySetInnerHTML={{
-            __html: formData.mcMessage,
-          }}
-        />
-      )}
-      <button type="submit">Subscribe</button>
-    </Form>
+    <form onSubmit={handleSubmit}>
+      <Title>Subscribe to My Newsletter and Get a Free Download!</Title>
+      <Body>
+        <FormImage>
+          <Image
+            alt="Andrea Silva Design Newsletter Free Download"
+            title="Andrea Silva Design Newsletter Free Download"
+            relativePath="freebies/andrea-silva-design-newsletter-free-download.jpg"
+            transformations={transformationsFormat('w_500')}
+          />
+        </FormImage>
+        <FormContent>
+          <p>
+            Download this free watercolor printable of Forest Bathing as my gift
+            to you for subscribing to my newsletter. Newsletter subscribers will
+            receive special updates and bonus content not found anywhere else!
+          </p>
+          <label htmlFor="fname">
+            First Name{' '}
+            <span>
+              * <small>{formData.errors.fname}</small>
+            </span>
+          </label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            onChange={handleChange}
+            value={formData.fname}
+          />
+          <label htmlFor="lname">
+            Last Name{' '}
+            <span>
+              * <small>{formData.errors.lname}</small>
+            </span>
+          </label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            onChange={handleChange}
+            value={formData.lname}
+          />
+          <label htmlFor="email">
+            Email{' '}
+            <span>
+              * <small>{formData.errors.email}</small>
+            </span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onChange={handleChange}
+            value={formData.email}
+          />
+          {formData.mcMessage === null ? null : (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: formData.mcMessage,
+              }}
+            />
+          )}
+          <button type="submit">Subscribe</button>
+        </FormContent>
+      </Body>
+    </form>
   );
 };
 
@@ -183,21 +224,21 @@ const emptyValidation = formData => {
   let hasErrors = false;
 
   if (formData.email.trim() === '') {
-    formData.errors.email = 'Required field';
+    formData.errors.email = 'Required';
     hasErrors = true;
   } else {
     formData.errors.email = null;
   }
 
   if (formData.fname.trim() === '') {
-    formData.errors.fname = 'Required field';
+    formData.errors.fname = 'Required';
     hasErrors = true;
   } else {
     formData.errors.fname = null;
   }
 
   if (formData.lname.trim() === '') {
-    formData.errors.lname = 'Required field';
+    formData.errors.lname = 'Required';
     hasErrors = true;
   } else {
     formData.errors.lname = null;

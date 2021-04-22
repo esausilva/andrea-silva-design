@@ -10,6 +10,7 @@ export const Container = styled.div`
   backdrop-filter: blur(4px);
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   z-index: 999;
+  overflow: auto;
 `;
 
 export const Body = styled.section`
