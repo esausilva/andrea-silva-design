@@ -64,7 +64,8 @@ function SEO({
 
     let sd = structuredDataTemplate;
     for (const token in tokens) {
-      sd = sd.replaceAll(token, tokens[token]);
+      const re = new RegExp(token, 'g');
+      sd = sd.replace(re, tokens[token]);
     }
 
     return sd;
