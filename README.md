@@ -8,6 +8,6 @@ You may use the code in this repo for your learning purposes.
 
 ## Giving Back
 
-If you find this repo useful in any way, consider getting me a coffee. I would really appreciate it!
+If you find this repo useful in any way, consider getting me a coffee by clicking on the image below. I would really appreciate it!
 
 [![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/esausilva)
