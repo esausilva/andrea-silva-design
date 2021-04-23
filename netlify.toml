@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/portfolio/fine-art"
+  to = "/portfolio/art"
+  status = 301
+  force = true
+  query = {path = ":path"}
