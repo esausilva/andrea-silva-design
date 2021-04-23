@@ -9,7 +9,10 @@ import { InstagramFeed } from '~components/pages/index/InstagramFeed';
 import { LetsChat } from '~components/pages/index/LetsChat';
 
 const IndexPage = () => (
-  <MainLayout pageTitle="Home" structuredDataTemplate={structuredDataTemplate}>
+  <MainLayout
+    pageTitle="Artist, Graphic Designer and Illustrator"
+    structuredDataTemplate={structuredDataTemplate}
+  >
     <Work />
     <ArtistStatement />
     <Testimonials />
