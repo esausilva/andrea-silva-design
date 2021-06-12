@@ -12,6 +12,9 @@ const useVideoAutoPlayback = options => {
   };
 
   useEffect(() => {
+    if (IntersectionObserver === null || IntersectionObserver === undefined)
+      return () => {};
+
     const observer = new IntersectionObserver(cb, options);
 
     if (containerRef.current) observer.observe(containerRef.current);
