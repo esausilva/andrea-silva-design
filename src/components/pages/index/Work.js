@@ -4,20 +4,16 @@ import { Link } from 'gatsby';
 
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
-import featuredImagesData from '~content/featuredImages.json';
+import featuredImagesData from '~content/index/featuredImages.json';
 
 //#region Styles
 const Portfolio = styled.section`
-  height: ${({ theme }) => `calc(100vh - ${theme.nav.small})`};
+  height: 100vh;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   @media (min-width: ${({ theme }) => theme.media.medium}) {
-    height: ${({ theme }) => `calc(100vh - ${theme.nav.medium})`};
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-  }
-  @media (min-width: ${({ theme }) => theme.media.large}) {
-    height: ${({ theme }) => `calc(100vh - ${theme.nav.large})`};
   }
 `;
 

@@ -13,6 +13,7 @@ export const theme = {
   colors: {
     pink: 'var(--pink)',
     gray: 'var(--gray)',
+    error: 'var(--error)',
   },
   nav: {
     small: 'var(--nav-height)',
@@ -20,6 +21,7 @@ export const theme = {
     large: 'var(--nav-height-large)',
   },
   media: {
+    small: '568px', // 700
     medium: '824px',
     large: '1186px',
   },

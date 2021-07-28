@@ -26,6 +26,48 @@
         }
       ],
       "allowExtraFields": false
+    },
+    "purchase-order":  {
+      "name": "Purchase Order",
+      "fields": {
+        "artwork": {
+          "type": "text",
+          "prettyName": "Artwork",
+          "required": true
+        },
+        "artworkLink": {
+          "type": "text",
+          "prettyName": "Artwork Link",
+          "required": true
+        },
+        "customerName": {
+          "type": "text",
+          "prettyName": "Full Name",
+          "required": true
+        },
+        "customerEmail": {
+          "type": "email",
+          "prettyName": "Email",
+          "required": true
+        },
+        "customerAddress": {
+          "type": "text",
+          "prettyName": "Full Address",
+          "required": true
+        },
+        "newsletterSignUp": {
+          "type": "text",
+          "prettyName": "Newsletter Sign Up",
+          "required": false
+        }
+      },
+      "actions": [
+        {
+          "type": "email",
+          "to": "andreasilva.design@outlook.com"
+        }
+      ],
+      "allowExtraFields": false
     }
   }
 }

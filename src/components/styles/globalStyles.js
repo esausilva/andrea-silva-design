@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   :root {
     --pink: ${pink};
     --gray: ${gray};
+    --error: #dc3545;
     --nav-height: 10rem;
     --nav-height-medium: 15rem;
     --nav-height-large: 20rem;

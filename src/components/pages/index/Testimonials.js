@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
 import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
-import testimonialsData from '~content/testimonials.json';
+import testimonialsData from '~content/index/testimonials.json';
 
 import 'keen-slider/keen-slider.min.css';
 

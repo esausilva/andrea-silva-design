@@ -13,6 +13,8 @@ export const Container = styled.div`
 `;
 
 export const Body = styled.section`
+  width: 100%;
+  height: 100%;
   position: fixed;
   background: #fff;
   top: 50%;
@@ -21,6 +23,17 @@ export const Body = styled.section`
   box-shadow: 0 1rem 3rem hsla(0, 0%, 0%, 0.3);
   padding: 1rem;
   overflow: auto;
+`;
+
+export const BodyResponsive = styled(Body)`
+  padding-top: 3.4rem;
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    width: 70%;
+    height: auto;
+  }
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    width: 50%;
+  }
 `;
 
 export const Close = styled.button`
@@ -41,5 +54,16 @@ export const Close = styled.button`
   @media (min-width: ${({ theme }) => theme.media.large}) {
     font-size: 7rem;
     top: -3rem;
+  }
+`;
+
+export const Title = styled.h4`
+  font-size: 1.9rem;
+  text-align: center;
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    font-size: 2.2rem;
+  }
+  @media (min-width: ${({ theme }) => theme.media.large}) {
+    font-size: 2.6rem;
   }
 `;

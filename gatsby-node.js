@@ -23,3 +23,24 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     },
   });
 };
+
+const gardenCollectionPages = async ({ graphql, actions }) => {
+  const collectionItemTemplate = path.resolve(
+    './src/templates/collection-item.js',
+  );
+  const gardenCollectionData = require('./src/content/collections/garden-collection.json');
+
+  gardenCollectionData.forEach(collection => {
+    actions.createPage({
+      path: `collections/garden-collection/${collection.slug}`,
+      component: collectionItemTemplate,
+      context: {
+        collection,
+      },
+    });
+  });
+};
+
+export const createPages = async params => {
+  await Promise.all([gardenCollectionPages(params)]);
+};

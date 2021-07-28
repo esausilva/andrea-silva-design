@@ -1,29 +1,29 @@
 import React, { useReducer, useContext } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import styled from 'styled-components';
-import { darken } from 'polished';
 
 import { pink } from '~styles/theme';
+import { Button } from '~styles/Button';
+import { Title } from '~styles/Modal';
+import { Input, Label, Fieldset, ErrorValidation } from '~styles/Form';
 import { PopupCookieContext } from '~components/layouts/MainLayout';
 import { getMaxCookieAgeInSeconds } from '~utils/index';
-import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
+import { Image } from '~helpers/Image';
 
 //#region Styles
-const danger = '#dc3545';
-
 const Body = styled.div`
   display: flex;
 `;
 
-const FormImage = styled.div`
+const PrintableImage = styled.div`
   display: none;
-  width: 40%;
   position: relative;
   overflow: hidden;
   margin-right: 0.7rem;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     display: inline-block;
+    width: 40%;
     img {
       position: absolute;
       margin: 0 !important;
@@ -34,59 +34,9 @@ const FormImage = styled.div`
   }
 `;
 
-const FormContent = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  label {
-    font-weight: 400;
-    span {
-      color: ${danger};
-    }
-  }
-  * {
-    margin-bottom: 1rem;
-  }
-  input {
-    padding: 0.5rem 1rem;
-    border: 1px solid ${({ theme }) => theme.colors.gray};
-    border-radius: 0.5rem;
-  }
-  button {
-    margin-top: 1rem;
-    background-color: ${({ theme }) => theme.colors.pink};
-    border: none;
-    border-radius: 0.5rem;
-    color: #fff;
-    font-weight: 400;
-    padding: 0.8rem;
-    cursor: pointer;
-    box-shadow: 0 0.1rem 0.3rem hsla(0, 0%, 0%, 0.3);
-    font-size: calc(${({ theme }) => theme.fonts.small} + 0.2rem);
-    &:active {
-      background-color: ${darken(0.04, pink)};
-    }
-    @media (min-width: ${({ theme }) => theme.media.medium}) {
-      font-size: calc(${({ theme }) => theme.fonts.medium} + 0.3rem);
-    }
-    @media (min-width: ${({ theme }) => theme.media.large}) {
-      font-size: calc(${({ theme }) => theme.fonts.large} + 0.3rem);
-    }
-  }
+const Form = styled.form`
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     width: 60%;
-  }
-`;
-
-const Title = styled.h4`
-  align-self: center;
-  font-size: 1.9rem;
-  text-align: center;
-  @media (min-width: ${({ theme }) => theme.media.medium}) {
-    font-size: 2.2rem;
-  }
-  @media (min-width: ${({ theme }) => theme.media.large}) {
-    font-size: 2.6rem;
   }
 `;
 //#endregion
@@ -137,7 +87,7 @@ const MailChimpSignupForm = () => {
     })
       .then(({ result, msg }) => {
         if (result === 'error') {
-          const value = `<p style="color:${danger};">${msg}</p>`;
+          const value = `<p style="color:#dc3545;">${msg}</p>`;
           dispatch({ name: 'mcMessage', value });
         } else {
           const value = `<p style="color:#28a745;">${msg}</p>`;
@@ -150,74 +100,72 @@ const MailChimpSignupForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <>
       <Title>Subscribe to My Newsletter and Get a Free Download!</Title>
       <Body>
-        <FormImage>
+        <PrintableImage>
           <Image
             alt="Andrea Silva Design Newsletter Free Download"
             title="Andrea Silva Design Newsletter Free Download"
             relativePath="freebies/andrea-silva-design-newsletter-free-download.jpg"
             transformations={transformationsFormat('w_500')}
           />
-        </FormImage>
-        <FormContent>
-          <p>
-            Download a free watercolor printable of <em>Forest Bathing</em> as
-            my gift to you for subscribing to my newsletter. Newsletter
-            subscribers will receive special updates and bonus content not found
-            anywhere else!
-          </p>
-          <label htmlFor="fname">
-            First Name{' '}
-            <span>
-              * <small>{formData.errors.fname}</small>
-            </span>
-          </label>
-          <input
-            type="text"
-            name="fname"
-            id="fname"
-            onChange={handleChange}
-            value={formData.fname}
-          />
-          <label htmlFor="lname">
-            Last Name{' '}
-            <span>
-              * <small>{formData.errors.lname}</small>
-            </span>
-          </label>
-          <input
-            type="text"
-            name="lname"
-            id="lname"
-            onChange={handleChange}
-            value={formData.lname}
-          />
-          <label htmlFor="signup-email">
-            Email{' '}
-            <span>
-              * <small>{formData.errors.email}</small>
-            </span>
-          </label>
-          <input
-            type="email"
-            name="email"
-            id="signup-email"
-            onChange={handleChange}
-            value={formData.email}
-          />
-          {formData.mcMessage === null ? null : (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: formData.mcMessage,
-              }}
+        </PrintableImage>
+        <Form onSubmit={handleSubmit}>
+          <Fieldset>
+            <p>
+              Download a free watercolor printable of <em>Forest Bathing</em> as
+              my gift to you for subscribing to my newsletter. Newsletter
+              subscribers will receive special updates and bonus content not
+              found anywhere else!
+            </p>
+            <Label htmlFor="fname">
+              First Name
+              <ErrorValidation>* {formData.errors.fname}</ErrorValidation>
+            </Label>
+            <Input
+              type="text"
+              name="fname"
+              id="fname"
+              onChange={handleChange}
+              value={formData.fname}
             />
-          )}
-          <button type="submit">Subscribe</button>
-        </FormContent>
+            <Label htmlFor="lname">
+              Last Name
+              <ErrorValidation>* {formData.errors.lname}</ErrorValidation>
+            </Label>
+            <Input
+              type="text"
+              name="lname"
+              id="lname"
+              onChange={handleChange}
+              value={formData.lname}
+            />
+            <Label htmlFor="signup-email">
+              Email
+              <ErrorValidation>* {formData.errors.email}</ErrorValidation>
+            </Label>
+            <Input
+              type="email"
+              name="email"
+              id="signup-email"
+              onChange={handleChange}
+              value={formData.email}
+            />
+            {formData.mcMessage === null ? null : (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: formData.mcMessage,
+                }}
+              />
+            )}
+            <Button type="submit" $bgColor={pink}>
+              Subscribe
+            </Button>
+          </Fieldset>
+        </Form>
       </Body>
-    </form>
+    </>
   );
 };
 

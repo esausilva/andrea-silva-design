@@ -7,12 +7,14 @@ import { ArtistStatement } from '~components/pages/index/ArtistStatement';
 import { Testimonials } from '~components/pages/index/Testimonials';
 import { InstagramFeed } from '~components/pages/index/InstagramFeed';
 import { LetsChat } from '~components/pages/index/LetsChat';
+import { CollectionBanner } from '~components/pages/index/CollectionBanner';
 
 const IndexPage = () => (
   <MainLayout
     pageTitle="Artist, Graphic Designer and Illustrator"
     structuredDataTemplate={structuredDataTemplate}
   >
+    <CollectionBanner />
     <Work />
     <ArtistStatement />
     <Testimonials />

@@ -1,4 +1,4 @@
-# Andrea Silva Portfolio
+# Andrea Silva Design
 
 > Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in illustration, fine art, digital design, and motion graphics. Located in Nashville, TN - Music City
 

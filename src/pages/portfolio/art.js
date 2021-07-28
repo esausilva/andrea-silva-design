@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
-import { SecondaryLayout } from '~styles/SecondaryLayout';
+import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Gallery } from '~components/Gallery/Gallery';
 import { Title } from '~styles/Title';
-import artData from '~content/art.json';
+import artData from '~content/portfolio/art.json';
 
 const Art = () => {
   return (

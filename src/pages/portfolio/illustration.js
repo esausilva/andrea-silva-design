@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
-import { SecondaryLayout } from '~styles/SecondaryLayout';
+import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Gallery } from '~components/Gallery/Gallery';
 import { Title } from '~styles/Title';
-import illustrationData from '~content/illustration.json';
+import illustrationData from '~content/portfolio/illustration.json';
 
 const Illustration = () => {
   return (

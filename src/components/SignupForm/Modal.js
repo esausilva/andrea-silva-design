@@ -7,24 +7,11 @@ import { PopupCookieContext } from '~components/layouts/MainLayout';
 import { getMaxCookieAgeInSeconds } from '~utils/index';
 import {
   Container as ModalContainer,
-  Body,
+  BodyResponsive,
   Close as CloseModal,
 } from '~styles/Modal';
 
 //#region Styles
-const ModalBody = styled(Body)`
-  width: 100%;
-  padding-top: 3.4rem;
-  height: 100%;
-  @media (min-width: ${({ theme }) => theme.media.medium}) {
-    width: 70%;
-    height: auto;
-  }
-  @media (min-width: ${({ theme }) => theme.media.large}) {
-    width: 50%;
-  }
-`;
-
 const Checkbox = styled.label`
   font-size: calc(${({ theme }) => theme.fonts.small} - 0.35rem);
   display: flex;
@@ -81,7 +68,7 @@ const Modal = ({ children, modalState }) => {
 
   return (
     <ModalContainer isOpen={modalState.value}>
-      <ModalBody>
+      <BodyResponsive>
         <CloseModal onClick={handleClose}>&times;</CloseModal>
         {children}
         <Checkbox htmlFor="do-not-show-popup">
@@ -96,7 +83,7 @@ const Modal = ({ children, modalState }) => {
             <button onClick={handleDoNotShowClose}>Save and close</button>
           ) : null}
         </Checkbox>
-      </ModalBody>
+      </BodyResponsive>
     </ModalContainer>
   );
 };

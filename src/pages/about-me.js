@@ -4,7 +4,7 @@ import { lighten } from 'polished';
 
 import { MainLayout } from '~components/layouts/MainLayout';
 import { MailChimpSignupForm } from '~components/SignupForm/MailChimpSignupForm';
-import { SecondaryLayout } from '~styles/SecondaryLayout';
+import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { transformationsFormat } from '~utils/index';
 import { Image } from '~helpers/Image';
 import { Title } from '~styles/Title';

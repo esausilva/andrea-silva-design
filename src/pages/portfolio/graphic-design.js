@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
-import { SecondaryLayout } from '~styles/SecondaryLayout';
+import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Gallery } from '~components/Gallery/Gallery';
 import { Title } from '~styles/Title';
-import graphicDesignData from '~content/graphicDesign.json';
+import graphicDesignData from '~content/portfolio/graphicDesign.json';
 
 const GraphicDesign = () => (
   <MainLayout pageTitle="Graphic Design" pathName="portfolio/graphic-design">

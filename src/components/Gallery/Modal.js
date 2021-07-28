@@ -16,8 +16,6 @@ import {
 
 //#region Styles
 const ModalBody = styled(Body)`
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   z-index: 1000;
