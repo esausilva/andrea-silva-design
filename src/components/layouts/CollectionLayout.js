@@ -116,8 +116,8 @@ const CollectionLayout = ({ children: data, hero, pageTitle }) => (
           <Link to={slug}>
             <Image
               relativePath={image}
-              alt={`${title}, ${size} - ${price}`}
-              title={`${title}, ${size} - ${price}`}
+              alt={`Shop ${title}, ${size} - ${price}`}
+              title={`Shop ${title}, ${size} - ${price}`}
               transformations={transformationsFormat('w_500')}
             />
           </Link>

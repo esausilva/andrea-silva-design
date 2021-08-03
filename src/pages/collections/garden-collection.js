@@ -8,11 +8,10 @@ const GardenCollection = () => {
     <CollectionLayout
       hero={{
         title: 'The Garden Collection',
-        image:
-          'art-collections/andrea-silva-design-2021-june-art-collection-cover.jpg',
+        image: 'art-collections/garden-collection/garden-collection-cover.jpg',
         imageTitle: 'June Collection - The Garden Collection',
       }}
-      pageTitle={'The Garden Collection'}
+      pageTitle="The Garden Collection"
     >
       {gardenCollectionData}
     </CollectionLayout>

@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
+import { LandingTitle } from '~styles/Title';
 import featuredImagesData from '~content/index/featuredImages.json';
 
 //#region Styles
@@ -43,12 +44,6 @@ const WorkMedium = styled.div`
       text-decoration: none;
     }
   }
-  h1 {
-    color: #fff;
-    text-shadow: ${({ theme }) => theme.fonts.textShadow};
-    font-size: 3rem;
-    font-weight: 600;
-  }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     a {
       justify-content: start;
@@ -56,12 +51,6 @@ const WorkMedium = styled.div`
     }
     h1 {
       margin: 1.5rem;
-      font-size: 4rem;
-    }
-  }
-  @media (min-width: ${({ theme }) => theme.media.large}) {
-    h1 {
-      font-size: 5.5rem;
     }
   }
 `;
@@ -79,7 +68,7 @@ const Work = () => {
             transformations={transformationsFormat('w_1000')}
           />
           <Link to={`/portfolio/${slug}`}>
-            <h1>{title}</h1>
+            <LandingTitle>{title}</LandingTitle>
           </Link>
         </WorkMedium>
       ))}

@@ -54,6 +54,17 @@ const Price = styled.p`
 `;
 
 const Purchase = styled(Button)`
+  span {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  &:disabled {
+    background-color: ${({ theme }) => theme.colors.gray};
+    cursor: not-allowed;
+    span {
+      text-decoration: line-through;
+    }
+  }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     margin-top: 2rem;
   }
@@ -81,9 +92,10 @@ const CollectionItem = ({ pageContext: { collection } }) => {
             type="button"
             $bgColor="#f0d3c7"
             $textColor="initial"
+            disabled={collection.isSold}
             onClick={toggleModal}
           >
-            Purchase
+            <span>Purchase</span> {collection.isSold ? 'SOLD' : ''}
           </Purchase>
         </CollectionBody>
         <CollectionImages>

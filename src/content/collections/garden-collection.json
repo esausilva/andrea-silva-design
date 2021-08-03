@@ -1,142 +1,512 @@
 [
   {
-    "title": "Cherries",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
+    "title": "Acorn Squash",
+    "image": "art-collections/garden-collection/acorn-squash/garden-collection-acorn-squash-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "cherries",
+    "price": "$50",
+    "isSold": false,
+    "slug": "acorn-squash",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg"
+      "art-collections/garden-collection/acorn-squash/garden-collection-acorn-squash-1.jpg",
+      "art-collections/garden-collection/acorn-squash/garden-collection-acorn-squash-2.jpg",
+      "art-collections/garden-collection/acorn-squash/garden-collection-acorn-squash-3.jpg",
+      "art-collections/garden-collection/acorn-squash/garden-collection-acorn-squash-4.jpg",
+      "art-collections/garden-collection/acorn-squash/garden-collection-acorn-squash-5.jpg"
     ]
   },
   {
-    "title": "Pineapple",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
+    "title": "Apple",
+    "image": "art-collections/garden-collection/apple/garden-collection-apple-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "pineapple",
+    "price": "$50",
+    "isSold": false,
+    "slug": "apple",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg"
+      "art-collections/garden-collection/apple/garden-collection-apple-1.jpg",
+      "art-collections/garden-collection/apple/garden-collection-apple-2.jpg",
+      "art-collections/garden-collection/apple/garden-collection-apple-3.jpg",
+      "art-collections/garden-collection/apple/garden-collection-apple-4.jpg",
+      "art-collections/garden-collection/apple/garden-collection-apple-5.jpg"
     ]
   },
   {
-    "title": "Eggplant",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
+    "title": "Artichoke",
+    "image": "art-collections/garden-collection/artichoke/garden-collection-artichoke-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "eggplant",
+    "price": "$50",
+    "isSold": false,
+    "slug": "artichoke",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg"
+      "art-collections/garden-collection/artichoke/garden-collection-artichoke-1.jpg",
+      "art-collections/garden-collection/artichoke/garden-collection-artichoke-2.jpg",
+      "art-collections/garden-collection/artichoke/garden-collection-artichoke-3.jpg",
+      "art-collections/garden-collection/artichoke/garden-collection-artichoke-4.jpg",
+      "art-collections/garden-collection/artichoke/garden-collection-artichoke-5.jpg"
     ]
   },
   {
-    "title": "Turnip",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
+    "title": "Asparagus",
+    "image": "art-collections/garden-collection/asparagus/garden-collection-asparagus-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "turnip",
+    "price": "$50",
+    "isSold": false,
+    "slug": "asparagus",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg"
+      "art-collections/garden-collection/asparagus/garden-collection-asparagus-1.jpg",
+      "art-collections/garden-collection/asparagus/garden-collection-asparagus-2.jpg",
+      "art-collections/garden-collection/asparagus/garden-collection-asparagus-3.jpg",
+      "art-collections/garden-collection/asparagus/garden-collection-asparagus-4.jpg",
+      "art-collections/garden-collection/asparagus/garden-collection-asparagus-5.jpg"
     ]
   },
   {
-    "title": "Broccoli",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
+    "title": "Avocado",
+    "image": "art-collections/garden-collection/avocado/garden-collection-avocado-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "broccoli",
+    "price": "$50",
+    "isSold": true,
+    "slug": "avocado",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg"
+      "art-collections/garden-collection/avocado/garden-collection-avocado-1.jpg",
+      "art-collections/garden-collection/avocado/garden-collection-avocado-2.jpg",
+      "art-collections/garden-collection/avocado/garden-collection-avocado-3.jpg",
+      "art-collections/garden-collection/avocado/garden-collection-avocado-4.jpg",
+      "art-collections/garden-collection/avocado/garden-collection-avocado-5.jpg"
     ]
   },
   {
-    "title": "Sweet Potato",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
+    "title": "Beet",
+    "image": "art-collections/garden-collection/beet/garden-collection-beet-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "sweet-potato",
+    "price": "$50",
+    "isSold": true,
+    "slug": "beet",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg"
+      "art-collections/garden-collection/beet/garden-collection-beet-1.jpg",
+      "art-collections/garden-collection/beet/garden-collection-beet-2.jpg",
+      "art-collections/garden-collection/beet/garden-collection-beet-3.jpg",
+      "art-collections/garden-collection/beet/garden-collection-beet-4.jpg",
+      "art-collections/garden-collection/beet/garden-collection-beet-5.jpg"
     ]
   },
   {
-    "title": "Ginger",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
+    "title": "Bell Pepper",
+    "image": "art-collections/garden-collection/bell-pepper/garden-collection-bell-pepper-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
-    "slug": "ginger",
+    "price": "$50",
+    "isSold": false,
+    "slug": "bell-pepper",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg"
-    ]
-  },
-  {
-    "title": "Lemon",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-    "size": "8x8\"",
-    "price": "$65",
-    "slug": "lemon",
-    "medium": "Watercolor on 100% Cotton Arches paper",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
-    "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg"
-    ]
-  },
-  {
-    "title": "Pomegranate",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-    "size": "8x8\"",
-    "price": "$65",
-    "slug": "pomegranate",
-    "medium": "Watercolor on 100% Cotton Arches paper",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
-    "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-1.jpg"
+      "art-collections/garden-collection/bell-pepper/garden-collection-bell-pepper-1.jpg",
+      "art-collections/garden-collection/bell-pepper/garden-collection-bell-pepper-2.jpg",
+      "art-collections/garden-collection/bell-pepper/garden-collection-bell-pepper-3.jpg",
+      "art-collections/garden-collection/bell-pepper/garden-collection-bell-pepper-4.jpg",
+      "art-collections/garden-collection/bell-pepper/garden-collection-bell-pepper-5.jpg"
     ]
   },
   {
     "title": "Blueberry",
-    "image": "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
+    "image": "art-collections/garden-collection/blueberry/garden-collection-blueberry-4.jpg",
     "size": "8x8\"",
-    "price": "$65",
+    "price": "$50",
+    "isSold": false,
     "slug": "blueberry",
     "medium": "Watercolor on 100% Cotton Arches paper",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
     "images": [
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg",
-      "art-collections/garden-collection/cherries-from-the-garden-collection-2.jpg"
+      "art-collections/garden-collection/blueberry/garden-collection-blueberry-1.jpg",
+      "art-collections/garden-collection/blueberry/garden-collection-blueberry-2.jpg",
+      "art-collections/garden-collection/blueberry/garden-collection-blueberry-3.jpg",
+      "art-collections/garden-collection/blueberry/garden-collection-blueberry-4.jpg",
+      "art-collections/garden-collection/blueberry/garden-collection-blueberry-5.jpg"
+    ]
+  },
+  {
+    "title": "Broccoli",
+    "image": "art-collections/garden-collection/broccoli/garden-collection-broccoli-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": true,
+    "slug": "broccoli",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/broccoli/garden-collection-broccoli-1.jpg",
+      "art-collections/garden-collection/broccoli/garden-collection-broccoli-2.jpg",
+      "art-collections/garden-collection/broccoli/garden-collection-broccoli-3.jpg",
+      "art-collections/garden-collection/broccoli/garden-collection-broccoli-4.jpg",
+      "art-collections/garden-collection/broccoli/garden-collection-broccoli-5.jpg"
+    ]
+  },
+  {
+    "title": "Brussel Sprouts",
+    "image": "art-collections/garden-collection/brussel-sprouts/garden-collection-brussel-sprouts-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "brussel-sprouts",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/brussel-sprouts/garden-collection-brussel-sprouts-1.jpg",
+      "art-collections/garden-collection/brussel-sprouts/garden-collection-brussel-sprouts-2.jpg",
+      "art-collections/garden-collection/brussel-sprouts/garden-collection-brussel-sprouts-3.jpg",
+      "art-collections/garden-collection/brussel-sprouts/garden-collection-brussel-sprouts-4.jpg",
+      "art-collections/garden-collection/brussel-sprouts/garden-collection-brussel-sprouts-5.jpg"
+    ]
+  },
+  {
+    "title": "Cabbage",
+    "image": "art-collections/garden-collection/cabbage/garden-collection-cabbage-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "cabbage",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/cabbage/garden-collection-cabbage-1.jpg",
+      "art-collections/garden-collection/cabbage/garden-collection-cabbage-2.jpg",
+      "art-collections/garden-collection/cabbage/garden-collection-cabbage-3.jpg",
+      "art-collections/garden-collection/cabbage/garden-collection-cabbage-4.jpg",
+      "art-collections/garden-collection/cabbage/garden-collection-cabbage-5.jpg"
+    ]
+  },
+  {
+    "title": "Cantaloupe",
+    "image": "art-collections/garden-collection/cantaloupe/garden-collection-cantaloupe-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "cantaloupe",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/cantaloupe/garden-collection-cantaloupe-1.jpg",
+      "art-collections/garden-collection/cantaloupe/garden-collection-cantaloupe-2.jpg",
+      "art-collections/garden-collection/cantaloupe/garden-collection-cantaloupe-3.jpg",
+      "art-collections/garden-collection/cantaloupe/garden-collection-cantaloupe-4.jpg",
+      "art-collections/garden-collection/cantaloupe/garden-collection-cantaloupe-5.jpg"
+    ]
+  },
+  {
+    "title": "Carrots",
+    "image": "art-collections/garden-collection/carrots/garden-collection-carrots-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "carrots",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/carrots/garden-collection-carrots-1.jpg",
+      "art-collections/garden-collection/carrots/garden-collection-carrots-2.jpg",
+      "art-collections/garden-collection/carrots/garden-collection-carrots-3.jpg",
+      "art-collections/garden-collection/carrots/garden-collection-carrots-4.jpg",
+      "art-collections/garden-collection/carrots/garden-collection-carrots-5.jpg"
+    ]
+  },
+  {
+    "title": "Cherries",
+    "image": "art-collections/garden-collection/cherries/garden-collection-cherries-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "cherries",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/cherries/garden-collection-cherries-1.jpg",
+      "art-collections/garden-collection/cherries/garden-collection-cherries-2.jpg",
+      "art-collections/garden-collection/cherries/garden-collection-cherries-3.jpg",
+      "art-collections/garden-collection/cherries/garden-collection-cherries-4.jpg",
+      "art-collections/garden-collection/cherries/garden-collection-cherries-5.jpg"
+    ]
+  },
+  {
+    "title": "Eggplant",
+    "image": "art-collections/garden-collection/eggplant/garden-collection-eggplant-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "eggplant",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/eggplant/garden-collection-eggplant-1.jpg",
+      "art-collections/garden-collection/eggplant/garden-collection-eggplant-2.jpg",
+      "art-collections/garden-collection/eggplant/garden-collection-eggplant-3.jpg",
+      "art-collections/garden-collection/eggplant/garden-collection-eggplant-4.jpg",
+      "art-collections/garden-collection/eggplant/garden-collection-eggplant-5.jpg"
+    ]
+  },
+  {
+    "title": "Garlic",
+    "image": "art-collections/garden-collection/garlic/garden-collection-garlic-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "garlic",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/garlic/garden-collection-garlic-1.jpg",
+      "art-collections/garden-collection/garlic/garden-collection-garlic-2.jpg",
+      "art-collections/garden-collection/garlic/garden-collection-garlic-3.jpg",
+      "art-collections/garden-collection/garlic/garden-collection-garlic-4.jpg",
+      "art-collections/garden-collection/garlic/garden-collection-garlic-5.jpg"
+    ]
+  },
+  {
+    "title": "Ginger",
+    "image": "art-collections/garden-collection/ginger/garden-collection-ginger-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "ginger",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/ginger/garden-collection-ginger-1.jpg",
+      "art-collections/garden-collection/ginger/garden-collection-ginger-2.jpg",
+      "art-collections/garden-collection/ginger/garden-collection-ginger-3.jpg",
+      "art-collections/garden-collection/ginger/garden-collection-ginger-4.jpg",
+      "art-collections/garden-collection/ginger/garden-collection-ginger-5.jpg"
+    ]
+  },
+  {
+    "title": "Kiwi",
+    "image": "art-collections/garden-collection/kiwi/garden-collection-kiwi-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "kiwi",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/kiwi/garden-collection-kiwi-1.jpg",
+      "art-collections/garden-collection/kiwi/garden-collection-kiwi-2.jpg",
+      "art-collections/garden-collection/kiwi/garden-collection-kiwi-3.jpg",
+      "art-collections/garden-collection/kiwi/garden-collection-kiwi-4.jpg",
+      "art-collections/garden-collection/kiwi/garden-collection-kiwi-5.jpg"
+    ]
+  },
+  {
+    "title": "Lemons",
+    "image": "art-collections/garden-collection/lemons/garden-collection-lemons-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": true,
+    "slug": "lemons",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/lemons/garden-collection-lemons-1.jpg",
+      "art-collections/garden-collection/lemons/garden-collection-lemons-2.jpg",
+      "art-collections/garden-collection/lemons/garden-collection-lemons-3.jpg",
+      "art-collections/garden-collection/lemons/garden-collection-lemons-4.jpg",
+      "art-collections/garden-collection/lemons/garden-collection-lemons-5.jpg"
+    ]
+  },
+  {
+    "title": "Onion",
+    "image": "art-collections/garden-collection/onion/garden-collection-onion-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "onion",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/onion/garden-collection-onion-1.jpg",
+      "art-collections/garden-collection/onion/garden-collection-onion-2.jpg",
+      "art-collections/garden-collection/onion/garden-collection-onion-3.jpg",
+      "art-collections/garden-collection/onion/garden-collection-onion-4.jpg",
+      "art-collections/garden-collection/onion/garden-collection-onion-5.jpg"
+    ]
+  },
+  {
+    "title": "Oranges",
+    "image": "art-collections/garden-collection/oranges/garden-collection-oranges-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "oranges",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/oranges/garden-collection-oranges-1.jpg",
+      "art-collections/garden-collection/oranges/garden-collection-oranges-2.jpg",
+      "art-collections/garden-collection/oranges/garden-collection-oranges-3.jpg",
+      "art-collections/garden-collection/oranges/garden-collection-oranges-4.jpg",
+      "art-collections/garden-collection/oranges/garden-collection-oranges-5.jpg"
+    ]
+  },
+  {
+    "title": "Peaches",
+    "image": "art-collections/garden-collection/peaches/garden-collection-peaches-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "peaches",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/peaches/garden-collection-peaches-1.jpg",
+      "art-collections/garden-collection/peaches/garden-collection-peaches-2.jpg",
+      "art-collections/garden-collection/peaches/garden-collection-peaches-3.jpg",
+      "art-collections/garden-collection/peaches/garden-collection-peaches-4.jpg",
+      "art-collections/garden-collection/peaches/garden-collection-peaches-5.jpg"
+    ]
+  },
+  {
+    "title": "Pineapple",
+    "image": "art-collections/garden-collection/pineapple/garden-collection-pineapple-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "pineapple",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/pineapple/garden-collection-pineapple-1.jpg",
+      "art-collections/garden-collection/pineapple/garden-collection-pineapple-2.jpg",
+      "art-collections/garden-collection/pineapple/garden-collection-pineapple-3.jpg",
+      "art-collections/garden-collection/pineapple/garden-collection-pineapple-4.jpg",
+      "art-collections/garden-collection/pineapple/garden-collection-pineapple-5.jpg"
+    ]
+  },
+  {
+    "title": "Pomegranate",
+    "image": "art-collections/garden-collection/pomegranate/garden-collection-pomegranate-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": true,
+    "slug": "pomegranate",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/pomegranate/garden-collection-pomegranate-1.jpg",
+      "art-collections/garden-collection/pomegranate/garden-collection-pomegranate-2.jpg",
+      "art-collections/garden-collection/pomegranate/garden-collection-pomegranate-3.jpg",
+      "art-collections/garden-collection/pomegranate/garden-collection-pomegranate-4.jpg",
+      "art-collections/garden-collection/pomegranate/garden-collection-pomegranate-5.jpg"
+    ]
+  },
+  {
+    "title": "Radishes",
+    "image": "art-collections/garden-collection/radishes/garden-collection-radishes-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "radishes",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/radishes/garden-collection-radishes-1.jpg",
+      "art-collections/garden-collection/radishes/garden-collection-radishes-2.jpg",
+      "art-collections/garden-collection/radishes/garden-collection-radishes-3.jpg",
+      "art-collections/garden-collection/radishes/garden-collection-radishes-4.jpg",
+      "art-collections/garden-collection/radishes/garden-collection-radishes-5.jpg"
+    ]
+  },
+  {
+    "title": "Strawberries",
+    "image": "art-collections/garden-collection/strawberries/garden-collection-strawberries-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "strawberries",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/strawberries/garden-collection-strawberries-1.jpg",
+      "art-collections/garden-collection/strawberries/garden-collection-strawberries-2.jpg",
+      "art-collections/garden-collection/strawberries/garden-collection-strawberries-3.jpg",
+      "art-collections/garden-collection/strawberries/garden-collection-strawberries-4.jpg",
+      "art-collections/garden-collection/strawberries/garden-collection-strawberries-5.jpg"
+    ]
+  },
+  {
+    "title": "Sweet Potatoes",
+    "image": "art-collections/garden-collection/sweet-potatoes/garden-collection-sweet-potatoes-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "sweet-potatoes",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/sweet-potatoes/garden-collection-sweet-potatoes-1.jpg",
+      "art-collections/garden-collection/sweet-potatoes/garden-collection-sweet-potatoes-2.jpg",
+      "art-collections/garden-collection/sweet-potatoes/garden-collection-sweet-potatoes-3.jpg",
+      "art-collections/garden-collection/sweet-potatoes/garden-collection-sweet-potatoes-4.jpg",
+      "art-collections/garden-collection/sweet-potatoes/garden-collection-sweet-potatoes-5.jpg"
+    ]
+  },
+  {
+    "title": "Tomatoes",
+    "image": "art-collections/garden-collection/tomatoes/garden-collection-tomatoes-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": true,
+    "slug": "tomatoes",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/tomatoes/garden-collection-tomatoes-1.jpg",
+      "art-collections/garden-collection/tomatoes/garden-collection-tomatoes-2.jpg",
+      "art-collections/garden-collection/tomatoes/garden-collection-tomatoes-3.jpg",
+      "art-collections/garden-collection/tomatoes/garden-collection-tomatoes-4.jpg",
+      "art-collections/garden-collection/tomatoes/garden-collection-tomatoes-5.jpg"
+    ]
+  },
+  {
+    "title": "Turnips",
+    "image": "art-collections/garden-collection/turnips/garden-collection-turnips-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "turnips",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/turnips/garden-collection-turnips-1.jpg",
+      "art-collections/garden-collection/turnips/garden-collection-turnips-2.jpg",
+      "art-collections/garden-collection/turnips/garden-collection-turnips-3.jpg",
+      "art-collections/garden-collection/turnips/garden-collection-turnips-4.jpg",
+      "art-collections/garden-collection/turnips/garden-collection-turnips-5.jpg"
+    ]
+  },
+  {
+    "title": "Watermelon",
+    "image": "art-collections/garden-collection/watermelon/garden-collection-watermelon-4.jpg",
+    "size": "8x8\"",
+    "price": "$50",
+    "isSold": false,
+    "slug": "watermelon",
+    "medium": "Watercolor on 100% Cotton Arches paper",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dicta distinctio officiis itaque neque asperiores, nisi sint provident veritatis at corrupti reiciendis adipisci. At accusantium, dolor quia asperiores et quod?",
+    "images": [
+      "art-collections/garden-collection/watermelon/garden-collection-watermelon-1.jpg",
+      "art-collections/garden-collection/watermelon/garden-collection-watermelon-2.jpg",
+      "art-collections/garden-collection/watermelon/garden-collection-watermelon-3.jpg",
+      "art-collections/garden-collection/watermelon/garden-collection-watermelon-4.jpg",
+      "art-collections/garden-collection/watermelon/garden-collection-watermelon-5.jpg"
     ]
   }
 ]
