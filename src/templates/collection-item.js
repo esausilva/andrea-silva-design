@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormspreeProvider } from '@formspree/react';
+import { Link } from 'gatsby';
 
 import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
@@ -16,8 +17,18 @@ const Wrapper = styled(SecondaryLayout)`
   display: grid;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 'images body';
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 'goBack goBack' 'images body';
     gap: 0 4rem;
+  }
+`;
+
+const BackTo = styled.span`
+  justify-self: right;
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    justify-self: left;
+    grid-area: goBack;
+    margin-bottom: 0.8rem;
   }
 `;
 
@@ -45,25 +56,31 @@ const CollectionImages = styled.aside`
 const Price = styled.p`
   font-size: calc(${({ theme }) => theme.fonts.small} + 0.4rem);
   font-weight: 400;
+  span {
+    color: ${({ theme }) => theme.colors.gray};
+    font-style: italic;
+    display: inline-block;
+    font-size: calc(${({ theme }) => theme.fonts.small} - 0.3rem);
+    margin-left: 0.5rem;
+  }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     font-size: calc(${({ theme }) => theme.fonts.medium} + 0.6rem);
+    span {
+      font-size: calc(${({ theme }) => theme.fonts.medium} - 0.3rem);
+    }
   }
   @media (min-width: ${({ theme }) => theme.media.large}) {
     font-size: calc(${({ theme }) => theme.fonts.medium} + 0.8rem);
+    span {
+      font-size: calc(${({ theme }) => theme.fonts.large} - 0.3rem);
+    }
   }
 `;
 
 const Purchase = styled(Button)`
-  span {
-    display: inline-block;
-    margin-bottom: 0;
-  }
   &:disabled {
     background-color: ${({ theme }) => theme.colors.gray};
     cursor: not-allowed;
-    span {
-      text-decoration: line-through;
-    }
   }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     margin-top: 2rem;
@@ -73,20 +90,35 @@ const Purchase = styled(Button)`
 
 const CollectionItem = ({ pageContext: { collection } }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [collectionSlug, setCollectionSlug] = useState('');
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+  useEffect(() => {
+    const urlParts = window.location.href.split('/');
+    const slug = urlParts[urlParts.length - 2];
+
+    setCollectionSlug(slug);
+    return () => {};
+  }, [collectionSlug]);
 
   return (
     <MainLayout pageTitle={`${collection.title}, ${collection.size}`}>
       <Wrapper>
+        <BackTo>
+          <Link to={`/collections/${collectionSlug}`}>Back to collection</Link>
+        </BackTo>
         <CollectionBody>
           <h1>
-            <em>
-              {collection.title}, {collection.size}
-            </em>
+            <em>{collection.title}</em>
           </h1>
-          <span>{collection.medium}</span>
-          <Price>{collection.price}</Price>
+          <span>
+            {collection.size} {collection.medium}
+          </span>
+          <Price>
+            {collection.isSold ? 'SOLD' : collection.price}
+            <span>{collection.isSold ? '' : '(frame not included)'}</span>
+          </Price>
           <p>{collection.description}</p>
           <Purchase
             type="button"
@@ -95,7 +127,7 @@ const CollectionItem = ({ pageContext: { collection } }) => {
             disabled={collection.isSold}
             onClick={toggleModal}
           >
-            <span>Purchase</span> {collection.isSold ? 'SOLD' : ''}
+            Purchase
           </Purchase>
         </CollectionBody>
         <CollectionImages>

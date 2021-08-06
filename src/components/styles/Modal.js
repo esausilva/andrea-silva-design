@@ -23,12 +23,14 @@ export const Body = styled.section`
   box-shadow: 0 1rem 3rem hsla(0, 0%, 0%, 0.3);
   padding: 1rem;
   overflow: auto;
+  @media (min-width: ${({ theme }) => theme.media.medium}) {
+    width: 70%;
+  }
 `;
 
 export const BodyResponsive = styled(Body)`
   padding-top: 3.4rem;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
-    width: 70%;
     height: auto;
   }
   @media (min-width: ${({ theme }) => theme.media.large}) {

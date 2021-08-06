@@ -46,6 +46,10 @@ const Banner = styled.section`
     margin-bottom: 10rem;
   }
 `;
+
+const Title = styled(LandingTitle)`
+  text-align: center;
+`;
 //#endregion
 
 const CollectionBanner = () => (
@@ -60,7 +64,7 @@ const CollectionBanner = () => (
         transformations={transformationsFormat('w_1000')}
       />
     </Link>
-    <LandingTitle>Shop The Garden Collection</LandingTitle>
+    <Title>Shop The Garden Collection</Title>
   </Banner>
 );
 

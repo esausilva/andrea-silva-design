@@ -32,7 +32,6 @@ const ModalBody = styled(Body)`
     width: 100%;
   }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
-    width: 70%;
     padding: 2rem;
     h1 {
       font-size: 4rem;

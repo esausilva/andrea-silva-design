@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import { MainLayout } from '~components/layouts/MainLayout';
+import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 
@@ -66,7 +67,6 @@ const CollectionItem = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  /* align-items: center; */
   text-align: center;
   @media (min-width: ${({ theme }) => theme.media.small}) and (max-width: ${({
       theme,
@@ -88,18 +88,15 @@ const CollectionItemTitle = styled.span`
   }
 `;
 
-const CollectionItemPrice = styled.span`
-  font-size: calc(${({ theme }) => theme.fonts.small} + 0.5rem);
-  @media (min-width: ${({ theme }) => theme.media.medium}) {
-    font-size: calc(${({ theme }) => theme.fonts.medium} + 0.4rem);
-  }
-  @media (min-width: ${({ theme }) => theme.media.large}) {
-    font-size: calc(${({ theme }) => theme.fonts.large} + 0.4rem);
+const Body = styled(SecondaryLayout)`
+  padding-bottom: 0;
+  p {
+    margin-bottom: 0;
   }
 `;
 //#endregion
 
-const CollectionLayout = ({ children: data, hero, pageTitle }) => (
+const CollectionLayout = ({ children: data, hero, pageTitle, description }) => (
   <MainLayout pageTitle={pageTitle}>
     <Hero>
       <Image
@@ -110,6 +107,9 @@ const CollectionLayout = ({ children: data, hero, pageTitle }) => (
       />
       <h1>{hero.title}</h1>
     </Hero>
+    <Body>
+      <p>{description}</p>
+    </Body>
     <Collection>
       {data.map(({ title, image, size, price, slug }) => (
         <CollectionItem key={title}>
@@ -124,7 +124,6 @@ const CollectionLayout = ({ children: data, hero, pageTitle }) => (
           <CollectionItemTitle>
             {title}, {size}
           </CollectionItemTitle>
-          <CollectionItemPrice>{price}</CollectionItemPrice>
         </CollectionItem>
       ))}
     </Collection>
@@ -139,13 +138,14 @@ CollectionLayout.propTypes = {
       size: PropTypes.string.isRequired,
       price: PropTypes.string.isRequired,
     }),
-  ),
+  ).isRequired,
   hero: PropTypes.shape({
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     imageTitle: PropTypes.string.isRequired,
-  }),
-  pageTitle: PropTypes.string,
+  }).isRequired,
+  pageTitle: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
 
 export { CollectionLayout };

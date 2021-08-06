@@ -16,7 +16,7 @@ import { Button } from '~styles/Button';
 import { Title } from '~styles/Modal';
 
 //#region Styles
-const HiddenInputs = styled.input`
+const HiddenInput = styled.input`
   display: none;
 `;
 //#endregion
@@ -38,10 +38,8 @@ const PurchaseOrderForm = ({ artWork, price }) => {
     <>
       <Title>{artWork}</Title>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
-        inventore cupiditate praesentium obcaecati sit fuga architecto impedit
-        quod et ipsa enim fugiat, reprehenderit maxime magni sunt, dolorum
-        aliquam? Nobis, facilis.
+        Once you fill out this form I will be in touch with you about payment
+        and shipping details.
       </p>
       <form method="POST" onSubmit={handleSubmit}>
         <Fieldset disabled={formState.submitting}>
@@ -99,20 +97,20 @@ const PurchaseOrderForm = ({ artWork, price }) => {
             Subscribe to Newsletter
           </Label>
 
-          <HiddenInputs
+          <HiddenInput
             type="text"
             id="artwork"
             name="artwork"
             defaultValue={`${artWork} - ${price}`}
             readonly
-          ></HiddenInputs>
-          <HiddenInputs
+          ></HiddenInput>
+          <HiddenInput
             type="text"
             id="artworkLink"
             name="artworkLink"
             defaultValue={url}
             readonly
-          ></HiddenInputs>
+          ></HiddenInput>
           <Button type="submit">
             {formState.submitting ? <FountainLoading /> : `Purchase ${price}`}
           </Button>
