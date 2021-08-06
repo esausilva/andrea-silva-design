@@ -209,10 +209,18 @@ const InstagramFeed = () => {
             See More
           </LastSlide>
         </Slider>
-        <ButtonSvgWrapper onClick={() => moveSlider(LEFT)}>
+        <ButtonSvgWrapper
+          aria-label="Scroll Left"
+          name="Scroll Left"
+          onClick={() => moveSlider(LEFT)}
+        >
           <ArrowLeft />
         </ButtonSvgWrapper>
-        <ButtonSvgWrapper onClick={() => moveSlider(RIGHT)}>
+        <ButtonSvgWrapper
+          aria-label="Scroll Right"
+          name="Scroll Right"
+          onClick={() => moveSlider(RIGHT)}
+        >
           <ArrowRight />
         </ButtonSvgWrapper>
       </SliderWrapper>

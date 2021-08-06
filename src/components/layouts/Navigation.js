@@ -196,7 +196,7 @@ const Navigation = () => {
   return (
     <Nav>
       <NavBrand>
-        <Link to="/">
+        <Link aria-label="Navigate To Home" name="Navigate To Home" to="/">
           <Image
             relativePath="andrea-silva-design-logo-black.png"
             alt="Andrea Silva Design Logo"
@@ -204,7 +204,7 @@ const Navigation = () => {
             transformations={transformationsFormat('h_180')}
           />
         </Link>
-        <Link to="/">
+        <Link aria-label="Navigate To Home" name="Navigate To Home" to="/">
           <span>Andrea Silva Design</span>
         </Link>
       </NavBrand>
