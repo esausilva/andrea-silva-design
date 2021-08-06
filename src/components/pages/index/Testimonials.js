@@ -81,7 +81,11 @@ const Testimonials = () => {
       <h2>What Andrea's Clients Say</h2>
       <SliderWrapper>
         {slider && (
-          <ArrowButton onClick={e => e.stopPropagation() || slider.prev()}>
+          <ArrowButton
+            aria-label="Change To Previous Testimonial"
+            name="Change To Previous Testimonial"
+            onClick={e => e.stopPropagation() || slider.prev()}
+          >
             <ArrowLeft />
           </ArrowButton>
         )}
@@ -95,7 +99,11 @@ const Testimonials = () => {
           ))}
         </div>
         {slider && (
-          <ArrowButton onClick={e => e.stopPropagation() || slider.next()}>
+          <ArrowButton
+            aria-label="Change To Next Testimonial"
+            name="Change To Next Testimonial"
+            onClick={e => e.stopPropagation() || slider.next()}
+          >
             <ArrowRight />
           </ArrowButton>
         )}
@@ -104,6 +112,8 @@ const Testimonials = () => {
         <Dots>
           {[...Array(slider.details().size).keys()].map(idx => (
             <Dot
+              aria-label="Change Testimonial"
+              name="Change Testimonial"
               key={idx}
               onClick={() => slider.moveToSlideRelative(idx)}
               currentSlide={currentSlide}

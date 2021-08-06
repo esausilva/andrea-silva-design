@@ -171,6 +171,7 @@ const LetsChat = () => {
               </InputColumn>
             </FormRow>
             <LetsChatButton
+              name="Let's Chat!"
               type="submit"
               $bgColor={pink}
               $border={`1px solid ${gray}`}

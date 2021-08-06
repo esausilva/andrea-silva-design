@@ -209,9 +209,21 @@ const Navigation = () => {
         </Link>
       </NavBrand>
       <MobileTitle>Andrea Silva</MobileTitle>
-      <Hamburger onClick={toggleMenu}>&#9776;</Hamburger>
+      <Hamburger
+        aria-label="Open Navigation"
+        name="Open Navigation"
+        onClick={toggleMenu}
+      >
+        &#9776;
+      </Hamburger>
       <MenuWrapper isMenuOpen={isMenuOpen}>
-        <CloseMenu onClick={toggleMenu}>&times;</CloseMenu>
+        <CloseMenu
+          aria-label="Close Navigation"
+          name="Close Navigation"
+          onClick={toggleMenu}
+        >
+          &times;
+        </CloseMenu>
         <NavMenu>
           {navigationData.internal.map(({ linkTo, text, isSamePage }) => (
             <li key={linkTo}>

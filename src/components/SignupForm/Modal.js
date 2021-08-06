@@ -80,7 +80,9 @@ const Modal = ({ children, modalState }) => {
           />
           Do not show again on this device
           {doNotShowValue === true ? (
-            <button onClick={handleDoNotShowClose}>Save and close</button>
+            <button name="Save and Close" onClick={handleDoNotShowClose}>
+              Save and close
+            </button>
           ) : null}
         </Checkbox>
       </BodyResponsive>

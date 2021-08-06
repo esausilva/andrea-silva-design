@@ -121,6 +121,7 @@ const CollectionItem = ({ pageContext: { collection } }) => {
           </Price>
           <p>{collection.description}</p>
           <Purchase
+            name="Purchase Artwork"
             type="button"
             $bgColor="#f0d3c7"
             $textColor="initial"

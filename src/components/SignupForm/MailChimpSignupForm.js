@@ -159,7 +159,11 @@ const MailChimpSignupForm = () => {
                 }}
               />
             )}
-            <Button type="submit" $bgColor={pink}>
+            <Button
+              name="Subscribe To My Newsletter"
+              type="submit"
+              $bgColor={pink}
+            >
               Subscribe
             </Button>
           </Fieldset>

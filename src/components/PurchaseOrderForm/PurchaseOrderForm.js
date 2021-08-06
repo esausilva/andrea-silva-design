@@ -111,7 +111,7 @@ const PurchaseOrderForm = ({ artWork, price }) => {
             defaultValue={url}
             readonly
           ></HiddenInput>
-          <Button type="submit">
+          <Button name="Purchase Artwork" type="submit">
             {formState.submitting ? <FountainLoading /> : `Purchase ${price}`}
           </Button>
         </Fieldset>

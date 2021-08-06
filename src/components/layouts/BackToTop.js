@@ -43,7 +43,12 @@ const BackToTop = () => {
   };
 
   return (
-    <Button aria-hidden="true" onClick={scrollToTop} show={display}>
+    <Button
+      aria-label="Back To Top"
+      name="Back To Top"
+      onClick={scrollToTop}
+      show={display}
+    >
       <ArrowTickUpCircle />
     </Button>
   );

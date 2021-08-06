@@ -92,7 +92,11 @@ const Modal = ({ children, modalState, changeSlide }) => {
 
   return (
     <ModalContainer isOpen={modalState.value}>
-      <ArrowButtonLeft onClick={e => backward()}>
+      <ArrowButtonLeft
+        aria-label="Go To Previous Slide"
+        name="Go To Previous Slide"
+        onClick={e => backward()}
+      >
         <ArrowLeft pathFill={chevronColor} />
       </ArrowButtonLeft>
       <Swipe onSwipeLeft={forward} onSwipeRight={backward} tolerance={100}>
@@ -107,7 +111,11 @@ const Modal = ({ children, modalState, changeSlide }) => {
           />
         </ModalBody>
       </Swipe>
-      <ArrowButtonRight onClick={e => forward()}>
+      <ArrowButtonRight
+        aria-label="Go To Next Slide"
+        name="Go To Next Slide"
+        onClick={e => forward()}
+      >
         <ArrowRight pathFill={chevronColor} />
       </ArrowButtonRight>
     </ModalContainer>
