@@ -7,7 +7,7 @@ const GardenCollection = () => {
   return (
     <CollectionLayout
       hero={{
-        title: 'The Garden Collection',
+        title: 'Shop The Garden Collection',
         image: 'art-collections/garden-collection/garden-collection-cover.jpg',
         imageTitle: 'June Collection - The Garden Collection',
       }}
