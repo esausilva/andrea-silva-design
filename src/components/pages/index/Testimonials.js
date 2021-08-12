@@ -3,7 +3,7 @@ import { useKeenSlider } from 'keen-slider/react';
 import styled from 'styled-components';
 
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
-import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
+import { ButtonSvgWrapper } from '~styles/Button';
 import testimonialsData from '~content/index/testimonials.json';
 
 import 'keen-slider/keen-slider.min.css';

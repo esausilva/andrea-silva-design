@@ -7,7 +7,7 @@ import { lighten } from 'polished';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ArrowLeft, ArrowRight } from '~svgs/Chevron';
-import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
+import { ButtonSvgWrapper } from '~styles/Button';
 
 //#region Styles
 const imageDimensions = '20rem !important';

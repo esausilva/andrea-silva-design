@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { animateScroll as scroll } from 'react-scroll';
 
 import { ArrowTickUpCircle } from '~svgs/ArrowTickUpCircle';
-import { ButtonSvgWrapper } from '~src/components/styles/ButtonSvgWrapper';
+import { ButtonSvgWrapper } from '~styles/Button';
 
 //#region Styles
 const Button = styled(ButtonSvgWrapper)`

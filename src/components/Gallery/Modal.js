@@ -6,7 +6,7 @@ import Swipe from 'react-easy-swipe';
 
 import { PortfolioSelector } from '~helpers/PortfolioSelector';
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
-import { ButtonSvgWrapper } from '~styles/ButtonSvgWrapper';
+import { ButtonSvgWrapper } from '~styles/Button';
 import { FORWARD, BACKWARD } from '~components/Gallery/Gallery';
 import {
   Container as ModalContainer,

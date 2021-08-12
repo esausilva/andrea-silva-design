@@ -10,40 +10,19 @@ import { ZoomIn } from '~svgs/ZoomIn';
 import { Modal } from '~src/components/Gallery/Modal';
 import { useMediaQuery } from '~src/hooks/useMediaQuery';
 import { theme } from '~styles/theme';
+import { ImageOverlayWithIcon } from '~styles/shared';
 
 //#region Styles
 import '~styles/react-masonry-css.css';
 
-const transition = '0.2s ease-in';
-
-const GalleryImageContainer = styled.figure`
+const GalleryImageContainer = styled.a`
   margin-bottom: -0.7rem;
-  position: relative;
-  cursor: pointer;
-  &:hover svg {
-    opacity: 1;
-  }
-  &:hover img {
-    filter: brightness(50%);
-  }
+  display: block;
+  ${ImageOverlayWithIcon}
   img {
-    margin-bottom: 0;
     padding: 0.7rem;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: filter ${transition};
-  }
-  svg {
-    cursor: pointer;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity ${transition};
   }
 `;
 //#endregion
@@ -141,6 +120,7 @@ const Gallery = ({ data }) => {
           ({ thumb, title, blurb, portfolioType, portfolio }, index) => (
             <GalleryImageContainer
               key={thumb}
+              href="#"
               onClick={e =>
                 setModalBodyState(title, blurb, portfolioType, portfolio, index)
               }

@@ -8,6 +8,7 @@ import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ShoppingBag } from '~svgs/ShoppingBag';
+import { ImageOverlayWithIcon } from '~styles/shared';
 
 //#region Styles
 const Hero = styled.div`
@@ -49,9 +50,6 @@ const Collection = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   font-weight: 400;
-  img {
-    margin-bottom: 0;
-  }
   @media (min-width: ${({ theme }) => theme.media.small}) and (max-width: ${({
       theme,
     }) => theme.media.medium}) {
@@ -80,30 +78,8 @@ const CollectionItem = styled.div`
   }
 `;
 
-const transition = '0.2s ease-in';
-
 const CollectionItemLink = styled(Link)`
-  position: relative;
-  &:hover svg {
-    opacity: 1;
-  }
-  &:hover img {
-    filter: brightness(50%);
-  }
-  img {
-    transition: filter ${transition};
-  }
-  svg {
-    cursor: pointer;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    transition: opacity ${transition};
-  }
+  ${ImageOverlayWithIcon}
 `;
 
 const CollectionItemTitle = styled.span`

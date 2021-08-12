@@ -30,3 +30,11 @@ export const Button = styled.button`
     font-size: calc(${({ theme }) => theme.fonts.large} + 0.3rem);
   }
 `;
+
+export const ButtonSvgWrapper = styled.button`
+  padding: 0;
+  border: 0;
+  background: none;
+  outline: none;
+  cursor: pointer;
+`;
