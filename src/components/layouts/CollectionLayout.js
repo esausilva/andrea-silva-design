@@ -29,6 +29,7 @@ const Hero = styled.div`
     color: #fff;
     text-shadow: ${({ theme }) => theme.fonts.textShadow};
     font-weight: 600;
+    text-align: center;
   }
   @media (min-width: ${({ theme }) => theme.media.small}) and (max-width: ${({
       theme,
