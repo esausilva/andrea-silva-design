@@ -7,7 +7,7 @@ import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
-import { ShoppingBag } from '~svgs/ShoppingBag';
+import { ShoppingCart } from '~svgs/ShoppingCart';
 import { ImageOverlayWithIcon } from '~styles/shared';
 
 //#region Styles
@@ -124,7 +124,7 @@ const CollectionLayout = ({ children: data, hero, pageTitle, description }) => (
               title={`Shop ${title}, ${size} - ${price}`}
               transformations={transformationsFormat('w_500')}
             />
-            <ShoppingBag />
+            <ShoppingCart />
           </CollectionItemLink>
           <CollectionItemTitle>
             {title}, {size}
