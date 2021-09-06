@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import tinykeys from 'tinykeys';
 import Swipe from 'react-easy-swipe';
 
-import { PortfolioSelector } from '~helpers/PortfolioSelector';
 import { ArrowLeft, ArrowRight } from '~svgs/ChevronCircle';
 import { ButtonSvgWrapper } from '~styles/Button';
+import { PortfolioSelector } from '~src/components/Gallery/PortfolioSelector';
 import { FORWARD, BACKWARD } from '~components/Gallery/Gallery';
 import {
   Container as ModalContainer,
