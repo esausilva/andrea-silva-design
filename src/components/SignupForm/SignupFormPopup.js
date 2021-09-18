@@ -6,15 +6,15 @@ import { PopupCookieContext } from '~components/layouts/MainLayout';
 
 const SignupFormPopup = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { showPopup } = useContext(PopupCookieContext);
+  const { showPopup, optionalPopup } = useContext(PopupCookieContext);
 
   useEffect(() => {
-    if (showPopup) {
+    if (showPopup && optionalPopup === false) {
       setTimeout(() => {
         setIsModalOpen(true);
       }, 10 * 1000);
     }
-  }, [showPopup]);
+  }, [showPopup, optionalPopup]);
 
   const closeModal = () => setIsModalOpen(false);
 

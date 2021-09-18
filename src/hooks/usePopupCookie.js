@@ -6,6 +6,7 @@ const cookieName = 'andrea-silva-design-signup-popup';
 const usePopupCookie = () => {
   const [cookies, setCookie, removeCookie] = useCookies([cookieName]);
   const [showPopup, setShowPopup] = useState(false);
+  const [optionalPopup, setOptionalPopup] = useState(false);
 
   useEffect(() => {
     const cookie = cookies[cookieName];
@@ -31,7 +32,7 @@ const usePopupCookie = () => {
     }
   };
 
-  return { createCookie, showPopup };
+  return { createCookie, showPopup, setOptionalPopup, optionalPopup };
 };
 
 export { usePopupCookie };

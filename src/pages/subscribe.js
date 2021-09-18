@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
-import { MailChimpSignupForm } from '~components/SignupForm/MailChimpSignupForm';
+import { Subscribe as SubscribeComponent } from '~components/pages/Subscribe';
 
 const Subscribe = () => {
   return (
     <MainLayout pageTitle="Subscribe to My Newsletter" pathName="subscribe">
       <SecondaryLayout>
-        <MailChimpSignupForm />
+        <SubscribeComponent />
       </SecondaryLayout>
     </MainLayout>
   );

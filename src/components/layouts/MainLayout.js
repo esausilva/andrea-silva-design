@@ -21,7 +21,12 @@ const Main = styled.main`
 const PopupCookieContext = createContext();
 
 const MainLayout = ({ children, ...rest }) => {
-  const { createCookie, showPopup } = usePopupCookie();
+  const {
+    createCookie,
+    showPopup,
+    setOptionalPopup,
+    optionalPopup,
+  } = usePopupCookie();
 
   return (
     <ThemeProvider theme={theme}>
@@ -30,7 +35,9 @@ const MainLayout = ({ children, ...rest }) => {
         <GlobalStyles />
         <BackToTop />
         <Navigation />
-        <PopupCookieContext.Provider value={{ createCookie, showPopup }}>
+        <PopupCookieContext.Provider
+          value={{ createCookie, showPopup, setOptionalPopup, optionalPopup }}
+        >
           <Main>{children}</Main>
           <Footer />
           <SignupFormPopup />
