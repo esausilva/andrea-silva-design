@@ -103,7 +103,10 @@ const CollectionItem = ({ pageContext: { collection } }) => {
   }, [collectionSlug]);
 
   return (
-    <MainLayout pageTitle={`${collection.title}, ${collection.size}`}>
+    <MainLayout
+      pageTitle={`${collection.title}, ${collection.size}`}
+      pathName={`collections/${collectionSlug}/${collection.slug}`}
+    >
       <Wrapper>
         <BackTo>
           <Link to={`/collections/${collectionSlug}`}>Back to collection</Link>
@@ -164,6 +167,8 @@ CollectionItem.propTypes = {
       medium: PropTypes.string.isRequired,
       description: PropTypes.string,
       images: PropTypes.arrayOf(PropTypes.string).isRequired,
+      slug: PropTypes.string.isRequired,
+      isSold: PropTypes.bool.isRequired,
     }),
   }).isRequired,
 };

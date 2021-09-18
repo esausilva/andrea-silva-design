@@ -101,7 +101,7 @@ const Body = styled(SecondaryLayout)`
 //#endregion
 
 const CollectionLayout = ({ children: data, hero, pageTitle, description }) => (
-  <MainLayout pageTitle={pageTitle}>
+  <MainLayout pageTitle={pageTitle} pathName="collections/garden-collection">
     <Hero>
       <Image
         relativePath={hero.image}
