@@ -28,9 +28,9 @@ const gardenCollectionPages = async ({ graphql, actions }) => {
   const collectionItemTemplate = path.resolve(
     './src/templates/collection-item.js',
   );
-  const gardenCollectionData = require('./src/content/collections/garden-collection.json');
+  const collectionData = require('./src/content/collections/garden-collection.json');
 
-  gardenCollectionData.forEach(collection => {
+  collectionData.forEach(collection => {
     actions.createPage({
       path: `collections/garden-collection/${collection.slug}`,
       component: collectionItemTemplate,
@@ -41,6 +41,26 @@ const gardenCollectionPages = async ({ graphql, actions }) => {
   });
 };
 
+const wanderCollectionPages = async ({ graphql, actions }) => {
+  const collectionItemTemplate = path.resolve(
+    './src/templates/collection-item.js',
+  );
+  const collectionData = require('./src/content/collections/wander-collection.json');
+
+  collectionData.forEach(collection => {
+    actions.createPage({
+      path: `collections/wander-collection/${collection.slug}`,
+      component: collectionItemTemplate,
+      context: {
+        collection,
+      },
+    });
+  });
+};
+
 export const createPages = async params => {
-  await Promise.all([gardenCollectionPages(params)]);
+  await Promise.all([
+    gardenCollectionPages(params),
+    wanderCollectionPages(params),
+  ]);
 };

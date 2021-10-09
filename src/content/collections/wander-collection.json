@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Sapphire Depths",
+    "image": "art-collections/wander-collection/sapphire-depths/wander-collection-sapphire-depths-thumb.jpg",
+    "size": "18x24 in.",
+    "price": "$400",
+    "isSold": false,
+    "slug": "sapphire-depths",
+    "medium": "watercolor on Arches 100% Cotton Paper",
+    "description": "Sometimes there's a purpose to one's wandering in the wilderness. Other times we wander simply for the pleasure of wandering. I think there's beauty in both journeys. With the first, you have an object you're seeking after, but with the second, you never know what treasures you will find along the way.",
+    "images": [
+      "art-collections/wander-collection/sapphire-depths/wander-collection-sapphire-depths-1.jpg",
+      "art-collections/wander-collection/sapphire-depths/wander-collection-sapphire-depths-2.jpg",
+      "art-collections/wander-collection/sapphire-depths/wander-collection-sapphire-depths-3.jpg",
+      "art-collections/wander-collection/sapphire-depths/wander-collection-sapphire-depths-4.jpg",
+      "art-collections/wander-collection/sapphire-depths/wander-collection-sapphire-depths-5.jpg"
+    ]
+  },
+  {
+    "title": "Treasure Hunt",
+    "image": "art-collections/wander-collection/treasure-hunt/wander-collection-treasure-hunt-thumb.jpg",
+    "size": "11x17 in.",
+    "price": "$180",
+    "isSold": false,
+    "slug": "treasure-hunt",
+    "medium": "watercolor on Arches 100% Cotton Paper",
+    "description": "What little treasures there are to find if you'll just stoop a little lower and look a little harder! Some you can find without even trying, but it's the treasures you have to dig for, waiting beneath unturned stones that are often more valuable.",
+    "images": [
+      "art-collections/wander-collection/treasure-hunt/wander-collection-treasure-hunt-1.jpg",
+      "art-collections/wander-collection/treasure-hunt/wander-collection-treasure-hunt-2.jpg",
+      "art-collections/wander-collection/treasure-hunt/wander-collection-treasure-hunt-3.jpg",
+      "art-collections/wander-collection/treasure-hunt/wander-collection-treasure-hunt-4.jpg",
+      "art-collections/wander-collection/treasure-hunt/wander-collection-treasure-hunt-5.jpg"
+    ]
+  },
+  {
+    "title": "Youth's Spirit",
+    "image": "art-collections/wander-collection/youths-spirit/wander-collection-youths-spirit-thumb.jpg",
+    "size": "11x17 in.",
+    "price": "$180",
+    "isSold": false,
+    "slug": "youths-spirit",
+    "medium": "watercolor on Arches 100% Cotton Paper",
+    "description": "Every stream a river to traverse, every stone a foe to outwit, every tree a friend to make. The imaginations of youth make even the smallest things seem bigger and the biggest things seem small.",
+    "images": [
+      "art-collections/wander-collection/youths-spirit/wander-collection-youths-spirit-1.jpg",
+      "art-collections/wander-collection/youths-spirit/wander-collection-youths-spirit-2.jpg",
+      "art-collections/wander-collection/youths-spirit/wander-collection-youths-spirit-3.jpg",
+      "art-collections/wander-collection/youths-spirit/wander-collection-youths-spirit-4.jpg",
+      "art-collections/wander-collection/youths-spirit/wander-collection-youths-spirit-5.jpg"
+    ]
+  },
+  {
+    "title": "Just Around the Bend",
+    "image": "art-collections/wander-collection/just-around-the-bend/wander-collection-just-around-the-bend-thumb.jpg",
+    "size": "18x24 in.",
+    "price": "$400",
+    "isSold": false,
+    "slug": "just-around-the-bend",
+    "medium": "watercolor on Arches 100% Cotton Paper",
+    "description": "Life (and wandering) comes with so many twists and turns and bends in the path. The funny thing about a bend in the path is that no one knows what's going to be there when you round the corner, but good or bad, it's always a comfort to have your best friend by your side.",
+    "images": [
+      "art-collections/wander-collection/just-around-the-bend/wander-collection-just-around-the-bend-1.jpg",
+      "art-collections/wander-collection/just-around-the-bend/wander-collection-just-around-the-bend-2.jpg",
+      "art-collections/wander-collection/just-around-the-bend/wander-collection-just-around-the-bend-3.jpg",
+      "art-collections/wander-collection/just-around-the-bend/wander-collection-just-around-the-bend-4.jpg",
+      "art-collections/wander-collection/just-around-the-bend/wander-collection-just-around-the-bend-5.jpg"
+    ]
+  }
+]

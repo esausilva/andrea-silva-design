@@ -9,6 +9,7 @@ import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ShoppingCart } from '~svgs/ShoppingCart';
 import { ImageOverlayWithIcon } from '~styles/shared';
+import { useCollectionSlug } from '~hooks/useCollectionSlug';
 
 //#region Styles
 const Hero = styled.div`
@@ -38,10 +39,10 @@ const Hero = styled.div`
     height: ${({ theme }) => `calc(100vh - ${theme.nav.small})`};
   }
   @media (min-width: ${({ theme }) => theme.media.medium}) {
-    height: ${({ theme }) => `calc(50vh - ${theme.nav.medium})`};
+    height: ${({ theme }) => `calc(70vh - ${theme.nav.medium})`};
   }
   @media (min-width: ${({ theme }) => theme.media.large}) {
-    height: ${({ theme }) => `calc(50vh - ${theme.nav.large})`};
+    height: ${({ theme }) => `calc(70vh - ${theme.nav.large})`};
   }
 `;
 
@@ -100,40 +101,47 @@ const Body = styled(SecondaryLayout)`
 `;
 //#endregion
 
-const CollectionLayout = ({ children: data, hero, pageTitle, description }) => (
-  <MainLayout pageTitle={pageTitle} pathName="collections/garden-collection">
-    <Hero>
-      <Image
-        relativePath={hero.image}
-        alt={hero.imageTitle}
-        title={hero.imageTitle}
-        transformations={transformationsFormat('w_1000')}
-      />
-      <h1>{hero.title}</h1>
-    </Hero>
-    <Body>
-      <p>{description}</p>
-    </Body>
-    <Collection>
-      {data.map(({ title, image, size, price, slug }) => (
-        <CollectionItem key={title}>
-          <CollectionItemLink to={slug}>
-            <Image
-              relativePath={image}
-              alt={`Shop ${title}, ${size} - ${price}`}
-              title={`Shop ${title}, ${size} - ${price}`}
-              transformations={transformationsFormat('w_500')}
-            />
-            <ShoppingCart />
-          </CollectionItemLink>
-          <CollectionItemTitle>
-            {title}, {size}
-          </CollectionItemTitle>
-        </CollectionItem>
-      ))}
-    </Collection>
-  </MainLayout>
-);
+const CollectionLayout = ({ children: data, hero, pageTitle, description }) => {
+  const { collectionSlug } = useCollectionSlug(1);
+
+  return (
+    <MainLayout
+      pageTitle={pageTitle}
+      pathName={`collections/${collectionSlug}`}
+    >
+      <Hero>
+        <Image
+          relativePath={hero.image}
+          alt={hero.imageTitle}
+          title={hero.imageTitle}
+          transformations={transformationsFormat('w_1000')}
+        />
+        <h1>{hero.title}</h1>
+      </Hero>
+      <Body>
+        <p>{description}</p>
+      </Body>
+      <Collection>
+        {data.map(({ title, image, size, price, slug }) => (
+          <CollectionItem key={title}>
+            <CollectionItemLink to={slug}>
+              <Image
+                relativePath={image}
+                alt={`Shop ${title}, ${size} - ${price}`}
+                title={`Shop ${title}, ${size} - ${price}`}
+                transformations={transformationsFormat('w_500')}
+              />
+              <ShoppingCart />
+            </CollectionItemLink>
+            <CollectionItemTitle>
+              {title}, {size}
+            </CollectionItemTitle>
+          </CollectionItem>
+        ))}
+      </Collection>
+    </MainLayout>
+  );
+};
 
 CollectionLayout.propTypes = {
   children: PropTypes.arrayOf(

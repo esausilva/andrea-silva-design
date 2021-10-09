@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { FormspreeProvider } from '@formspree/react';
@@ -11,6 +11,7 @@ import { PurchaseOrderForm } from '~components/PurchaseOrderForm/PurchaseOrderFo
 import { Button } from '~styles/Button';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
+import { useCollectionSlug } from '~hooks/useCollectionSlug';
 
 //#region Styles
 const Wrapper = styled(SecondaryLayout)`
@@ -90,17 +91,9 @@ const Purchase = styled(Button)`
 
 const CollectionItem = ({ pageContext: { collection } }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [collectionSlug, setCollectionSlug] = useState('');
+  const { collectionSlug } = useCollectionSlug(2);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
-
-  useEffect(() => {
-    const urlParts = window.location.href.split('/');
-    const slug = urlParts[urlParts.length - 2];
-
-    setCollectionSlug(slug);
-    return () => {};
-  }, [collectionSlug]);
 
   return (
     <MainLayout
