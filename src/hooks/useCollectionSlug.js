@@ -4,13 +4,13 @@ const useCollectionSlug = position => {
   const [collectionSlug, setCollectionSlug] = useState('');
 
   useEffect(() => {
-    const urlParts = window.location.href.split('/');
+    const urlParts = window.location.href.split('/').filter(Boolean);
     const slug = urlParts[urlParts.length - position];
 
     setCollectionSlug(slug);
 
     return () => {};
-  }, [collectionSlug, position]);
+  }, [position]);
 
   return { collectionSlug };
 };
