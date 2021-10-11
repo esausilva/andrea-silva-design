@@ -54,17 +54,17 @@ const Title = styled(LandingTitle)`
 
 const CollectionBanner = () => (
   <Banner>
-    <Link to={`/collections/garden-collection`} title="Garden Collection">
+    <Link to={`/collections/wander-collection`} title="Wander Collection">
       <Image
         relativePath={
-          'art-collections/garden-collection/garden-collection-cover.jpg'
+          'art-collections/wander-collection/wander-collection-header.jpg'
         }
-        alt={'June Collection - The Garden Collection'}
-        title={'June Collection - The Garden Collection'}
+        alt={'Wander Collection - October Collection'}
+        title={'Wander Collection - October Collection Collection'}
         transformations={transformationsFormat('w_1000')}
       />
     </Link>
-    <Title>Shop The Garden Collection</Title>
+    <Title>Shop The Wander Collection</Title>
   </Banner>
 );
 
