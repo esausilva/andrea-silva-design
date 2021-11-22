@@ -53,7 +53,9 @@ const Quote = styled.p`
 `;
 
 const ContentBottom = styled.div`
+  margin-bottom: 2em;
   @media (min-width: ${({ theme }) => theme.media.medium}) {
+    margin-bottom: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: ${gridGap};
