@@ -18,6 +18,11 @@
   ],
   "social": [
     {
+      "href": "https://etsy.com/shop/andreasilvadesign",
+      "image": "etsy-shop-icon.png",
+      "alt": "Andrea Silva Design Etsy Shop"
+    },
+    {
       "href": "https://www.facebook.com/andreasilva.design",
       "image": "social-media-facebook-icon.png",
       "alt": "Andrea Silva Design Facebook"
