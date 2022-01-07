@@ -101,23 +101,23 @@ const MailChimpSignupForm = () => {
 
   return (
     <>
-      <Title>Thanksgiving Conversation Cards</Title>
+      <Title>Subscribe to My Newsletter and Get a Free Download!</Title>
       <Body>
         <PrintableImage>
           <Image
             alt="Andrea Silva Design Newsletter Free Download"
             title="Andrea Silva Design Newsletter Free Download"
-            relativePath="freebies/andrea-silva-design-newsletter-free-thanksgiving-download.jpg"
+            relativePath="freebies/andrea-silva-design-newsletter-free-download.jpg"
             transformations={transformationsFormat('w_500')}
           />
         </PrintableImage>
         <Form onSubmit={handleSubmit}>
           <Fieldset>
             <p>
-              Make your Thanksgiving holiday more meaningful with these
-              Thanksgiving Conversation Cards. I'll send them straight to your
-              inbox. All you have to do is print and cut, then share meaningful
-              conversation with your loved ones!
+              Download a free watercolor printable of <em>Forest Bathing</em> as
+              my gift to you for subscribing to my newsletter. Newsletter
+              subscribers will receive special updates and bonus content not
+              found anywhere else!
             </p>
             <Label htmlFor="fname">
               First Name
