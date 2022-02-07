@@ -107,17 +107,16 @@ const MailChimpSignupForm = () => {
           <Image
             alt="Andrea Silva Design Newsletter Free Download"
             title="Andrea Silva Design Newsletter Free Download"
-            relativePath="freebies/andrea-silva-design-newsletter-free-download.jpg"
+            relativePath="freebies/andrea-silva-design-newsletter-free-valentines-download.jpg"
             transformations={transformationsFormat('w_500')}
           />
         </PrintableImage>
         <Form onSubmit={handleSubmit}>
           <Fieldset>
             <p>
-              Download a free watercolor printable of <em>Forest Bathing</em> as
-              my gift to you for subscribing to my newsletter. Newsletter
-              subscribers will receive special updates and bonus content not
-              found anywhere else!
+              Download my free sweet and simple Valentine's cards as my gift to
+              you for subscribing to my newsletter. Newsletter subscribers will
+              receive special updates and bonus content not found anywhere else!
             </p>
             <Label htmlFor="fname">
               First Name
