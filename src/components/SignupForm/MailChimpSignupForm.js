@@ -107,7 +107,7 @@ const MailChimpSignupForm = () => {
           <Image
             alt="Andrea Silva Design Newsletter Free Download"
             title="Andrea Silva Design Newsletter Free Download"
-            relativePath="freebies/andrea-silva-design-newsletter-free-valentines-download.jpg"
+            relativePath="freebies/andrea-silva-design-newsletter-free-download.jpg"
             transformations={transformationsFormat('w_500')}
           />
         </PrintableImage>
