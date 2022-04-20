@@ -68,10 +68,14 @@ const ArrowButton = styled(ButtonSvgWrapper)`
 
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const [sliderRef, slider] = useKeenSlider({
     initial: 0,
-    slideChanged(s) {
-      setCurrentSlide(s.details().relativeSlide);
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
     },
     loop: true,
   });
@@ -80,11 +84,11 @@ const Testimonials = () => {
     <TestimonialsSection>
       <h2>What Andrea's Clients Say</h2>
       <SliderWrapper>
-        {slider && (
+        {loaded && slider.current && (
           <ArrowButton
             aria-label="Change To Previous Testimonial"
             name="Change To Previous Testimonial"
-            onClick={e => e.stopPropagation() || slider.prev()}
+            onClick={e => e.stopPropagation() || slider.current?.prev()}
           >
             <ArrowLeft />
           </ArrowButton>
@@ -98,28 +102,30 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-        {slider && (
+        {loaded && slider.current && (
           <ArrowButton
             aria-label="Change To Next Testimonial"
             name="Change To Next Testimonial"
-            onClick={e => e.stopPropagation() || slider.next()}
+            onClick={e => e.stopPropagation() || slider.current?.next()}
           >
             <ArrowRight />
           </ArrowButton>
         )}
       </SliderWrapper>
-      {slider && (
+      {loaded && slider.current && (
         <Dots>
-          {[...Array(slider.details().size).keys()].map(idx => (
-            <Dot
-              aria-label="Change Testimonial"
-              name="Change Testimonial"
-              key={idx}
-              onClick={() => slider.moveToSlideRelative(idx)}
-              currentSlide={currentSlide}
-              currentIndex={idx}
-            />
-          ))}
+          {[...Array(slider.current.track.details.slides.length).keys()].map(
+            idx => (
+              <Dot
+                aria-label="Change Testimonial"
+                name="Change Testimonial"
+                key={idx}
+                onClick={() => slider.current?.moveToIdx(idx)}
+                currentSlide={currentSlide}
+                currentIndex={idx}
+              />
+            ),
+          )}
         </Dots>
       )}
     </TestimonialsSection>

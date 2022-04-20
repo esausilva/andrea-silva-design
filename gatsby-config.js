@@ -50,6 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         createLinkInHead: true,
+        output: '/',
         query: `{
           site {
             siteMetadata {
@@ -62,15 +63,14 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.nodes.map(node => {
-            return {
-              url: `${site.siteMetadata.siteUrl}${node.path}`,
-              changefreq: `weekly`,
-              priority: 0.7,
-              lastmod: formatDate(new Date(), 'yyyy-MM-dd'),
-            };
-          }),
+        serialize: ({ siteUrl, path }) => {
+          return {
+            url: `${siteUrl}${path}`,
+            changefreq: `weekly`,
+            priority: 0.7,
+            lastmod: formatDate(new Date(), 'yyyy-MM-dd'),
+          };
+        },
       },
     },
     {
