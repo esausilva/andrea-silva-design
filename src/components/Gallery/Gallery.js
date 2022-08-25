@@ -116,7 +116,7 @@ const Gallery = ({ data }) => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {data.map(
+        {data?.map(
           ({ thumb, title, blurb, portfolioType, portfolio }, index) => (
             <GalleryImageContainer
               key={thumb}

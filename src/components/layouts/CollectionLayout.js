@@ -116,7 +116,7 @@ const CollectionLayout = ({ children: data, hero, description }) => {
         <p>{description}</p>
       </Body>
       <Collection>
-        {data.map(({ title, image, size, price, slug }) => (
+        {data?.map(({ title, image, size, price, slug }) => (
           <CollectionItem key={title}>
             <CollectionItemLink to={slug}>
               <Image

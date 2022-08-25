@@ -94,7 +94,7 @@ const Testimonials = () => {
           </ArrowButton>
         )}
         <div ref={sliderRef} className="keen-slider">
-          {testimonialsData.map(({ by, testimonial }) => (
+          {testimonialsData?.map(({ by, testimonial }) => (
             <div className="keen-slider__slide" key={by}>
               <p>
                 {testimonial} <br /> <span>- {by}</span>
@@ -114,7 +114,7 @@ const Testimonials = () => {
       </SliderWrapper>
       {loaded && slider.current && (
         <Dots>
-          {[...Array(slider.current.track.details.slides.length).keys()].map(
+          {[...Array(slider.current.track.details.slides.length).keys()]?.map(
             idx => (
               <Dot
                 aria-label="Change Testimonial"

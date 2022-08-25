@@ -59,7 +59,7 @@ const WorkMedium = styled.div`
 const Work = () => {
   return (
     <Portfolio id="nav-work">
-      {featuredImagesData.map(({ image, alt, slug, title }) => (
+      {featuredImagesData?.map(({ image, alt, slug, title }) => (
         <WorkMedium key={image}>
           <Image
             relativePath={image}

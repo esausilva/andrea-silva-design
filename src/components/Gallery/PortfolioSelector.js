@@ -8,7 +8,7 @@ import { transformationsFormat } from '~utils/index';
 const PortfolioSelector = ({ type, portfolio, heading }) => {
   return (
     <>
-      {portfolio.map((relativePath, index) => {
+      {portfolio?.map((relativePath, index) => {
         switch (type) {
           case 'image':
             return (

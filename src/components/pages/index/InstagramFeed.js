@@ -175,7 +175,7 @@ const InstagramFeed = () => {
       <SwipeInfo aria-hidden="true">← Swipe →</SwipeInfo>
       <SliderWrapper>
         <Slider ref={sliderRef}>
-          {data.grams.edges.map(
+          {data.grams.edges?.map(
             ({ node: { id, localFile, timestamp, caption } }) => (
               <a
                 href={`https://www.instagram.com/p/${id}/`}

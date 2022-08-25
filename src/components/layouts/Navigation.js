@@ -225,7 +225,7 @@ const Navigation = () => {
           &times;
         </CloseMenu>
         <NavMenu>
-          {navigationData.internal.map(({ linkTo, text, isSamePage }) => (
+          {navigationData.internal?.map(({ linkTo, text, isSamePage }) => (
             <li key={linkTo}>
               <NavigationLink
                 linkTo={linkTo}
@@ -236,7 +236,7 @@ const Navigation = () => {
             </li>
           ))}
           <li>
-            {navigationData.social.map(({ href, image, alt }) => (
+            {navigationData.social?.map(({ href, image, alt }) => (
               <a target="_blank" rel="noreferrer" href={href} key={image}>
                 <Image
                   relativePath={image}

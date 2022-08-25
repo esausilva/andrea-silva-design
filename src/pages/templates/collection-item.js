@@ -128,7 +128,7 @@ const CollectionItem = ({ pageContext }) => {
           </Purchase>
         </CollectionBody>
         <CollectionImages>
-          {images.map((image, index) => (
+          {images?.map((image, index) => (
             <Image
               key={image}
               relativePath={image}
