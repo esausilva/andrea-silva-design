@@ -26,7 +26,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
 const gardenCollectionPages = async ({ graphql, actions }) => {
   const collectionItemTemplate = path.resolve(
-    './src/templates/collection-item.js',
+    './src/pages/templates/collection-item.js',
   );
   const collectionData = require('./src/content/collections/garden-collection.json');
 
@@ -35,7 +35,7 @@ const gardenCollectionPages = async ({ graphql, actions }) => {
       path: `collections/garden-collection/${collection.slug}`,
       component: collectionItemTemplate,
       context: {
-        collection,
+        ...collection,
       },
     });
   });
@@ -43,7 +43,7 @@ const gardenCollectionPages = async ({ graphql, actions }) => {
 
 const wanderCollectionPages = async ({ graphql, actions }) => {
   const collectionItemTemplate = path.resolve(
-    './src/templates/collection-item.js',
+    './src/pages/templates/collection-item.js',
   );
   const collectionData = require('./src/content/collections/wander-collection.json');
 
@@ -52,7 +52,7 @@ const wanderCollectionPages = async ({ graphql, actions }) => {
       path: `collections/wander-collection/${collection.slug}`,
       component: collectionItemTemplate,
       context: {
-        collection,
+        ...collection,
       },
     });
   });

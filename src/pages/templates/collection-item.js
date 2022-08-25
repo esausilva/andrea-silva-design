@@ -8,6 +8,7 @@ import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Modal } from '~components/PurchaseOrderForm/Modal';
 import { PurchaseOrderForm } from '~components/PurchaseOrderForm/PurchaseOrderForm';
+import { Seo } from '~components/helpers/SEO';
 import { Button } from '~styles/Button';
 import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
@@ -89,51 +90,50 @@ const Purchase = styled(Button)`
 `;
 //#endregion
 
-const CollectionItem = ({ pageContext: { collection } }) => {
+const CollectionItem = ({ pageContext }) => {
+  const { title, size, price, isSold, medium, description, images } =
+    pageContext;
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { collectionSlug } = useCollectionSlug(2);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   return (
-    <MainLayout
-      pageTitle={`${collection.title}, ${collection.size}`}
-      pathName={`collections/${collectionSlug}/${collection.slug}`}
-    >
+    <MainLayout>
       <Wrapper>
         <BackTo>
           <Link to={`/collections/${collectionSlug}`}>Back to collection</Link>
         </BackTo>
         <CollectionBody>
           <h1>
-            <em>{collection.title}</em>
+            <em>{title}</em>
           </h1>
           <span>
-            {collection.size} {collection.medium}
+            {size} {medium}
           </span>
           <Price>
-            {collection.isSold ? 'SOLD' : collection.price}
-            <span>{collection.isSold ? '' : '(frame not included)'}</span>
+            {isSold ? 'SOLD' : price}
+            <span>{isSold ? '' : '(frame not included)'}</span>
           </Price>
-          <p>{collection.description}</p>
+          <p>{description}</p>
           <Purchase
             name="Purchase Artwork"
             type="button"
             $bgColor="#f0d3c7"
             $textColor="initial"
-            disabled={collection.isSold}
+            disabled={isSold}
             onClick={toggleModal}
           >
             Purchase
           </Purchase>
         </CollectionBody>
         <CollectionImages>
-          {collection.images.map((image, index) => (
+          {images.map((image, index) => (
             <Image
               key={image}
               relativePath={image}
-              alt={`${collection.title} - ${index + 1}`}
-              title={`${collection.title} - ${index + 1}`}
+              alt={`${title} - ${index + 1}`}
+              title={`${title} - ${index + 1}`}
               transformations={transformationsFormat('w_500')}
             />
           ))}
@@ -141,10 +141,7 @@ const CollectionItem = ({ pageContext: { collection } }) => {
       </Wrapper>
       <Modal modalState={{ value: isModalOpen, toggle: toggleModal }}>
         <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>
-          <PurchaseOrderForm
-            artWork={`${collection.title}, ${collection.size}`}
-            price={collection.price}
-          />
+          <PurchaseOrderForm artWork={`${title}, ${size}`} price={price} />
         </FormspreeProvider>
       </Modal>
     </MainLayout>
@@ -153,17 +150,21 @@ const CollectionItem = ({ pageContext: { collection } }) => {
 
 CollectionItem.propTypes = {
   pageContext: PropTypes.shape({
-    collection: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      size: PropTypes.string.isRequired,
-      price: PropTypes.string.isRequired,
-      medium: PropTypes.string.isRequired,
-      description: PropTypes.string,
-      images: PropTypes.arrayOf(PropTypes.string).isRequired,
-      slug: PropTypes.string.isRequired,
-      isSold: PropTypes.bool.isRequired,
-    }),
-  }).isRequired,
+    title: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    medium: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    slug: PropTypes.string.isRequired,
+    isSold: PropTypes.bool.isRequired,
+  }),
 };
 
 export default CollectionItem;
+
+export const Head = ({ location, pageContext }) => {
+  const { title, size } = pageContext;
+
+  return <Seo pageTitle={`${title}, ${size}`} pathName={location.pathname} />;
+};

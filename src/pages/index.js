@@ -8,12 +8,10 @@ import { Testimonials } from '~components/pages/index/Testimonials';
 import { InstagramFeed } from '~components/pages/index/InstagramFeed';
 import { LetsChat } from '~components/pages/index/LetsChat';
 import { CollectionBanner } from '~components/pages/index/CollectionBanner';
+import { Seo } from '~components/helpers/SEO';
 
 const IndexPage = () => (
-  <MainLayout
-    pageTitle="Artist, Graphic Designer and Illustrator"
-    structuredDataTemplate={structuredDataTemplate}
-  >
+  <MainLayout>
     <CollectionBanner />
     <Work />
     <ArtistStatement />
@@ -92,3 +90,10 @@ const structuredDataTemplate = `
 `;
 
 export default IndexPage;
+
+export const Head = () => (
+  <Seo
+    pageTitle="Artist, Graphic Designer and Illustrator"
+    structuredDataTemplate={structuredDataTemplate}
+  />
+);

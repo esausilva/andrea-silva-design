@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({
   description,
-  lang,
-  meta,
   pageTitle,
   pathName,
   structuredDataTemplate,
+  children,
 }) {
   const { site, allImages } = useStaticQuery(
     graphql`
@@ -35,8 +33,9 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description;
   const canonical = pathName
-    ? `${site.siteMetadata.siteUrl}/${pathName}`
+    ? `${site.siteMetadata.siteUrl}${pathName}`
     : site.siteMetadata.siteUrl;
+  const titleTemplate = `${pageTitle} | ${site.siteMetadata.title}`;
 
   const GetImageUrl = imageName => {
     var image = allImages.edges.find(img =>
@@ -72,99 +71,53 @@ function SEO({
   };
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={pageTitle}
-      titleTemplate={`%s - ${site.siteMetadata.title}`}
-      link={
-        canonical
-          ? [
-              {
-                rel: 'canonical',
-                href: canonical,
-              },
-            ]
-          : []
-      }
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: `${pageTitle} - ${site.siteMetadata.title}`,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:url`,
-          content: `${canonical}`,
-        },
-        {
-          property: `og:image`,
-          content: GetImageUrl('andrea-silva-design-social-card'),
-        },
-        {
-          property: `og:image:width`,
-          content: `1200`,
-        },
-        {
-          property: `og:image:height`,
-          content: `630`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:image`,
-          content: GetImageUrl('andrea-silva-design-social-card'),
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: `${pageTitle} - ${site.siteMetadata.title}`,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    >
+    <>
+      <title>{titleTemplate}</title>
+      {canonical ? <link rel="canonical" href={canonical} /> : ''}
+      <meta name="description" content={metaDescription} />
+      <meta
+        name="og:title"
+        content={`${pageTitle} - ${site.siteMetadata.title}`}
+      />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="og:type" content="website" />
+      <meta name="og:url" content={canonical} />
+      <meta
+        name="og:image"
+        content={GetImageUrl('andrea-silva-design-social-card')}
+      />
+      <meta name="og:image:width" content="1200" />
+      <meta name="og:image:height" content="630" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:image"
+        content={GetImageUrl('andrea-silva-design-social-card')}
+      />
+      <meta name="twitter:creator" content={site.siteMetadata.author} />
+      <meta
+        name="twitter:title"
+        content={`${pageTitle} - ${site.siteMetadata.title}`}
+      />
+      <meta name="twitter:description" content={metaDescription} />
+      {children}
       {structuredDataTemplate ? (
         <script type="application/ld+json">
           {replaceTokens(structuredDataTemplate)}
         </script>
       ) : null}
-    </Helmet>
+    </>
   );
 }
 
 SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
   description: ``,
   structuredDataTemplate: null,
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
   pageTitle: PropTypes.string.isRequired,
   structuredDataTemplate: PropTypes.string,
 };
 
-export { SEO };
+export { SEO as Seo };

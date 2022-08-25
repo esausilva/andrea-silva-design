@@ -123,7 +123,7 @@
     "image": "art-collections/garden-collection/blueberry/garden-collection-blueberry-4.jpg",
     "size": "8x8 in.",
     "price": "$50",
-    "isSold": false,
+    "isSold": true,
     "slug": "blueberry",
     "medium": "watercolor on 100% cotton Arches paper",
     "description": "In smoothies, muffins, salads, or just by themselves, there's no bad way to eat a blueberry! The outside of a blueberry is of course this gorgeous dark blue color, but did you know that the inside of a blueberry is not blue?! Yes, it's true!",

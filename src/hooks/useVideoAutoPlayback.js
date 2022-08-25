@@ -8,7 +8,7 @@ const useVideoAutoPlayback = options => {
     const [entry] = entries;
 
     if (entry.isIntersecting) videoRef.current.play();
-    else videoRef.current.pause();
+    else videoRef.current?.pause();
   };
 
   useEffect(() => {
@@ -16,11 +16,12 @@ const useVideoAutoPlayback = options => {
       return () => {};
 
     const observer = new IntersectionObserver(cb, options);
+    const current = containerRef.current;
 
-    if (containerRef.current) observer.observe(containerRef.current);
+    if (current) observer.observe(current);
 
     return () => {
-      if (containerRef.current) observer.unobserve(containerRef.current);
+      if (current) observer.unobserve(current);
     };
   }, [containerRef, options]);
 

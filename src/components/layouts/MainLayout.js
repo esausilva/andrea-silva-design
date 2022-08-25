@@ -2,7 +2,6 @@ import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { SEO } from '~helpers/SEO';
 import { GlobalStyles } from '~styles/globalStyles';
 import { theme } from '~styles/theme';
 import { Navigation } from './Navigation';
@@ -20,18 +19,13 @@ const Main = styled.main`
 
 const PopupCookieContext = createContext();
 
-const MainLayout = ({ children, ...rest }) => {
-  const {
-    createCookie,
-    showPopup,
-    setOptionalPopup,
-    optionalPopup,
-  } = usePopupCookie();
+const MainLayout = ({ children }) => {
+  const { createCookie, showPopup, setOptionalPopup, optionalPopup } =
+    usePopupCookie();
 
   return (
     <ThemeProvider theme={theme}>
       <>
-        <SEO {...rest} />
         <GlobalStyles />
         <BackToTop />
         <Navigation />

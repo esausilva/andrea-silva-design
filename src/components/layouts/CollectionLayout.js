@@ -9,7 +9,6 @@ import { Image } from '~helpers/Image';
 import { transformationsFormat } from '~utils/index';
 import { ShoppingCart } from '~svgs/ShoppingCart';
 import { ImageOverlayWithIcon } from '~styles/shared';
-import { useCollectionSlug } from '~hooks/useCollectionSlug';
 
 //#region Styles
 const Hero = styled.div`
@@ -101,14 +100,9 @@ const Body = styled(SecondaryLayout)`
 `;
 //#endregion
 
-const CollectionLayout = ({ children: data, hero, pageTitle, description }) => {
-  const { collectionSlug } = useCollectionSlug(1);
-
+const CollectionLayout = ({ children: data, hero, description }) => {
   return (
-    <MainLayout
-      pageTitle={pageTitle}
-      pathName={`collections/${collectionSlug}`}
-    >
+    <MainLayout>
       <Hero>
         <Image
           relativePath={hero.image}
@@ -157,7 +151,6 @@ CollectionLayout.propTypes = {
     image: PropTypes.string.isRequired,
     imageTitle: PropTypes.string.isRequired,
   }).isRequired,
-  pageTitle: PropTypes.string.isRequired,
   description: PropTypes.string,
 };
 

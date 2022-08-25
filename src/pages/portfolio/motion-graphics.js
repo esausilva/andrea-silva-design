@@ -3,15 +3,13 @@ import React from 'react';
 import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Gallery } from '~components/Gallery/Gallery';
+import { Seo } from '~components/helpers/SEO';
 import { Title } from '~styles/Title';
 import motionGraphics from '~content/portfolio/motionGraphics.json';
 
 const MotionGraphics = () => {
   return (
-    <MainLayout
-      pageTitle="Motion Graphics"
-      pathName="portfolio/motion-graphics"
-    >
+    <MainLayout>
       <SecondaryLayout>
         <Title>Motion Graphics</Title>
         <p>
@@ -26,3 +24,7 @@ const MotionGraphics = () => {
 };
 
 export default MotionGraphics;
+
+export const Head = ({ location }) => (
+  <Seo pageTitle="Motion Graphics" pathName={location.pathname} />
+);

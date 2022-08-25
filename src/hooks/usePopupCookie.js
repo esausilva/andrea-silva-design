@@ -16,7 +16,7 @@ const usePopupCookie = () => {
     }
 
     return () => {};
-  }, [cookies[cookieName]]);
+  }, [cookies]);
 
   const createCookie = maxAge => {
     const cookie = cookies[cookieName];

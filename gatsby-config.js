@@ -10,7 +10,6 @@ module.exports = {
     siteUrl: 'https://andreasilva.design',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

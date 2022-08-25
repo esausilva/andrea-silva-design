@@ -3,12 +3,13 @@ import React from 'react';
 import { MainLayout } from '~components/layouts/MainLayout';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Gallery } from '~components/Gallery/Gallery';
+import { Seo } from '~components/helpers/SEO';
 import { Title } from '~styles/Title';
 import artData from '~content/portfolio/art.json';
 
 const Art = () => {
   return (
-    <MainLayout pageTitle="Fine Art" pathName="portfolio/art">
+    <MainLayout>
       <SecondaryLayout>
         <Title>Fine Art</Title>
         <p>
@@ -23,3 +24,7 @@ const Art = () => {
 };
 
 export default Art;
+
+export const Head = ({ location }) => (
+  <Seo pageTitle="Fine Art" pathName={location.pathname} />
+);
