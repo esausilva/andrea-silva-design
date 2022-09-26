@@ -62,3 +62,9 @@ export const ThankYou = styled.mark`
   text-align: center;
   display: ${({ show }) => (show ? 'inline-block' : 'none')};
 `;
+
+export const Notice = styled(ThankYou)`
+  background: #fecba1;
+  color: #653307;
+  border-color: #fd9843;
+`;
