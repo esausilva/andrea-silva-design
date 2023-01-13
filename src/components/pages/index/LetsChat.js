@@ -129,27 +129,6 @@ const LetsChat = () => {
               Thank you for your interest, I will be in touch with you soon.
               -Andrea
             </ThankYou>
-            <Notice show={true}>
-              I am taking some time off from custom work temporarily for
-              maternity leave. Feel free to contact me here and I will put you
-              on my wait list and get back with you sometime in November when I
-              start taking more client work. In the meantime, I'd love it if
-              you'd browse available work in my shop, or follow me on{' '}
-              <a
-                href="https://www.facebook.com/andreasilva.design"
-                target="_blank"
-              >
-                Facebook
-              </a>{' '}
-              or{' '}
-              <a
-                href="https://www.instagram.com/andreasilva.design/"
-                target="_blank"
-              >
-                Instagram
-              </a>{' '}
-              @andreasilva.design.
-            </Notice>
             <FormRow>
               <Labels htmlFor="name">Name</Labels>
               <InputColumn>
