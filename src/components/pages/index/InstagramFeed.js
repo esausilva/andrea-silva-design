@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { GatsbyImage as Img } from 'gatsby-plugin-image';
+import { GatsbyImage as Img, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
 import { lighten } from 'polished';
@@ -184,7 +184,7 @@ const InstagramFeed = () => {
                 key={timestamp}
               >
                 <GatsbyImage
-                  image={localFile.childImageSharp.gatsbyImageData}
+                  image={getImage(localFile)}
                   loading="lazy"
                   alt={`Instagram photo by Andrea Silva Design on ${LongDateFromUnix(
                     timestamp,
