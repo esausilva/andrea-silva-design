@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import tinykeys from 'tinykeys';
+import { tinykeys } from 'tinykeys';
 
 import { PopupCookieContext } from '~components/layouts/MainLayout';
 import { getMaxCookieAgeInSeconds } from '~utils/index';
