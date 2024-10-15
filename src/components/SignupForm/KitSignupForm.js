@@ -1,5 +1,4 @@
 import React, { useReducer, useContext } from 'react';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
 import styled from 'styled-components';
 
 import { pink } from '~styles/theme';
@@ -45,7 +44,7 @@ const initialFormState = {
   email: '',
   fname: '',
   lname: '',
-  mcMessage: null,
+  message: null,
   errors: {
     email: null,
     fname: null,
@@ -54,7 +53,7 @@ const initialFormState = {
 };
 
 const formReducer = (state, { name, value, reset }) => {
-  if (reset) return { ...initialFormState, mcMessage: value };
+  if (reset) return { ...initialFormState, message: value };
 
   return {
     ...state,
@@ -62,7 +61,7 @@ const formReducer = (state, { name, value, reset }) => {
   };
 };
 
-const MailChimpSignupForm = () => {
+const KitSignupForm = () => {
   const [formData, dispatch] = useReducer(formReducer, initialFormState);
   const { createCookie } = useContext(PopupCookieContext);
 
@@ -71,7 +70,7 @@ const MailChimpSignupForm = () => {
     dispatch({ name, value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
     const { errors, hasErrors } = emptyValidation(formData);
@@ -80,23 +79,61 @@ const MailChimpSignupForm = () => {
     if (hasErrors) return;
 
     const { email, fname, lname } = formData;
+    const kitApiUrl = `${process.env.GATSBY_KIT_API_ENDPOINT}/v3/forms/${process.env.GATSBY_KIT_FORM_ID}/subscribe`;
 
-    addToMailchimp(email, {
-      FNAME: fname,
-      LNAME: lname,
-    })
-      .then(({ result, msg }) => {
-        if (result === 'error') {
-          const value = `<p style="color:#dc3545;">${msg}</p>`;
-          dispatch({ name: 'mcMessage', value });
-        } else {
-          const value = `<p style="color:#28a745;">${msg}</p>`;
+    try {
+      var response = await fetch(kitApiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          first_name: fname,
+          fields: {
+            last_name: lname,
+          },
+          api_key: process.env.GATSBY_KIT_API_KEY,
+          tags: [process.env.GATSBY_KIT_FORM_TAG],
+        }),
+      });
+      const data = await response.json();
 
-          dispatch({ name: 'mcMessage', value, reset: true });
-          createCookie(getMaxCookieAgeInSeconds({ isNeverExpires: true }));
-        }
-      })
-      .catch(err => alert(err));
+      if (response.status !== 200) {
+        dispatch({
+          name: 'message',
+          value: getMessageValue(false, `${data.error}: ${data.message}`),
+          reset: true,
+        });
+        return;
+      }
+
+      if (data?.subscription?.state === 'active') {
+        dispatch({
+          name: 'message',
+          value: getMessageValue(
+            true,
+            'Yay! Looks like you are subscribed already.',
+          ),
+          reset: true,
+        });
+        return;
+      }
+
+      dispatch({
+        name: 'message',
+        value: getMessageValue(
+          true,
+          "Yay! Thanks for subscribing. A confirmation email has been sent to your inbox. Please check your spam folder if you can't find it.",
+        ),
+        reset: true,
+      });
+      createCookie(getMaxCookieAgeInSeconds({ isNeverExpires: true }));
+    } catch (error) {
+      dispatch({
+        name: 'message',
+        value: getMessageValue(false, `${error}`),
+        reset: true,
+      });
+    }
   };
 
   return (
@@ -152,10 +189,10 @@ const MailChimpSignupForm = () => {
               onChange={handleChange}
               value={formData.email}
             />
-            {formData.mcMessage === null ? null : (
+            {formData.message === null ? null : (
               <div
                 dangerouslySetInnerHTML={{
-                  __html: formData.mcMessage,
+                  __html: formData.message,
                 }}
               />
             )}
@@ -200,4 +237,12 @@ const emptyValidation = formData => {
   return { errors: formData.errors, hasErrors };
 };
 
-export { MailChimpSignupForm };
+const getMessageValue = (success, value) => {
+  let color = '#28a745';
+
+  if (success === false) color = '#dc3545';
+
+  return `<p style="color:${color};">${value}</p>`;
+};
+
+export { KitSignupForm };

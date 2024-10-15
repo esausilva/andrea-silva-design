@@ -5,7 +5,7 @@ import { MainLayout } from '~components/layouts/MainLayout';
 import { Work } from '~components/pages/index/Work';
 import { ArtistStatement } from '~components/pages/index/ArtistStatement';
 import { Testimonials } from '~components/pages/index/Testimonials';
-import { InstagramFeed } from '~components/pages/index/InstagramFeed';
+// import { InstagramFeed } from '~components/pages/index/InstagramFeed';
 import { LetsChat } from '~components/pages/index/LetsChat';
 import { CollectionBanner } from '~components/pages/index/CollectionBanner';
 import { Seo } from '~components/helpers/SEO';
@@ -16,7 +16,7 @@ const IndexPage = () => (
     <Work />
     <ArtistStatement />
     <Testimonials />
-    <InstagramFeed />
+    {/* <InstagramFeed /> */}
     <FormspreeProvider project={process.env.GATSBY_FORMSPREE_PROJECT_ID}>
       <LetsChat />
     </FormspreeProvider>

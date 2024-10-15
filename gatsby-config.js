@@ -5,7 +5,7 @@ var formatDate = require('date-fns/format');
 module.exports = {
   siteMetadata: {
     title: `Andrea Silva Design`,
-    description: `Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in illustration, fine art, digital design, and motion graphics. Located in Nashville, TN - Music City`,
+    description: `Andrea Silva Design showcases the work of graphic designer and artist Andrea Silva, including pieces in illustration, fine art, digital design, and motion graphics. Located in Franklin, TN.`,
     author: `@_esausilva`,
     siteUrl: 'https://andreasilva.design',
   },
@@ -70,13 +70,6 @@ module.exports = {
             lastmod: formatDate(new Date(), 'yyyy-MM-dd'),
           };
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint: process.env.MAILCHIMP_ENDPOINT,
-        timeout: 3500,
       },
     },
     {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import { MailChimpSignupForm } from '~components/SignupForm/MailChimpSignupForm';
+import { KitSignupForm } from '~components/SignupForm/KitSignupForm';
 import { Modal } from '~components/SignupForm/Modal';
 import { PopupCookieContext } from '~components/layouts/MainLayout';
 
@@ -20,7 +20,7 @@ const SignupFormPopup = () => {
 
   return (
     <Modal modalState={{ value: isModalOpen, close: closeModal }}>
-      <MailChimpSignupForm />
+      <KitSignupForm />
     </Modal>
   );
 };

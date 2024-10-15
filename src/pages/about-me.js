@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 import { MainLayout } from '~components/layouts/MainLayout';
-import { MailChimpSignupForm } from '~components/SignupForm/MailChimpSignupForm';
+import { KitSignupForm } from '~components/SignupForm/KitSignupForm';
 import { SecondaryLayout } from '~components/layouts/SecondaryLayout';
 import { Seo } from '~components/helpers/SEO';
 import { transformationsFormat } from '~utils/index';
@@ -139,7 +139,7 @@ const AboutMe = () => {
             </p>
           </div>
         </ContentBottom>
-        <MailChimpSignupForm />
+        <KitSignupForm />
       </Content>
     </MainLayout>
   );

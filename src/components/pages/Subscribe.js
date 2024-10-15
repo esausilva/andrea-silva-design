@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 
 import { PopupCookieContext } from '~components/layouts/MainLayout';
-import { MailChimpSignupForm } from '~components/SignupForm/MailChimpSignupForm';
+import { KitSignupForm } from '~components/SignupForm/KitSignupForm';
 
 const Subscribe = () => {
   const { setOptionalPopup } = useContext(PopupCookieContext);
@@ -12,7 +12,7 @@ const Subscribe = () => {
     return () => {};
   }, [setOptionalPopup]);
 
-  return <MailChimpSignupForm />;
+  return <KitSignupForm />;
 };
 
 export { Subscribe };
