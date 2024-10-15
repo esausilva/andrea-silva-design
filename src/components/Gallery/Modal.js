@@ -101,7 +101,7 @@ const Modal = ({
   const backward = () => changeSlide(BACKWARD);
 
   return (
-    <ModalContainer isOpen={modalState.value}>
+    <ModalContainer $isOpen={modalState.value}>
       <ArrowButtonLeft
         aria-label="Go To Previous Slide"
         name="Go To Previous Slide"

@@ -45,8 +45,8 @@ const Dot = styled.button`
   border: none;
   width: 10px;
   height: 10px;
-  background: ${({ currentSlide, currentIndex }) =>
-    currentSlide === currentIndex ? '#000' : '#c5c5c5'};
+  background: ${({ $currentSlide, $currentIndex }) =>
+    $currentSlide === $currentIndex ? '#000' : '#c5c5c5'};
   border-radius: 50%;
   margin: 0 5px;
   padding: 5px;
@@ -121,8 +121,8 @@ const Testimonials = () => {
                 name="Change Testimonial"
                 key={idx}
                 onClick={() => slider.current?.moveToIdx(idx)}
-                currentSlide={currentSlide}
-                currentIndex={idx}
+                $currentSlide={currentSlide}
+                $currentIndex={idx}
               />
             ),
           )}

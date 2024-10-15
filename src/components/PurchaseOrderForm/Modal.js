@@ -27,7 +27,7 @@ const Modal = ({
   };
 
   return (
-    <ModalContainer isOpen={modalState.value}>
+    <ModalContainer $isOpen={modalState.value}>
       <BodyResponsive>
         <CloseModal onClick={toggleModal}>&times;</CloseModal>
         {children}

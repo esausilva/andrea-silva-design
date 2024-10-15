@@ -5,14 +5,7 @@ import { useForm, ValidationError } from '@formspree/react';
 
 import { FountainLoading } from '~svgs/FountainLoading';
 import { gray, pink } from '~styles/theme';
-import {
-  Input,
-  TextArea,
-  Label,
-  Fieldset,
-  ThankYou,
-  Notice,
-} from '~styles/Form';
+import { Input, TextArea, Label, Fieldset, ThankYou } from '~styles/Form';
 import { Button } from '~styles/Button';
 
 //#region Styles
@@ -125,7 +118,7 @@ const LetsChat = () => {
       <FormContainer>
         <Form method="POST" onSubmit={handleSubmit}>
           <Fieldset disabled={formState.submitting}>
-            <ThankYou show={formState.succeeded}>
+            <ThankYou $show={formState.succeeded}>
               Thank you for your interest, I will be in touch with you soon.
               -Andrea
             </ThankYou>

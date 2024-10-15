@@ -12,9 +12,11 @@ const Button = styled(ButtonSvgWrapper)`
   right: 2rem;
   bottom: 1.5rem;
   z-index: 2;
-  transition: opacity 500ms, ${({ theme }) => theme.animations.transform500ms};
-  opacity: ${({ show }) => (show ? '1' : '0')};
-  transform: ${({ show }) => (show ? 'rotate(360deg)' : 'rotate(180deg)')};
+  transition:
+    opacity 500ms,
+    ${({ theme }) => theme.animations.transform500ms};
+  opacity: ${({ $show }) => ($show ? '1' : '0')};
+  transform: ${({ $show }) => ($show ? 'rotate(360deg)' : 'rotate(180deg)')};
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     right: 3rem;
     bottom: 2rem;
@@ -47,7 +49,7 @@ const BackToTop = () => {
       aria-label="Back To Top"
       name="Back To Top"
       onClick={scrollToTop}
-      show={display}
+      $show={display}
     >
       <ArrowTickUpCircle />
     </Button>

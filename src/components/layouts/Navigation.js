@@ -79,11 +79,11 @@ const MenuWrapper = styled.div`
   right: 0;
   bottom: 0;
   left: 100%;
-  transform: ${({ isMenuOpen }) =>
-    isMenuOpen ? 'translateX(-100%)' : 'translateX(0)'};
+  transform: ${({ $isMenuOpen }) =>
+    $isMenuOpen ? 'translateX(-100%)' : 'translateX(0)'};
   transition: transform 250ms;
-  box-shadow: ${({ isMenuOpen }) =>
-    isMenuOpen ? '0 0.1rem 3rem hsla(0, 0%, 0%, 0.7)' : 'none'};
+  box-shadow: ${({ $isMenuOpen }) =>
+    $isMenuOpen ? '0 0.1rem 3rem hsla(0, 0%, 0%, 0.7)' : 'none'};
   @media (min-width: ${({ theme }) => theme.media.medium}) {
     position: initial;
     width: initial;
@@ -216,7 +216,7 @@ const Navigation = () => {
       >
         &#9776;
       </Hamburger>
-      <MenuWrapper isMenuOpen={isMenuOpen}>
+      <MenuWrapper $isMenuOpen={isMenuOpen}>
         <CloseMenu
           aria-label="Close Navigation"
           name="Close Navigation"

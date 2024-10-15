@@ -6,7 +6,9 @@ const inputs = css`
   border-radius: 0.5rem;
   color: #495057;
   width: 100%;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition:
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
   &:focus {
     outline: none;
     box-shadow: 0 0 0.23rem 0.23rem #17a2b8;
@@ -60,7 +62,7 @@ export const ThankYou = styled.mark`
   border-color: #c3e6cb;
   border-radius: 0.5rem;
   text-align: center;
-  display: ${({ show }) => (show ? 'inline-block' : 'none')};
+  display: ${({ $show }) => ($show ? 'inline-block' : 'none')};
 `;
 
 export const Notice = styled(ThankYou)`

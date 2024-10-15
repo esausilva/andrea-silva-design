@@ -43,7 +43,7 @@ const PurchaseOrderForm = ({ artWork, price }) => {
       </p>
       <form method="POST" onSubmit={handleSubmit}>
         <Fieldset disabled={formState.submitting}>
-          <ThankYou show={formState.succeeded}>
+          <ThankYou $show={formState.succeeded}>
             Thank you for your interest, I will be in touch with you soon.
             -Andrea
           </ThankYou>
