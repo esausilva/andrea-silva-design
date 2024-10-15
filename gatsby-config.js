@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-var formatDate = require('date-fns/format');
+var { formatDate } = require('date-fns/format');
 
 module.exports = {
   siteMetadata: {
