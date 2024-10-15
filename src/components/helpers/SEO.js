@@ -3,33 +3,31 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({
-  description,
+  description = '',
   pageTitle,
   pathName,
-  structuredDataTemplate,
+  structuredDataTemplate = null,
   children,
 }) {
-  const { site, allImages } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
+  const { site, allImages } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
         }
-        allImages: allFile(filter: { ext: { regex: "/.jpg/" } }) {
-          edges {
-            node {
-              publicURL
-            }
+      }
+      allImages: allFile(filter: { ext: { regex: "/.jpg/" } }) {
+        edges {
+          node {
+            publicURL
           }
         }
       }
-    `,
-  );
+    }
+  `);
 
   const metaDescription = description || site.siteMetadata.description;
   const canonical = pathName
@@ -108,11 +106,6 @@ function SEO({
     </>
   );
 }
-
-SEO.defaultProps = {
-  description: ``,
-  structuredDataTemplate: null,
-};
 
 SEO.propTypes = {
   description: PropTypes.string,

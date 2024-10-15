@@ -40,7 +40,10 @@ const Checkbox = styled.label`
 `;
 //#endregion
 
-const Modal = ({ children, modalState }) => {
+const Modal = ({
+  children,
+  modalState = { value: false, close: () => {} },
+}) => {
   const [doNotShowValue, setDoNotShowValue] = useState(false);
   const { createCookie, showPopup } = useContext(PopupCookieContext);
 
@@ -96,12 +99,6 @@ Modal.propTypes = {
     value: PropTypes.bool,
     close: PropTypes.func.isRequired,
   }).isRequired,
-};
-
-Modal.defaultProps = {
-  modalState: {
-    value: false,
-  },
 };
 
 export { Modal };

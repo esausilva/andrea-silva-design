@@ -43,15 +43,6 @@ const MainLayout = ({ children }) => {
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  pageTitle: PropTypes.string,
-  pathName: PropTypes.string,
-  structuredDataTemplate: PropTypes.string,
-};
-
-MainLayout.defaultProps = {
-  pageTitle: '',
-  pathName: '',
-  structuredDataTemplate: null,
 };
 
 export { MainLayout, PopupCookieContext };

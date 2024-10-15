@@ -24,7 +24,7 @@ const Arrow = styled(ArrowBase)`
 `;
 //#endregion
 
-export const ArrowLeft = ({ pathFill }) => (
+export const ArrowLeft = ({ pathFill = '' }) => (
   <Arrow
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -35,15 +35,11 @@ export const ArrowLeft = ({ pathFill }) => (
   </Arrow>
 );
 
-ArrowLeft.defaultProps = {
-  pathFill: '',
-};
-
 ArrowLeft.propTypes = {
   pathFill: PropTypes.string,
 };
 
-export const ArrowRight = ({ pathFill }) => (
+export const ArrowRight = ({ pathFill = '' }) => (
   <Arrow
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
@@ -53,10 +49,6 @@ export const ArrowRight = ({ pathFill }) => (
     <path d="M10.3 8.7a1 1 0 0 1 1.4-1.4l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 0 1-1.4-1.4l3.29-3.3-3.3-3.3z" />
   </Arrow>
 );
-
-ArrowRight.defaultProps = {
-  pathFill: '',
-};
 
 ArrowRight.propTypes = {
   pathFill: PropTypes.string,

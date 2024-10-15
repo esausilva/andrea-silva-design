@@ -59,7 +59,17 @@ const ArrowButtonRight = styled(ArrowButtonBase)`
 `;
 //#endregion
 
-const Modal = ({ children, modalState, changeSlide }) => {
+const Modal = ({
+  children = {
+    heading: '',
+    blurb: '',
+    portfolioType: '',
+    portfolio: [],
+    currentIndex: 0,
+  },
+  modalState,
+  changeSlide,
+}) => {
   const { heading, blurb, portfolioType, portfolio } = children;
   const chevronColor = '#474747';
 
@@ -120,16 +130,6 @@ const Modal = ({ children, modalState, changeSlide }) => {
       </ArrowButtonRight>
     </ModalContainer>
   );
-};
-
-Modal.defaultProps = {
-  children: {
-    heading: '',
-    blurb: '',
-    portfolioType: '',
-    portfolio: [],
-    currentIndex: 0,
-  },
 };
 
 Modal.propTypes = {

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import 'lazysizes';
 
-const Image = ({ alt, title, relativePath, transformations }) => {
+const Image = ({ alt, title = '', relativePath, transformations = '' }) => {
   return (
     <img
       src={`https://res.cloudinary.com/${process.env.GATSBY_CLOUDINARY_USER}/image/upload/e_blur:1500,f_auto,q_40${transformations}/andrea-silva-design/${relativePath}`}
@@ -20,11 +20,6 @@ Image.propTypes = {
   title: PropTypes.string,
   relativePath: PropTypes.string.isRequired,
   transformations: PropTypes.string,
-};
-
-Image.defaultProps = {
-  title: '',
-  transformations: '',
 };
 
 export { Image };

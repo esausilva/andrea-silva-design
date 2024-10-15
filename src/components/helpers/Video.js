@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 
 const Video = ({
   relativePath,
-  showNoSupport,
-  attributes,
-  transformations,
+  showNoSupport = true,
+  attributes = {
+    controls: true,
+    disablePictureInPicture: true,
+    controlsList: 'nodownload',
+  },
+  transformations = '',
 }) => {
   const [sources, setSources] = useState({ thumb: '', video: '' });
 
@@ -51,16 +55,6 @@ Video.propTypes = {
   showNoSupport: PropTypes.bool,
   attributes: PropTypes.object,
   transformations: PropTypes.string,
-};
-
-Video.defaultProps = {
-  showNoSupport: true,
-  attributes: {
-    controls: true,
-    disablePictureInPicture: true,
-    controlsList: 'nodownload',
-  },
-  transformations: '',
 };
 
 export { Video };

@@ -8,7 +8,10 @@ import {
   Close as CloseModal,
 } from '~styles/Modal';
 
-const Modal = ({ children, modalState }) => {
+const Modal = ({
+  children,
+  modalState = { value: false, toggle: () => {} },
+}) => {
   useEffect(() => {
     let unsubscribe = tinykeys(window, {
       Escape: () => toggleModal(),
@@ -39,12 +42,6 @@ Modal.propTypes = {
     value: PropTypes.bool,
     toggle: PropTypes.func.isRequired,
   }).isRequired,
-};
-
-Modal.defaultProps = {
-  modalState: {
-    value: false,
-  },
 };
 
 export { Modal };
